@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::before{
+            content: attr(class) attr(id) attr(toyou);
+        }
+    </style>
+</head>
+<body>
+    <!-- 没有toyou这个属性 瞎写attr还是可以正常表现，将toyou的内容值显示在网页 -->
+    <p class="wo" id="me" toyou="i">了
+        Hi
+    </p>
+</body>
+</html>
