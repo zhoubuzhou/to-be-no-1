@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>什么是CSS?-学习 Web 开发</title>
 
     <style>
+
         .black{
             color:black;
         }
@@ -44,33 +45,134 @@
            line-height:1.2;
            font-size: 12px;
        }
+       /* 一下是3.11加入的样式内容 */
+       [class~="sam"]{
+           height: 20px;
+       }
+
+       .bor{
+           border: solid none;
+           border-radius: 10px;
+           padding: 15px 10px 15px 40px;
+           margin: 40px 10px 25px;
+           box-shadow: 0 0 0 .1px gray;
+           text-align: left;
+           background-color:rgb(24, 112, 240,0.1);
+       }
+
+       .yuan{
+            border: solid none;
+            border-radius: 5px;
+            background-color:rgba(128, 128, 128, 0.1);
+            padding: 20px 0px 5px 0px;
+            margin: 10px 20px 10px 0px;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            
+       }
+       .padd{
+           padding: 30px;
+       }
+       h1{
+          margin-bottom: 40px;
+       }
+       h2{
+           font-size: 30px;
+       }
+
+       .kaishilan{
+        border: solid rgba(201, 199, 199, 0.8) 0.8px;
+        padding:5px;
+        background-color: rgba(168, 168, 168, 0.11);
+       }
+
+       ul li{
+           margin: 20px;
+       }
+
+       table{
+        border: solid rgba(201, 199, 199, 0.8) ;
+       }
+
+      .tupian{
+        border: solid rgba(201, 199, 199, 0.8)0.8px;
+        border-radius: 5px;
+       }
+
+       h3{
+        font-size: 30px;
+       }
+
+       button{
+        padding:5px;
+       }
+
+       #you{
+           text-align: right;
+       }
+
+       .ol{
+        margin: 5px;
+        line-height: 40px;
+       }
+
+       .found{
+        border: solid rgba(201, 199, 199, 0.8)0.8px;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: rgba(221, 219, 219, 0.178);
+        }
+
+       .greyup *{ 
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .greyup{
+            color: rgb(117, 115, 115);
+        }
+
+        .yejiao{
+            list-style: none;
+            line-height: 30px;
+            list-style-position: inside;
+            padding: 50px 0px 10px;
+        }
+
+        .moz{
+            padding: 40px 50px 50px;
+        }
 
     </style>
-
 </head>
 <body>
+    <div>
     <p>
-        <!-- width="200px"s设置大小 -->
-        <img src="./mdn.svg" width="200px" alt="">
+        <!-- width="180px"s设置大小 -->
+        <img src="./mdn.svg" width="180px" alt="">
     </p>
     
-    <div>
+    <div class="kaishilan">
         <a href=""  class="grey">学习 Web 开发</a> 
         &nbsp; > &nbsp; 
         <a href=""  class="grey">什么是CSS?</a>
     </div>
     <div>
-        <p>
-            <a href="" class="black">This page was translated from English by the community. Learn more and join the MDN Web Docs community.</a>
+        <p class="bor">
+            <a href="" class="black"> This page was translated from English by the community. Learn more and join the MDN Web Docs community.</a>
         </p>
+        
     </div>
+    </div>
+    <div  class="padd">
     <h1>什么是CSS?</h1>
     <ul>
         <li>
-            <button class="bo"><a href="" class="grey">Overview: First steps</a></button>
+        <button class="bo"><a href="" class="grey">Overview: First steps</a></button>
         </li>
         <li>
-            <button class="bo"><a href="" class="grey">下一页</a></button>
+        <button class="bo"><a href="" class="grey">下一页</a></button>
         </li>
     </ul>
 
@@ -78,11 +180,12 @@
         <a href=""class="blue"><strong>CSS</strong></a> (层叠样式表) 让你可以创建好看的网页，但是它具体是怎么工作的呢? 这篇文章通过一些很简单的例子，告诉我们什么是 CSS，同时还会涉及一些和 CSS 相关的专业术语。
     </p>
 <!--  cellspacing="0"不建议 -->
-    <table border="1" cellspacing="0">
+<!-- 不知道如何细化 -->
+    <table>
         <tbody>
             <tr>
                 <td  class="bo">预备知识:</td>
-                <td>基本的计算机知识，<a href="" class="blue">安装基础软件</a>, <a href="" class="blue">文件处理</a> 的基础知识, 还有HTML基础 (学习 <a href="" class="blue">HTML概述</a>。)</td>
+                <td >基本的计算机知识，<a href="" class="blue">安装基础软件</a>, <a href="" class="blue">文件处理</a> 的基础知识, 还有HTML基础 (学习 <a href="" class="blue">HTML概述</a>。)</td>
             </tr>
             <tr>
                 <td  class="bo">目标:</td>
@@ -94,13 +197,13 @@
     <p>
         在 <a href="" class="blue">HTML概述</a> 模块我们学习了HTML是什么，以及如何使用它来组成页面。 浏览器能够解析这些页面。标题部分看起来会比正常文本更大，段落则会另起一行，并且相互之间会有一定间隔。链接通过下划线和不同的颜色与其他文本区分开来。这些都是浏览器的默认样式——当开发者没有指定样式时，浏览器通过这些最简单的样式使页面具有基本可读性。
     </p>
-
-    <img src="./example_dlnb526_zh.png" height="250px" alt="MDN插入">
+    
+    <div class="tupian"><img src="./example_dlnb526_zh.png" height="250px" alt="MDN插入"></div>
 
     <p>
         如果所有网站都像上图那样，互联网就会非常枯燥。但是使用 CSS 就可以完全控制浏览器如何显示 HTML 元素，从而充分展示你喜欢的设计样式。
     </p>
-
+<br>
     <h2 title="permalink to css可以用来干什么"><a href="" class="black">CSS用来干什么?</a></h2>
 
     <p>
@@ -115,7 +218,7 @@
         <span class="bo">展示</span>一份文档给用户实际上是将文档变成用户可用的文件。<a href="" class="blue">Browsers</a>：如 <a href="" class="blue">Firefox (en-US)</a>，<a href="" class="blue">Chrome</a>, 或<a href="" class="blue"> Edge (en-US)</a>，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。
     </p>
 
-    <div>
+    <div  class="bor">
         <p  class="grey">
             <span class="bo">注意</span>: 浏览器有时候也被称为<a href="" class="blue">user agent</a>，大致可以当这个程序是一个存在于计算机系统中的人。 当我们讨论CSS时，浏览器是 User agent 的主要形式， 然而它并不是唯一的一个。还有其他可用的user agents — 像是那些可以把HTML和CSS文档转换为可以打印的PDF文档的软件。
         </p>
@@ -124,7 +227,7 @@
     <p>
         CSS 可以用于给文档添加样式 —— 比如改变标题和链接的<a href="" class="blue">颜色</a>及<a href="" class="blue">大小</a>。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的<a href="" class="blue">布局</a>。它甚至还可以用来做一些特效，比如<a href="" class="blue">动画</a>。查看本段内容中所给出的特定案例。
     </p>
-
+<br>
     <h2 title="permalink to css语法">CSS 语法</h2>
 
     <p>
@@ -135,11 +238,11 @@
         下面这段代码使用非常简单的 CSS 规则实现了之前提到的效果:
     </p>
 
-    <pre>
-        <span class="vi">h1</span>{
-            <span class="red">color</span>: red;
-            <span class="red">font-size</span>: 5em;
-        }
+    <pre class="yuan">
+  <span class="vi">h1</span> {
+     <span class="red">color</span>: red;
+     <span class="red">font-size</span>: 5em;
+  }
     </pre>
 
     <p>
@@ -158,23 +261,23 @@
         一个 CSS 样式表可以包含很多个规则。
     </p>
 
-    <pre>
-        <span class="vi">h1</span> {
-            <span class="red">color</span>: red;
-            <span class="red">font-size</span>: 5em;
-        }
+    <pre  class="yuan">
+   <span class="vi">h1</span> {
+       <span class="red">color</span>: red;
+       <span class="red">font-size</span>: 5em;
+   }
         
-        <span class="vi">p</span> {
-            <span class="red">color</span>: black;
-        }
+   <span class="vi">p</span> {
+       <span class="red">color</span>: black;
+   }
     </pre>
 
     <p>
         你会发现你已经很快掌握了一些属性的值，但是属性可以接受的值远不止这些。在MDN上每个属性都有单独的页面，不论你是忘记了某个属性，还是想要知道一个属性还能接受什么其它的值，这些页面都可以帮助你。
     </p>
 
-    <div>
-        <p class="grey"><span class="bo">注意</span>：在MDN上的 <a href="" class="blue"> CSS reference </a>页面列举了所有的 CSS属性页面（同时也包括其它的CSS特性）。 另外，当你想要寻找一个CSS特性的更多内容时，多使用你的搜索引擎来搜索 "mdn <i>css-feature-name</i>>" 。例如，搜索 "mdn color" 和 "mdn font-size"！</p>
+    <div  class="bor">
+        <p  class="grey"><span class="bo">注意</span>：在MDN上的 <a href="" class="blue"> CSS reference </a>页面列举了所有的 CSS属性页面（同时也包括其它的CSS特性）。 另外，当你想要寻找一个CSS特性的更多内容时，多使用你的搜索引擎来搜索 "mdn <i>css-feature-name</i>>" 。例如，搜索 "mdn color" 和 "mdn font-size"！</p>
     </div>
 
     <h2 title="permalink to css模块">CSS 模块</h2>
@@ -188,7 +291,7 @@
     <p>
         举个具体点的例子：如上文中的 Backgrounds and Borders 模块 — 你会发现<a href="" class="blue"> background-color </a>和 <a href="" class="blue">border-color </a>这两个属性在逻辑上相通。并且它也确实如此。
     </p>
-
+<br>
     <h2 title="permalink to css规范">CSS 规范</h2>
 
     <p>
@@ -211,7 +314,7 @@
 
     <a href="" class="blue">Report problems with this compatibility data on GitHub</a>
 
-    <table border="1">
+    <table border="1" class="bing">
         <tbody>
             <tr>
                 <td rowspan="2">kong</td>
@@ -275,7 +378,7 @@
     <p>
         以下是 CSS<a href="" class="blue"> font-family </a>属性的兼容数据表。
     </p>
-
+<br>
     <h3 title="permalink to 下一步">下一步</h3>
 
     <p>
@@ -283,63 +386,71 @@
     </p>
 
     <button class="grey"><strong>Overview: First steps</strong></button>
-    <button class="grey"><strong>下一页</strong></button>
+    <div  id="you"><button class="grey"><strong>下一页</strong></button></div>
 
     <h3 title="permalink to 本章目录">本章目录</h3>
 
-    <ol>
+    <ol class="ol">
         <li  class="bo"><a href="" class="blue">什么是 CSS?</a></li>
         <li><a href="" class="blue">CSS 入门</a></li>
         <li><a href="" class="blue">如何构建CSS</a></li>
         <li><a href="" class="blue">CSS 如何工作</a></li>
         <li><a href="" class="blue">用用你刚学到的知识</a></li>
     </ol>
-<hr>
-    <ul>
-        <span  class="bo">Found a problem with this page?</span>
+
+    <ul class="found">
+        <span  class="bo" style="font-weight: 500;">Found a problem with this page?</span>
         <li class="blue">Edit on <strong>GitHub</strong></li>
         <li class="blue">Source on <strong>GitHub</strong></li>
         <li class="blue">Report a problem with this content on <strong>GitHub</strong></li>
         <li class="blue">Want to fix the problem yourself? See our Contribution guide.</li>
         <span class="bo">Last modified</span>: 2022年3月9日,<a href="" class="blue"> by MDN contributors</a>
     </ul>
-<hr id="greyup">
+</div>
+
+<div class="greyup">
+
+    <h3><strong>mdn</strong></h3>
     <p>Your blueprint for a better internet.</p>
 
-    <dl>
-        <dt class="bo">MDN</dt>
-        <dd><a href="" class="grey">About</a></dd>
-        <dd><a href="" class="grey">Hacks Blog</a></dd>
-        <dd><a href="" class="grey">Careers</a></dd>
-    </dl>
+    <div >
+       
+    <ul  class="yejiao">
+        <h4 class="bo">MDN</h4>
+        <li><a href="" class="grey">About</a></li>
+        <li><a href="" class="grey">Hacks Blog</a></li>
+        <li><a href="" class="grey">Careers</a></li>
+    </ul>
+    </div>
 
-    <dl>
-        <dt class="bo">Support</dt>
-        <dd><a href="" class="grey">Report a page issue</a></dd>
-        <dd><a href="" class="grey">Report a site issue</a></dd>
-    </dl>
+    <ul class="yejiao">
+        <h4 class="bo">Support</h4>
+        <li><a href="" class="grey">Report a page issue</a></li>
+        <li><a href="" class="grey">Report a site issue</a></li>
+    </ul>
 
-    <dl>
-        <dt  class="bo">Our communities</dt>
-        <dd><a href="" class="grey">MDN Community</a></dd>
-        <dd><a href="" class="grey">MDN Forum</a></dd>
-        <dd><a href="" class="grey">MDN Chat</a></dd>
-    </dl>
+    <ul class="yejiao">
+        <h4  class="bo">Our communities</h4>
+        <li><a href="" class="grey">MDN Community</a></li>
+        <li><a href="" class="grey">MDN Forum</a></li>
+        <li><a href="" class="grey">MDN Chat</a></li>
+    </ul>
 
-    <dl>
-        <dt  class="bo">Developers</dt>
-        <dd><a href="" class="grey">Web Technologies</a></dd>
-        <dd><a href="" class="grey">Learn Web Development</a></dd>
-    </dl>
-
+    <ul class="yejiao">
+        <h4  class="bo">Developers</h4>
+        <li><a href="" class="grey">Web Technologies</a></li>
+        <li><a href="" class="grey">Learn Web Development</a></li>
+    </ul>
+<br>
     <hr>
 
-    <a href="" class="grey">Website Privacy Notice</a>
-    <a href="" class="grey">Cookies</a>
-    <a href="" class="grey">Legal</a>
-    <a href="" class="grey">Community Participation Guidelines</a>
-
-
+    <div class="moz">
+    <a href="" class="grey"> Website Privacy Notice </a>
+    <a href="" class="grey"> Cookies </a>
+    <a href="" class="grey"> Legal </a>
+    <a href="" class="grey"> Community Participation Guidelines </a>
+    </div>
+ 
     <div class="good">
         Visit <a href=""  class="grey">Mozilla Corporation’s</a> not-for-profit parent, the <a href=""  class="grey">Mozilla Foundation.</a>
     </div>
@@ -347,9 +458,10 @@
     <div class="good">
         Portions of this content are ©1998–2022 by individual mozilla.org contributors. Content available under  <a href="" class="grey">a Creative Commons license</a>.
     </div>
+<br>
 
     <button><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS" class="grey">be like</a></button>
-
+</div>
 
 </body>
 </html>
