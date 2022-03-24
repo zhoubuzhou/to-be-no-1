@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: solid;
+        display: flex;
+        flex-flow: column;
+        width: 700px;
+        height: 600px;
+      }
+      .box div {
+        border: solid 1px;
+      }
+      .box2 {
+        display: flex;
+        flex-flow: row;
+        flex: 1 0 auto;
+      }
+
+      .box3 {
+        display: flex;
+        flex-flow: column;
+      }
+      .box3 > div {
+        flex: 1 0 auto;
+      }
+      .tou {
+        font-size: 70px;
+      }
+      .l2 ul {
+        list-style: none;
+        padding-left: 10px;
+        padding-right: 50px;
+      }
+      .zhuce a {
+        display: block;
+        font-size: 10px;
+        padding: 20px 10px 10px;
+        color: rgb(132, 132, 134);
+      }
+      .zhuce button {
+        margin-left: 8px;
+      }
+      .dell {
+        flex: 1 0 auto;
+        background-image: linear-gradient(rgb(141, 218, 141), #fff);
+      }
+      .dell p:nth-child(1) {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 70px;
+        color: rgb(58, 163, 84);
+      }
+      .dell span {
+        text-align: center;
+        margin-left: 130px;
+        padding: 5px 10px;
+        border-radius: 20%;
+        background-color: rgb(58, 163, 84);
+        color: #fff;
+      }
+      .ben {
+        font-size: 40px;
+        text-align: center;
+        color: rgb(73, 201, 105);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="tou">京冬 <input type="text" /></div>
+      <div class="box2">
+        <div class="l2">
+          <ul>
+            <li>家用电器</li>
+            <li>手机</li>
+            <li>电脑</li>
+          </ul>
+        </div>
+        <div class="dell">
+          <p>福利狂想</p>
+          <p class="ben">戴尔笔记本</p>
+          <span>立刻抢购</span>
+        </div>
+        <div class="box3">
+          <div>京东E卡</div>
+          <div>电脑配件</div>
+          <div>0元领取新人礼</div>
+        </div>
+        <div class="zhuce">
+          <a href="">Hi~欢迎光临京冬</a>
+          <button>登录</button>
+          <button>注册</button>
+        </div>
+      </div>
+      <div>
+        此处是个雪碧图
+        <p>balabala</p>
+      </div>
+    </div>
+  </body>
+</html>
