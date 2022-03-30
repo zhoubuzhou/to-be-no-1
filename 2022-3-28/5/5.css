@@ -1,0 +1,30 @@
+.d1:before {
+  content: "1";
+  font-size: 20px;
+  color: red;
+}
+
+.d2:before {
+  content: "2";
+  font-size: 19px;
+  color: red;
+}
+
+.d3:before {
+  content: "3";
+  font-size: 18px;
+  color: red;
+}
+
+.d4:before {
+  content: "4";
+  font-size: 17px;
+  color: red;
+}
+
+.d5:before {
+  content: "5";
+  font-size: 16px;
+  color: red;
+}
+/*# sourceMappingURL=5.css.map */

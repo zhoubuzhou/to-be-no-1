@@ -1,0 +1,13 @@
+.d1, .d2, .d3 {
+  border: solid;
+  color: red;
+}
+
+.d2, .d3 {
+  background-color: aqua;
+}
+
+.d3 {
+  font-size: 20px;
+}
+/*# sourceMappingURL=1.css.map */
