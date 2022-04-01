@@ -1,0 +1,248 @@
+body, p, a, h1 {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+* {
+  border: solid 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main .kong {
+  width: 100vw;
+  height: 2.66667vw;
+  background-color: gray;
+}
+
+.main .tou {
+  width: 100vw;
+  height: 17.06667vw;
+}
+
+.main .tou .sketch {
+  width: 100vw;
+  height: 5.33333vw;
+}
+
+.main .tou .quan {
+  width: 100vw;
+  height: 11.73333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .tou .quan .xiaoyu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .tou .quan .yu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .tou .quan .dian {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main .ditu {
+  width: 100vw;
+  height: 40vw;
+}
+
+.main .ditu div {
+  position: relative;
+  top: 32vw;
+  left: 50%;
+  margin-left: -9.33333vw;
+  display: inline-block;
+}
+
+.main .shangxian {
+  width: 100vw;
+  height: 24vw;
+}
+
+.main .shangxian img {
+  width: 92vw;
+  height: 19.46667vw;
+  margin: 2.26667vw 4vw;
+}
+
+.main .lan {
+  width: 100vw;
+  height: 42.26667vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3.73333vw 4vw;
+}
+
+.main .lan div {
+  width: 21.86667vw;
+  height: 15.2vw;
+}
+
+.main .zixun .zzy {
+  width: 92vw;
+  height: 17.33333vw;
+  margin: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .zixun .zzy .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main .zixun .zzy .left .lv {
+  width: 16vw;
+  height: 17.33333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .zixun .zzy .left .lv div {
+  width: 9.33333vw;
+  height: 9.78667vw;
+}
+
+.main .zixun .zzy .left .ul {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main .zixun .zzy .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13.33333vw;
+  height: 17.06667vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .lan2 {
+  width: 100vw;
+  height: 48.53333vw;
+}
+
+.main .lan2 .boxx1 {
+  width: 100vw;
+  height: 48.53333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main .lan2 .boxx1 div {
+  width: 44vw;
+  height: 18.66667vw;
+}
+
+.main .lan3 .boxxx1 {
+  width: 100vw;
+  height: 100.8vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  padding: 4vw 4vw 4.53333vw;
+}
+
+.main .lan3 .boxxx1 div {
+  width: 30.4vw;
+  height: 30.4vw;
+  border-radius: 6px;
+}
+
+.main .wei {
+  width: 100vw;
+  height: 16.53333vw;
+  background-color: gray;
+}
+/*# sourceMappingURL=home page.css.map */
