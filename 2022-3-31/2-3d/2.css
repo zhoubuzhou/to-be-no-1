@@ -1,0 +1,72 @@
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: rotatez(0deg) skew(-40deg, -40deg);
+            transform: rotatez(0deg) skew(-40deg, -40deg);
+  }
+  100% {
+    -webkit-transform: rotatez(360deg) skew(-40deg, -40deg);
+            transform: rotatez(360deg) skew(-40deg, -40deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: rotatez(0deg) skew(-40deg, -40deg);
+            transform: rotatez(0deg) skew(-40deg, -40deg);
+  }
+  100% {
+    -webkit-transform: rotatez(360deg) skew(-40deg, -40deg);
+            transform: rotatez(360deg) skew(-40deg, -40deg);
+  }
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: #baf4f8;
+  border: solid 10px;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  -webkit-perspective: 200px;
+          perspective: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.box span {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  left: 50%;
+  margin-left: -2px;
+  z-index: 999;
+}
+
+.d1 {
+  width: 100px;
+  height: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(95%, #fff));
+  background-image: linear-gradient(red, #fff 95%);
+  border: solid;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -50px;
+  -webkit-transform: skew(-40deg, -40deg);
+          transform: skew(-40deg, -40deg);
+  -webkit-animation: move 2s cubic-bezier(0.5, 0, 0, 1) infinite;
+          animation: move 2s cubic-bezier(0.5, 0, 0, 1) infinite;
+}
+
+.d1:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+/*# sourceMappingURL=2.css.map */

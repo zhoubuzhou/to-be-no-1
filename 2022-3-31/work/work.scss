@@ -1,0 +1,42 @@
+$num:490;
+@keyframes move {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-#{$num}deg);
+  }
+}
+
+.main {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  .box {
+    width: 400px;
+    height: 400px;
+    background: url(./p3.jpg);
+    background-size: contain;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .zhen {
+    width: 100px;
+    height: 100px;
+    background: url(./p2.png) center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    flex-wrap: nowrap;
+    z-index: 9999;
+    animation-play-state: paused;
+    &:hover {
+      animation: move 3s cubic-bezier(.44,.34,0,1.01) infinite both;
+      animation-play-state: running;
+      cursor:pointer;
+    }
+  }
+}
