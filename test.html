@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-content:space-evenly;
+        flex-wrap: wrap;
+      }
+      li {
+        width: 30%;
+        height: 200px;
+        border: 1px solid #000;
+        list-style: none;
+        margin-bottom: 20px;
+      }
+      ul:after{
+        content: '';
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul></ul>
+    <div>123</div>
+    <script>
+
+      for (let i = 0; i < 5*Math.random() + 2; i++) {
+        const li = document.createElement("li");
+        document.getElementsByTagName("ul")[0].append(li);
+      }
+    </script>
+  </body>
+</html>
