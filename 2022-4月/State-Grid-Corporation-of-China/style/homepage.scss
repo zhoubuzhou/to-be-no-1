@@ -1,0 +1,492 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url(../iconfont/iconfont.ttf) format("truetype");
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin title {
+    position: absolute;
+    height: 52px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 20px;
+    border-radius:8px 8px 0px 0px;
+     box-shadow:0px 1px 0px #e2e2e2;
+}
+
+// Small green marker 缩写绿色的小标记
+@mixin sgm {
+    width: 4px;
+    height: 16px;
+    background-color: #00796a;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+// 正文样式开始----
+.main {
+    width: 1440px;
+    margin: auto;
+    padding: 60px 16px 0px;
+    position: relative;
+    background-color: #efefef;
+
+    .header {
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(49, 150, 154, 1);
+
+        .left {
+            color: #ffffff;
+            padding: 0px 16px;
+            width: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span:nth-child(1) {
+                font-size: 44.5px;
+            }
+
+            span:nth-child(2) {
+                font-size: 18px;
+
+            }
+
+            span:nth-child(3) {
+                font-size: 14px;
+                text-shadow: 0px 3px 0px rgba(4, 35, 37, 0.19);
+            }
+        }
+
+        .right {
+            width: 480px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 26px;
+
+            span:nth-child(1) {
+                position: relative;
+
+                input {
+                    outline: none;
+                    width: 287px;
+                    height: 36px;
+                    background-color: rgba(41, 146, 148, 1);
+                    border: 1px solid;
+                    border-color: #50e1e4;
+                    border-radius: 18px;
+                    padding-left: 20.6px;
+                    color: #ffffff;
+                    font-size: 14px;
+                    box-sizing: border-box;
+                    &::placeholder{
+                        color:rgba(255, 255, 255, 0.2);
+                    }
+                }
+
+                .loupe {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 10px;
+                    font-size: 24px;
+                }
+            }
+
+            span:nth-child(n+2) {
+                color: #3bcbd0;
+                text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.16);
+                font-size: 23px;
+            }
+
+            .nine {
+                position: absolute;
+                right: 74px;
+                bottom: 16px;
+                width: 18px;
+                height: 14.01px;
+                background-color: #f13413;
+                border-radius: 5.42px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    color: #ffffff;
+                    transform: scale(0.6);
+                }
+            }
+        }
+    }
+
+    .Bread-crab {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+        margin: 16px 0 16px;
+        padding: 0 16px;
+
+        .house {
+            font-size: 25px;
+            color: #8c8c8c;
+        }
+
+        .tab {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            border: none;
+            color: #8c8c8c;
+
+            .options {
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                margin-left: 16px;
+
+                .options-1 {
+                    width: 118px;
+                    height: 30px;
+                    background-color: #f0f0f0;
+                    border-radius: 4px;
+                    padding: 8px 8px 8px 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span:nth-child(1) {
+                        color: #434343;
+                        font-size: 14px;
+                    }
+
+                    span:nth-child(2) {
+                        color: #8c8c8c;
+                        display: block;
+                        transform: scale(0.8);
+                    }
+
+                }
+
+                .options-2 {
+                    width: 142px;
+                    height: 30px;
+                    background-color: #519499;
+                    border-radius: 4px;
+                    padding: 8px 8px 8px 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-left: 8px;
+
+                    span:nth-child(1) {
+                        font-weight: 700;
+                        color: #ffffff;
+                        font-size: 14px;
+                    }
+
+                    span:nth-child(2) {
+                        width: 16px;
+                        height: 16px;
+                        background-color: #5aa1a7;
+                        border-radius: 50%;
+
+                        span {
+                            color: #ffffffbc;
+                            display: block;
+                            transform: scale(0.7);
+                            text-align: center;
+                        }
+                    }
+
+                }
+            }
+
+            .vertical {
+                width: 0px;
+                height: 16px;
+                background-color: #ffffff;
+                border: 1px solid;
+                border-color: #e0e0e0;
+                margin: 0 16px;
+            }
+        }
+
+        .magnify {
+            display: flex;
+            font-size: 16px;
+            align-items: center;
+            color: #8c8c8c;
+
+            span:nth-child(1) {
+                margin-right: 16px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .search {
+        height: 64px;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        label:nth-child(1) {
+            flex-grow: 1;
+
+            select {
+                width: 248px;
+                height: 32px;
+                border-color: #d9d9d9;
+                border-radius: 4px;
+                margin-left: 12px;
+                padding-left: 12px;
+            }
+        }
+
+        label:nth-child(2) {
+            flex-grow: 4;
+
+            input {
+                width: 212px;
+                height: 31px;
+                border-color: rgba(0, 0, 0, 0.15);
+                border-radius: 4px;
+                margin-left: 17px;
+                padding-left: 12px;
+                color: rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        div {
+            button {
+                width: 64px;
+                height: 32px;
+                &:nth-child(1){
+                background-color: #ffffff;
+                border: 1px solid;
+                border-color: #d9d9d9;
+                border-radius: 6px;
+                }
+                &:nth-child(2){
+                    background-color:#519499;
+                    border: 1px solid #519499;
+                    border-radius:6px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .count {
+        height: 95px;
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 0;
+        color:#ffffff;
+        .item {
+            width: 340px;
+            padding: 17px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:nth-child(1) {
+                background-image: linear-gradient(135.23deg, #3cced9 0%, #519499 100%);
+                border-radius: 8px;
+            }
+
+            &:nth-child(2) {
+                background-image: linear-gradient(135.23deg, #44d7b6 0%, #33d0ac 100%);
+                border-radius: 8px
+            }
+
+            &:nth-child(3) {
+                background-image: linear-gradient(135.23deg, #f7b500 0%, #fd9128 100%);
+                border-radius: 8px;
+            }
+
+            &:nth-child(4) {
+                background-image: linear-gradient(135.23deg, #80d3ff 0%, #27b4ff 100%);
+                border-radius: 8px;
+            }
+
+
+            .writing {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                justify-content: space-between;
+                height: 46px;
+                border: none;
+
+                p {
+                    display: inline;
+                    font-size: 20px;
+                }
+            }
+
+            .mark {
+                height: 48px;
+                width: 48px;
+                background-color: #ffffff;
+                border-radius: 50%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 26px;
+                }
+                .voltmeter-1{
+                    color:#4ba5ab;
+                }
+                .voltmeter-2{
+                    color:#34d1ad;
+                }
+                .clock-1{
+                    color:#f69d3d;
+                }
+                .clock-2{
+                    color:#26aff8;
+                }
+            }
+        }
+    }
+
+    .user {
+        height: 548px;
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 0;
+
+        .item {
+            position: relative;
+
+            &:nth-of-type(1) {
+                width: 574px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                div {
+                    @include title;
+                    padding-left: 16px;
+
+                    span {
+                        @include sgm;
+                    }
+                }
+                img{
+                    height: 420px;
+                    margin-top: 25px;
+
+                }
+            }
+
+            &:nth-of-type(2) {
+                width: 400px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+
+                div {
+                    @include title;
+
+                    span {
+                        @include sgm;
+                    }
+                }
+            }
+
+            &:nth-of-type(3) {
+                width: 402px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+
+                div {
+                    @include title;
+
+                    span {
+                        @include sgm;
+                    }
+                }
+            }
+        }
+    }
+
+    .Charts {
+        height: 519px;
+        display: flex;
+        justify-content: space-between;
+
+
+        .item {
+            &:nth-of-type(1) {
+                width: 574px;
+                position: relative;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+
+                div {
+                    @include title;
+
+                    span {
+                        @include sgm;
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                width: 818px;
+                position: relative;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+
+                div {
+                    @include title;
+
+                    span {
+                        @include sgm;
+                    }
+                }
+            }
+        }
+    }
+}
