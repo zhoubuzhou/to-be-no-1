@@ -21,8 +21,8 @@
     align-items: center;
     font-size: 16px;
     padding-left: 20px;
-    border-radius:8px 8px 0px 0px;
-     box-shadow:0px 1px 0px #e2e2e2;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0px 1px 0px #e2e2e2;
 }
 
 // Small green marker 缩写绿色的小标记
@@ -34,18 +34,20 @@
     margin-right: 8px;
 }
 
-div {
+* {
     box-sizing: border-box;
 }
+
 
 // 正文样式开始----
 .main {
     width: 1440px;
     margin: auto;
-    padding: 60px 16px 0px;
+    padding: 60px 16px 16px;
     position: relative;
     background-color: #efefef;
 
+    // 主页头部
     .header {
         height: 60px;
         position: absolute;
@@ -57,6 +59,7 @@ div {
         align-items: center;
         background-color: rgba(49, 150, 154, 1);
 
+        // 左半部分的图标&导航
         .left {
             color: #ffffff;
             padding: 0px 16px;
@@ -80,6 +83,7 @@ div {
             }
         }
 
+        // 右半部分
         .right {
             width: 480px;
             position: relative;
@@ -91,6 +95,7 @@ div {
             span:nth-child(1) {
                 position: relative;
 
+                // 搜索栏
                 input {
                     outline: none;
                     width: 287px;
@@ -103,11 +108,13 @@ div {
                     color: #ffffff;
                     font-size: 14px;
                     box-sizing: border-box;
-                    &::placeholder{
-                        color:rgba(255, 255, 255, 0.2);
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.2);
                     }
                 }
 
+                // 搜索栏中的放大镜样式
                 .loupe {
                     position: absolute;
                     bottom: 5px;
@@ -116,12 +123,14 @@ div {
                 }
             }
 
+            // 右上角3个 图标样式
             span:nth-child(n+2) {
                 color: #3bcbd0;
                 text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.16);
                 font-size: 23px;
             }
 
+            // 99悬浮消息通知
             .nine {
                 position: absolute;
                 right: 74px;
@@ -142,6 +151,7 @@ div {
         }
     }
 
+    // 面包蟹栏
     .Bread-crab {
         height: 38px;
         display: flex;
@@ -157,6 +167,7 @@ div {
             color: #8c8c8c;
         }
 
+        // 中间功能区
         .tab {
             flex-grow: 1;
             display: flex;
@@ -170,6 +181,7 @@ div {
                 align-items: center;
                 margin-left: 16px;
 
+                // 非业务功能
                 .options-1 {
                     width: 118px;
                     height: 30px;
@@ -193,6 +205,7 @@ div {
 
                 }
 
+                // 台区状态分析
                 .options-2 {
                     width: 142px;
                     height: 30px;
@@ -227,6 +240,7 @@ div {
                 }
             }
 
+            // 分割小块
             .vertical {
                 width: 0px;
                 height: 16px;
@@ -237,6 +251,7 @@ div {
             }
         }
 
+        // 图标样式 爱心放大
         .magnify {
             display: flex;
             font-size: 16px;
@@ -250,6 +265,7 @@ div {
         }
     }
 
+    // 选项栏 管理单位日期选择
     .search {
         height: 64px;
         padding: 16px;
@@ -261,6 +277,7 @@ div {
         align-items: center;
         font-size: 14px;
 
+        // 管理单位
         label:nth-child(1) {
             flex-grow: 1;
 
@@ -274,6 +291,7 @@ div {
             }
         }
 
+        // 日期选择
         label:nth-child(2) {
             flex-grow: 4;
 
@@ -292,28 +310,34 @@ div {
             button {
                 width: 64px;
                 height: 32px;
-                &:nth-child(1){
-                background-color: #ffffff;
-                border: 1px solid;
-                border-color: #d9d9d9;
-                border-radius: 6px;
+
+                // 按钮1重置
+                &:nth-child(1) {
+                    background-color: #ffffff;
+                    border: 1px solid;
+                    border-color: #d9d9d9;
+                    border-radius: 6px;
                 }
-                &:nth-child(2){
-                    background-color:#519499;
+
+                // 按钮2查询
+                &:nth-child(2) {
+                    background-color: #519499;
                     border: 1px solid #519499;
-                    border-radius:6px;
+                    border-radius: 6px;
                     color: #fff;
                 }
             }
         }
     }
 
+    // 1*4图标表
     .count {
         height: 95px;
         display: flex;
         justify-content: space-between;
         margin: 16px 0;
-        color:#ffffff;
+        color: #ffffff;
+
         .item {
             width: 340px;
             padding: 17px;
@@ -321,6 +345,7 @@ div {
             justify-content: space-between;
             align-items: center;
 
+            // 板块背景色
             &:nth-child(1) {
                 background-image: linear-gradient(135.23deg, #3cced9 0%, #519499 100%);
                 border-radius: 8px;
@@ -341,7 +366,7 @@ div {
                 border-radius: 8px;
             }
 
-
+            // 区块统一样式
             .writing {
                 display: flex;
                 flex-direction: column;
@@ -350,12 +375,14 @@ div {
                 height: 46px;
                 border: none;
 
+                // 数字样式覆盖
                 p {
                     display: inline;
                     font-size: 20px;
                 }
             }
 
+            // 1*4区块中的图标样式
             .mark {
                 height: 48px;
                 width: 48px;
@@ -369,22 +396,31 @@ div {
                 span {
                     font-size: 26px;
                 }
-                .voltmeter-1{
-                    color:#4ba5ab;
+
+                // 第一块图标 电表颜色
+                .voltmeter-1 {
+                    color: #4ba5ab;
                 }
-                .voltmeter-2{
-                    color:#34d1ad;
+
+                // 第二块图标 电表颜色
+                .voltmeter-2 {
+                    color: #34d1ad;
                 }
-                .clock-1{
-                    color:#f69d3d;
+
+                // 第三块图标 钟颜色
+                .clock-1 {
+                    color: #f69d3d;
                 }
-                .clock-2{
-                    color:#26aff8;
+
+                // 第四块图标 钟颜色
+                .clock-2 {
+                    color: #26aff8;
                 }
             }
         }
     }
 
+    // 1*3图标部分
     .user {
         height: 548px;
         display: flex;
@@ -394,6 +430,7 @@ div {
         .item {
             position: relative;
 
+            // 第一块安徽省
             &:nth-of-type(1) {
                 width: 574px;
                 background-color: #ffffff;
@@ -402,6 +439,7 @@ div {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 div {
                     @include title;
                     padding-left: 16px;
@@ -410,82 +448,675 @@ div {
                         @include sgm;
                     }
                 }
-                img{
+
+                img {
                     height: 420px;
                     margin-top: 25px;
 
                 }
             }
 
+            // 第二块优化用户数
             &:nth-of-type(2) {
                 width: 400px;
                 background-color: #ffffff;
                 border-radius: 8px;
                 box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 86px 0 73px;
 
-                div {
-                    @include title;
 
-                    span {
-                        @include sgm;
+                >div {
+
+                    &:nth-child(1) {
+                        @include title;
+
+                        span {
+                            @include sgm;
+                        }
                     }
+
+                    &:nth-child(2) {
+                        width: 322px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 16px;
+                        font-weight: 500;
+
+                        span {
+                            &:nth-child(1) {
+                                font-size: 16px;
+                                color: rgba(49, 150, 154, 1);
+                                margin: 0px;
+                            }
+
+                            font-size: 12px;
+                            color: rgba(153, 153, 153, 1);
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        width: 279px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        div {
+                            font-size: 16px;
+                            color: rgba(102, 102, 102, 1);
+                            display: flex;
+                            align-items: center;
+
+                            >span {
+                                display: inline-block;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                margin-right: 8px;
+                                background-color: #d9d9d9;
+                            }
+
+                            .col-blue {
+                                background-color: #4689f6;
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    width: 212.3px;
                 }
             }
 
+            // 第三块优化负荷
             &:nth-of-type(3) {
                 width: 402px;
                 background-color: #ffffff;
                 border-radius: 8px;
                 box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 86px 0 73px;
 
-                div {
-                    @include title;
+                >div {
+                    &:nth-child(1) {
+                        @include title;
 
-                    span {
-                        @include sgm;
+                        span {
+                            @include sgm;
+                        }
                     }
+
+                    &:nth-child(2) {
+                        width: 308px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 16px;
+                        font-weight: 500;
+
+                        span {
+                            &:nth-child(1) {
+                                font-size: 16px;
+                                color: rgba(49, 150, 154, 1);
+                                margin: 0px;
+                            }
+
+                            font-size: 12px;
+                            color: rgba(153, 153, 153, 1);
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        width: 279px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        div {
+                            font-size: 16px;
+                            color: rgba(102, 102, 102, 1);
+                            display: flex;
+                            align-items: center;
+
+                            >span {
+                                display: inline-block;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                margin-right: 8px;
+                                background-color: #d9d9d9;
+                            }
+
+                            .col-green {
+                                background-color: rgba(65, 215, 156, 1);
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    width: 212.3px;
                 }
             }
         }
     }
 
-    .Charts {
+    // 1*2表格 第一模块 1-3行样式
+    @mixin taiqu-1 {
+
+        // 序号
+        &:nth-child(1) {
+            width: 18px;
+            height: 18px;
+            background-color: #31969a;
+            border-radius: 50%;
+            text-align: center;
+
+            span {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        // 台区名称
+        &:nth-child(2) {
+            font-size: 17px;
+        }
+
+        // 数据线底色
+        &:nth-child(3) {
+            width: 352px;
+            height: 6px;
+            background-color: rgba(239, 239, 239, 1);
+            border-radius: 3px;
+        }
+
+        // 分数
+        &:nth-child(4) {
+            font-size: 16px;
+
+            span {
+                color: rgba(153, 153, 153, 1);
+                font-size: 12px;
+            }
+        }
+    }
+
+    // 1*2表格 第一模块 4-10行样式
+    @mixin taiqu-4 {
+
+        // 序号
+        &:nth-child(1) {
+            color: rgba(102, 102, 102, 1);
+            font-size: 14px;
+            width: 16px;
+            text-align: center;
+        }
+
+        // 台区名称
+        &:nth-child(2) {
+            font-size: 17px;
+        }
+
+        // 数据线底色
+        &:nth-child(3) {
+            width: 352px;
+            height: 6px;
+            background-color: rgba(239, 239, 239, 1);
+            border-radius: 3px;
+        }
+
+        // 分数
+        &:nth-child(4) {
+            font-size: 16px;
+
+            span {
+                color: rgba(153, 153, 153, 1);
+                font-size: 12px;
+            }
+        }
+    }
+
+    @function top($n){
+        @return $n - 12px;
+    }
+    // 1*2表格
+    .charts {
         height: 519px;
         display: flex;
         justify-content: space-between;
 
-
         .item {
+
+            // 这里是台区优化评分排名部分
             &:nth-of-type(1) {
                 width: 574px;
                 position: relative;
                 background-color: #ffffff;
                 border-radius: 8px;
                 box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding-bottom: 14px;
 
-                div {
-                    @include title;
-
-                    span {
-                        @include sgm;
+                >div {
+                    >div {
+                        display: inline-block;
                     }
+
+                    &:nth-child(1) {
+                        @include title;
+
+                        span {
+                            @include sgm;
+                        }
+                    }
+
+                    // 表格开始
+                    // 第一排
+                    &:nth-child(2) {
+                        margin-top: 52px;
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-1();
+
+                            // 线条数据
+                            >div {
+                                width: 340px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #31969a;
+                            }
+
+                        }
+                    }
+
+                    // 第二排
+                    &:nth-child(3) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-1();
+
+                            // 线条数据
+                            >div {
+                                width: 329px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #f7b500;
+                            }
+
+                        }
+                    }
+
+                    // 第三排
+                    &:nth-child(4) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-1();
+
+                            // 线条数据
+                            >div {
+                                width: 321px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #3da3fc;
+                            }
+                        }
+                    }
+
+                    // 第四排
+                    &:nth-child(5) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-4();
+
+                            // 线条数据
+                            >div {
+                                width: 318px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #6cc4ca;
+                            }
+
+                        }
+                    }
+
+                    // 第五排
+                    &:nth-child(6) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-4();
+
+                            // 线条数据
+                            >div {
+                                width: 294px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #6cc4ca;
+                            }
+
+                        }
+                    }
+
+                    // 第六排
+                    &:nth-child(7) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-4();
+
+                            // 线条数据
+                            >div {
+                                width: 284px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #6cc4ca;
+                            }
+
+                        }
+                    }
+
+                    // 第七排
+                    &:nth-child(8) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-4();
+
+                            // 线条数据
+                            >div {
+                                width: 284px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #6cc4ca;
+                            }
+
+                        }
+                    }
+
+                    // 第八排
+                    &:nth-child(9) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-4();
+
+                            // 线条数据
+                            >div {
+                                width: 284px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #6cc4ca;
+                            }
+
+                        }
+                    }
+
+                    // 第九排
+                    &:nth-child(10) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-4();
+
+                            // 线条数据
+                            >div {
+                                width: 284px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #6cc4ca;
+                            }
+
+                        }
+                    }
+
+                    // 第十排
+                    &:nth-child(11) {
+                        width: 527px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >div {
+                            @include taiqu-4();
+
+                            // 线条数据
+                            >div {
+                                width: 284px;
+                                height: 6px;
+                                border-radius: 3px;
+                                background-color: #6cc4ca;
+                            }
+
+                        }
+                    }
+
                 }
             }
 
+            // 区域台区用能优化统计
             &:nth-of-type(2) {
                 width: 818px;
                 position: relative;
                 background-color: #ffffff;
                 border-radius: 8px;
                 box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
 
-                div {
-                    @include title;
+                >div {
 
-                    span {
-                        @include sgm;
+                    // 头部
+                    &:nth-child(1) {
+                        @include title;
+
+                        span {
+                            @include sgm;
+                        }
+                    }
+
+                    // 统计表开始
+                    // 单位
+                    &:nth-child(2) {
+                        margin-top: 52px;
+                        color: #999999;
+                        font-size: 11px;
+                        align-self: flex-start;
+                        margin-left: 33px;
+                    }
+
+                    // 计数底
+                    &:nth-child(3) {
+                        height: 358px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-end;
+
+                        >div {
+                            display: flex;
+                            align-items: center;
+
+                            // 1000-200文字和虚线样式
+                            >span {
+                                font-size: 11px;
+
+                                &:nth-child(1) {
+                                    color: rgba(153, 153, 153, 1);
+                                    margin-right: 10px;
+                                }
+
+                                &:nth-child(2) {
+                                    display: inline-block;
+                                    width: 702.3px;
+                                    border-top: 2px dashed rgba(230, 230, 230, 1);
+                                }
+                            }
+
+                            // 0实线样式
+                            &:nth-last-child(1) {
+                                >span:nth-child(2) {
+                                    border-top: 1px solid rgba(230, 230, 230, 1);
+                                }
+
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        width: 678px;
+                        display: flex;
+                        justify-content: space-between;
+                        padding-left: 25px;
+                        margin-top: -20px;
+                        // 城市列
+                        >div {
+                            font-size: 12px;
+                            color: rgba(153, 153, 153, 1);
+                            position: relative;
+                            // 竖条基本样式
+                            >span {
+                                position: absolute;
+                                left: 12px;
+                                width: 12px;
+                                background-color: #4689f6;
+                                border-radius: 4px 4px 0px 0px;
+                            }
+                            // 第1条
+                            &:nth-child(1){
+                                >span{
+                                    height: 244px;
+                                    top: top(-244px);
+                                }
+                            }
+                            // 第2条
+                            &:nth-child(2){
+                                >span{
+                                    height:200px;
+                                    top: top(-200px);
+                                }
+                            }
+                            // 第3条
+                            &:nth-child(3){
+                                >span{
+                                    height:296px;
+                                    top: top(-296px);
+                                }
+                            }
+                            // 第4条
+                            &:nth-child(4){
+                                >span{
+                                    height:235px;
+                                    top:top(-235px);
+                                }
+                            }
+                            // 第5条
+                            &:nth-child(5){
+                                >span{
+                                    height: 222px;
+                                    top: top(-222px);
+                                }
+                            }
+                             // 第6条
+                             &:nth-child(6){
+                                >span{
+                                    height: 213px;
+                                    top: top(-213px);
+                                }
+                            }
+                             // 第7条
+                             &:nth-child(7){
+                                >span{
+                                    height: 244px;
+                                    top: top(-244px);
+                                }
+                            }
+                             // 第8条
+                             &:nth-child(8){
+                                >span{
+                                    height: 220px;
+                                    top:top(-220px);
+                                }
+                            }
+                             // 第9条
+                             &:nth-child(9){
+                                >span{
+                                    height: 194px;
+                                    top: top(-194px);
+                                }
+                            }
+                            // 第10条
+                            &:nth-child(10){
+                                >span{
+                                    height: 247px;
+                                    top:top(-247px);
+                                }
+                            }
+                            // 第11条
+                            &:nth-child(11){
+                                >span{
+                                    height: 192px;
+                                    top: top(-192px);
+                                }
+                            }
+                            // 第12条
+                            &:nth-child(12){
+                                >span{
+                                    height: 214px;
+                                    top: top(-214px);
+                                }
+                            }
+                            // 第13条
+                            &:nth-child(13){
+                                >span{
+                                    height: 196px;
+                                    top:top(-196px);
+                                }
+                            }
+                        }
                     }
                 }
+
             }
         }
     }

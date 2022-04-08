@@ -71,24 +71,4 @@ div {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
-
-.col-12 {
-  background-color: blue;
-}
-
-.col-6 {
-  background-color: green;
-}
-
-.col-4 {
-  background-color: red;
-}
-
-.col-3 {
-  background-color: pink;
-}
-
-.col-2 {
-  background-color: yellow;
-}
 /*# sourceMappingURL=4.css.map */

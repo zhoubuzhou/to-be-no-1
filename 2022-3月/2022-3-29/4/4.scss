@@ -13,9 +13,3 @@ div{
         flex-basis: $i/12*100%;
     }
 }
-
-@each $c,$ba in (blue,12)(green,6)(red,4)(pink,3)(yellow,2) {
-    .col-#{$ba}{
-        background-color: #{$c};
-    }
-}
