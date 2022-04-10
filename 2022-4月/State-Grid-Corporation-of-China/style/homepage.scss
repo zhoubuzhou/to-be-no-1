@@ -498,7 +498,7 @@
                         }
                     }
 
-                    &:nth-of-type(3) {
+                    &:nth-of-type(4) {
                         width: 279px;
                         display: flex;
                         justify-content: space-between;
@@ -528,6 +528,14 @@
                 img {
                     width: 212.3px;
                 }
+
+                // .round{
+                //     width: 212.3px;
+                //     height: 212.3px;
+                //     background-color: #00796a;
+                //     border-radius: 50%;
+                //     position: relative;
+                // }
             }
 
             // 第三块优化负荷
@@ -570,7 +578,7 @@
                         }
                     }
 
-                    &:nth-of-type(3) {
+                    &:nth-of-type(4) {
                         width: 279px;
                         display: flex;
                         justify-content: space-between;

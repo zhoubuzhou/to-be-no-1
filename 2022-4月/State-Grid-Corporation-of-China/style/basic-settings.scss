@@ -1,0 +1,605 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url(../iconfont/iconfont.ttf) format("truetype");
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin title {
+    position: absolute;
+    height: 52px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 20px;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0px 1px 0px #e2e2e2;
+}
+
+// Small green marker 缩写绿色的小标记
+@mixin sgm {
+    width: 4px;
+    height: 16px;
+    background-color: #00796a;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// 正文样式开始----
+.main {
+    width: 1440px;
+    margin: auto;
+    padding: 60px 16px 16px;
+    position: relative;
+    background-color: #efefef;
+
+    // 主页头部
+    .header {
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(49, 150, 154, 1);
+
+        // 左半部分的图标&导航
+        .left {
+            color: #ffffff;
+            padding: 0px 16px;
+            width: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span:nth-child(1) {
+                font-size: 44.5px;
+            }
+
+            span:nth-child(2) {
+                font-size: 18px;
+
+            }
+
+            span:nth-child(3) {
+                font-size: 14px;
+                text-shadow: 0px 3px 0px rgba(4, 35, 37, 0.19);
+            }
+        }
+
+        // 右半部分
+        .right {
+            width: 480px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 26px;
+
+            span:nth-child(1) {
+                position: relative;
+
+                // 搜索栏
+                input {
+                    outline: none;
+                    width: 287px;
+                    height: 36px;
+                    background-color: rgba(41, 146, 148, 1);
+                    border: 1px solid;
+                    border-color: #50e1e4;
+                    border-radius: 18px;
+                    padding-left: 20.6px;
+                    color: #ffffff;
+                    font-size: 14px;
+                    box-sizing: border-box;
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+
+                // 搜索栏中的放大镜样式
+                .loupe {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 10px;
+                    font-size: 24px;
+                }
+            }
+
+            // 右上角3个 图标样式
+            span:nth-child(n+2) {
+                color: #3bcbd0;
+                text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.16);
+                font-size: 23px;
+            }
+
+            // 99悬浮消息通知
+            .nine {
+                position: absolute;
+                right: 74px;
+                bottom: 16px;
+                width: 18px;
+                height: 14.01px;
+                background-color: #f13413;
+                border-radius: 5.42px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    color: #ffffff;
+                    transform: scale(0.6);
+                }
+            }
+        }
+    }
+
+    // 面包蟹栏
+    .Bread-crab {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+        margin: 16px 0 16px;
+        padding: 0 16px;
+
+        .house {
+            font-size: 25px;
+            color: #8c8c8c;
+        }
+
+        // 中间功能区
+        .tab {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            border: none;
+            color: #8c8c8c;
+
+            .options {
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                margin-left: 16px;
+
+                // 非业务功能
+                .options-1 {
+                    width: 118px;
+                    height: 30px;
+                    background-color: #f0f0f0;
+                    border-radius: 4px;
+                    padding: 8px 8px 8px 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span:nth-child(1) {
+                        color: #434343;
+                        font-size: 14px;
+                    }
+
+                    span:nth-child(2) {
+                        color: #8c8c8c;
+                        display: block;
+                        transform: scale(0.8);
+                    }
+
+                }
+
+                // 台区状态分析
+                .options-2 {
+                    width: 142px;
+                    height: 30px;
+                    background-color: #519499;
+                    border-radius: 4px;
+                    padding: 8px 8px 8px 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-left: 8px;
+
+                    span:nth-child(1) {
+                        font-weight: 700;
+                        color: #ffffff;
+                        font-size: 14px;
+                    }
+
+                    span:nth-child(2) {
+                        width: 16px;
+                        height: 16px;
+                        background-color: #5aa1a7;
+                        border-radius: 50%;
+
+                        span {
+                            color: #ffffffbc;
+                            display: block;
+                            transform: scale(0.7);
+                            text-align: center;
+                        }
+                    }
+
+                }
+            }
+
+            // 分割小块
+            .vertical {
+                width: 0px;
+                height: 16px;
+                background-color: #ffffff;
+                border: 1px solid;
+                border-color: #e0e0e0;
+                margin: 0 16px;
+            }
+        }
+
+        // 图标样式 爱心放大
+        .magnify {
+            display: flex;
+            font-size: 16px;
+            align-items: center;
+            color: #8c8c8c;
+
+            span:nth-child(1) {
+                margin-right: 16px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    // 选项栏 管理单位日期选择
+    .search {
+        height: 64px;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        // 管理单位
+        label:nth-child(1) {
+            flex-grow: 1;
+
+            select {
+                width: 248px;
+                height: 32px;
+                border-color: #d9d9d9;
+                border-radius: 4px;
+                margin-left: 12px;
+                padding-left: 12px;
+            }
+        }
+
+        // 日期选择
+        label:nth-child(2) {
+            flex-grow: 4;
+
+            input {
+                width: 212px;
+                height: 31px;
+                border-color: rgba(0, 0, 0, 0.15);
+                border-radius: 4px;
+                margin-left: 17px;
+                padding-left: 12px;
+                color: rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        div {
+            button {
+                width: 64px;
+                height: 32px;
+
+                // 按钮1重置
+                &:nth-child(1) {
+                    background-color: #ffffff;
+                    border: 1px solid;
+                    border-color: #d9d9d9;
+                    border-radius: 6px;
+                }
+
+                // 按钮2查询
+                &:nth-child(2) {
+                    background-color: #519499;
+                    border: 1px solid #519499;
+                    border-radius: 6px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    // 1*4图标表
+    .count {
+        height: 95px;
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 0;
+        color: #ffffff;
+
+        .item {
+            width: 340px;
+            padding: 17px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            // 板块背景色
+            &:nth-child(1) {
+                background-image: linear-gradient(135.23deg, #3cced9 0%, #519499 100%);
+                border-radius: 8px;
+            }
+
+            &:nth-child(2) {
+                background-image: linear-gradient(135.23deg, #44d7b6 0%, #33d0ac 100%);
+                border-radius: 8px
+            }
+
+            &:nth-child(3) {
+                background-image: linear-gradient(135.23deg, #f7b500 0%, #fd9128 100%);
+                border-radius: 8px;
+            }
+
+            &:nth-child(4) {
+                background-image: linear-gradient(135.23deg, #80d3ff 0%, #27b4ff 100%);
+                border-radius: 8px;
+            }
+
+            // 区块统一样式
+            .writing {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                justify-content: space-between;
+                height: 46px;
+                border: none;
+
+                // 数字样式覆盖
+                p {
+                    display: inline;
+                    font-size: 20px;
+                }
+            }
+
+            // 1*4区块中的图标样式
+            .mark {
+                height: 48px;
+                width: 48px;
+                background-color: #ffffff;
+                border-radius: 50%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 26px;
+                }
+
+                // 第一块图标 电表颜色
+                .voltmeter-1 {
+                    color: #4ba5ab;
+                }
+
+                // 第二块图标 电表颜色
+                .voltmeter-2 {
+                    color: #34d1ad;
+                }
+
+                // 第三块图标 钟颜色
+                .clock-1 {
+                    color: #f69d3d;
+                }
+
+                // 第四块图标 钟颜色
+                .clock-2 {
+                    color: #26aff8;
+                }
+            }
+        }
+    }
+
+    .charts{
+            width: 818px;
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(3, 43, 36, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            >div {
+
+                // 头部
+                &:nth-child(1) {
+                    @include title;
+
+                    span {
+                        @include sgm;
+                    }
+                }
+
+                // 统计表开始
+                // 单位
+                &:nth-child(2) {
+                    margin-top: 52px;
+                    color: #999999;
+                    font-size: 11px;
+                    align-self: flex-start;
+                    margin-left: 33px;
+                }
+
+                // 计数底
+                &:nth-child(3) {
+                    height: 358px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+
+                        // 1000-200文字和虚线样式
+                        >span {
+                            font-size: 11px;
+
+                            &:nth-child(1) {
+                                color: rgba(153, 153, 153, 1);
+                                margin-right: 10px;
+                            }
+
+                            &:nth-child(2) {
+                                display: inline-block;
+                                width: 702.3px;
+                                border-top: 2px dashed rgba(230, 230, 230, 1);
+                            }
+                        }
+
+                        // 0实线样式
+                        &:nth-last-child(1) {
+                            >span:nth-child(2) {
+                                border-top: 1px solid rgba(230, 230, 230, 1);
+                            }
+
+                        }
+                    }
+                }
+
+                &:nth-child(4) {
+                    width: 678px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 25px;
+                    margin-top: -20px;
+                    // 城市列
+                    >div {
+                        font-size: 12px;
+                        color: rgba(153, 153, 153, 1);
+                        position: relative;
+                        // 竖条基本样式
+                        >span {
+                            position: absolute;
+                            left: 12px;
+                            width: 12px;
+                            background-color: #4689f6;
+                            border-radius: 4px 4px 0px 0px;
+                        }
+                        // 第1条
+                        &:nth-child(1){
+                            >span{
+                                height: 244px;
+                                top: top(-244px);
+                            }
+                        }
+                        // 第2条
+                        &:nth-child(2){
+                            >span{
+                                height:200px;
+                                top: top(-200px);
+                            }
+                        }
+                        // 第3条
+                        &:nth-child(3){
+                            >span{
+                                height:296px;
+                                top: top(-296px);
+                            }
+                        }
+                        // 第4条
+                        &:nth-child(4){
+                            >span{
+                                height:235px;
+                                top:top(-235px);
+                            }
+                        }
+                        // 第5条
+                        &:nth-child(5){
+                            >span{
+                                height: 222px;
+                                top: top(-222px);
+                            }
+                        }
+                         // 第6条
+                         &:nth-child(6){
+                            >span{
+                                height: 213px;
+                                top: top(-213px);
+                            }
+                        }
+                         // 第7条
+                         &:nth-child(7){
+                            >span{
+                                height: 244px;
+                                top: top(-244px);
+                            }
+                        }
+                         // 第8条
+                         &:nth-child(8){
+                            >span{
+                                height: 220px;
+                                top:top(-220px);
+                            }
+                        }
+                         // 第9条
+                         &:nth-child(9){
+                            >span{
+                                height: 194px;
+                                top: top(-194px);
+                            }
+                        }
+                        // 第10条
+                        &:nth-child(10){
+                            >span{
+                                height: 247px;
+                                top:top(-247px);
+                            }
+                        }
+                        // 第11条
+                        &:nth-child(11){
+                            >span{
+                                height: 192px;
+                                top: top(-192px);
+                            }
+                        }
+                        // 第12条
+                        &:nth-child(12){
+                            >span{
+                                height: 214px;
+                                top: top(-214px);
+                            }
+                        }
+                        // 第13条
+                        &:nth-child(13){
+                            >span{
+                                height: 196px;
+                                top:top(-196px);
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
