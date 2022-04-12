@@ -412,6 +412,11 @@
   border-radius: 8px;
 }
 
+.main .count .item:nth-child(5) {
+  background-image: linear-gradient(135.23deg, #ffa2a2 0%, #ee6666 100%);
+  border-radius: 8px;
+}
+
 .main .count .item .writing {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,6 +472,10 @@
 
 .main .count .item .mark .clock-2 {
   color: #26aff8;
+}
+
+.main .count .item .mark .undulation {
+  color: #f17171;
 }
 
 .main .charts {
@@ -745,6 +754,6 @@
   border: 1px solid;
   border-color: #d9d9d9;
   border-radius: 4px;
-  text-align: cent;
+  text-align: center;
 }
 /*# sourceMappingURL=basic-settings.css.map */

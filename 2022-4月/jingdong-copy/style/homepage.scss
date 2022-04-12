@@ -1,0 +1,318 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url(../iconfont/iconfont.ttf) format("truetype");
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+@function vw($px) {
+    @return $px / 1519.2 * 100vw;
+}
+// 边框
+div{
+    border: 1px solid;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style-type:none;
+    margin: auto;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    // 灰色顶部导航
+    .shortcut{
+        height: vw(31);
+        background-color: #e3e4e5;
+        >div{
+            width: vw(1190);
+            margin: auto;
+            height: vw(31);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // 定位位置 江苏
+            >span{
+                flex-grow: 1;
+                font-size: 12px;
+            }
+            // 列表
+            >ul{
+                list-style-type:none;
+                display: flex;
+                margin: auto;
+                justify-content: space-between;
+                font-size: vw(15);
+                padding: 0;
+                >li{
+                    padding: 0px vw(7);
+                    font-size: 12px;
+                }
+            }
+        }
+        
+    }
+    
+    // 头部搜索栏
+    .header{
+        height: vw(141);
+        // 嵌套div
+        >div{
+            margin:auto;
+            width: vw(1190);
+            display: flex;
+            justify-content: space-between;
+
+            // 京东图标
+            .jd-icon{
+                background-image: url(../picture/sprite.png);
+                width: vw(190);
+                height: vw(120);
+                }
+
+            >div{
+                // header 中部
+                &:nth-child(2){
+                    flex-grow: 1;
+                    >div{
+                        &:nth-of-type(2){
+                            font-size: vw(12);
+                        }
+                        // 分类 秒杀 优惠券等等
+                        &:nth-of-type(3){
+                            >ul{
+                                list-style-type:none;
+                                display: flex;
+                                margin: auto;
+                                justify-content: space-between;
+                                font-size: vw(15);
+                                padding-left: 0;
+                                >li{
+                                    padding: 0 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                // 二维码
+                &:nth-last-child(1){
+                    width: vw(190);
+                    height: vw(120);
+                    // 白色框
+                    >div{
+                        width: vw(76);
+                        height: vw(76);
+                        background-color: #fff;
+                        box-shadow:0 0 4px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        // 二维码样式
+                       >div{
+                        background-image: url(../picture/dc4cf353fd96922e.png.jpg);
+                        width: vw(66);
+                        height: vw(66);
+                        background-size: 100%;
+                        border: none;
+                       }
+                    } 
+                }
+            }
+            
+        }
+    }
+
+    // 主要导航
+    .fs{
+        height: vw(480);
+        background-color: #f4f4f4;
+        margin-bottom: vw(30);
+        // 覆盖
+        >div{
+            width: vw(1190);
+            margin: auto;
+            height: vw(480);
+            display: flex;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            padding-top: vw(10);
+            
+            // 左边复杂导航栏
+            .cate-menu{
+                width: vw(190);
+                background-color: #fff;
+            }
+            // 中部
+            .slider{
+                width: vw(790);
+                display: flex;
+               justify-content: space-between;
+               background-color: #fff;
+                // 大图片
+                .picture-link{
+                    >img{
+                        width: vw(590);
+                    }
+                }
+                .picture-links{
+                    img{
+                        width: vw(190);
+                    }
+                }
+            }
+            .login-bar{
+                width: vw(190);
+                background-color: #fff;
+            }
+        }
+    }
+.j-app{
+    overflow: visible;
+     // 右侧浮动小框
+    .elevator{
+        width: vw(58);
+        position:sticky;
+        top: vw(80);
+        right: vw(80);
+        z-index: 999;
+        background-color: #fff;
+        float: right;
+
+        // 浮动项
+        ul{
+            height: vw(358);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            >li{
+                padding:10px;
+                text-align: center;
+            }
+        }
+        // 回顶部
+        .back-top{
+            display: inline-block;
+            height: vw(58);
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+    // 京东秒杀
+    .seckill{
+        height: vw(260);
+        margin-bottom: vw(20); 
+        .seckill-inner{
+            width: vw(1190);
+            height: vw(260);
+            margin: 0px vw(155);
+            display: flex;
+            // 秒杀计时
+            .spike{
+                width: vw(190);
+            }
+            // 中间轮播商品项
+            .spike-item{
+                width: vw(800);
+            }
+            // 右侧轮播商品项
+            .spike-image{
+                width: vw(180);
+                height: vw(240);
+            }
+        }
+    }
+    
+    
+    // 1*2每日特价
+    .spe{
+        height: vw(340);
+        margin-bottom:vw(20);
+        
+        
+        .spe-entry{
+            margin: auto;
+            width: vw(1190);
+            display: flex;
+            justify-content: space-between;
+            
+
+            .item{
+                width: vw(590);
+                height: vw(340);
+            }
+        }
+        
+    }
+    // 发现好货
+    .goods{
+        height: vw(260);
+        margin-bottom:vw(20) ;
+        .goods-entry{
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            width: vw(1190);
+            height: vw(260);
+            // 左侧发现好货
+            .found{
+                width: vw(190);
+            }
+            // 商品项
+            .good-items{
+                width: vw(990);
+            }
+
+        }
+    }
+    // 1*4 新品首发
+    .starting{
+        height: vw(340);
+        .starting-entry{
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            width: vw(1190);
+            height: vw(340);
+            >div{
+                width: vw(290);
+            }
+        }
+    }
+
+    // 频道广场
+    .classify{
+        height: vw(1005);
+    }
+    // 为你推荐
+    .reco{
+        height: vw(11755);
+    }
+
+    // 精灵图
+    .mod-service{
+        height: vw(42);
+    }
+    // y页脚
+    .footer{
+        height: vw(465.4);
+        .foot-help{
+            height: vw(200);
+        }
+        .foot-end{
+            height: vw(234.4);
+        }
+    }
+}
