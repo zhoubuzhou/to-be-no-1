@@ -11,16 +11,24 @@
     <!-- 灰色顶部导航 -->
     <div class="shortcut">
       <div>
-        <span class="iconfont">&#xe604; 江苏</span>
+        <p><span class="iconfont">&#xe604;</span>江苏</p>
         <ul>
-          <li>你好请登录 免费注册</li>
+          <li>你好 , 请登录 <span class="red"> 免费注册</span></li>
+          <li><span>|</span></li>
           <li>我的订单</li>
+          <li><span>|</span></li>
           <li>我的京东 ↓</li>
+          <li><span>|</span></li>
           <li>京东会员</li>
-          <li>企业采购↓</li>
-          <li>客户服务↓</li>
-          <li>网站导航↓</li>
+          <li><span>|</span></li>
+          <li><span class="red">企业采购 </span>↓</li>
+          <li><span>|</span></li>
+          <li>客户服务 ↓</li>
+          <li><span>|</span></li>
+          <li>网站导航 ↓</li>
+          <li><span>|</span></li>
           <li>手机京东</li>
+          <li><span>|</span></li>
           <li>网站无障碍</li>
         </ul>
       </div>
@@ -29,24 +37,29 @@
     <!-- 头部搜索栏 -->
     <div class="header iconfont">
       <div>
-        <!-- css中插入京东图标 child 1 -->
+        <!-- css中插入京东图标-->
         <div class="jd-icon"></div>
-        <!-- header中部 child 2 -->
-        <div>
+        <!-- header中部 -->
+        <div class="search">
           <!-- 搜索框&购物车 -->
-          <div>
+          <div class="search-m">
             <!-- 搜索框 1-->
-            <div>
-              <input type="text" pattern="暗影游戏本" />
+            <div class="from">
+              <input type="text" placeholder="暗影游戏本">
               <span>&#xe8bc;</span>
               <button class="iconfont">&#xe615;</button>
             </div>
-            <button class="iconfont">
-              &#xf0179; 我的购物车 <span>0</span>
-            </button>
+            <!-- 购物车 -->
+            <div class="iconfont shop">
+              <div>
+                <span>&#xf0179;</span>
+                <span>我的购物车</span>
+                <span>0</span>
+              </div>
+            </div>
           </div>
           <!-- 搜索框下的文字 2-->
-          <div>
+          <div class="small-categories">
             <a href="">手机换新季</a>
             <a href="">京东京造</a>
             <a href="">iphone13</a>
@@ -57,8 +70,8 @@
             <a href="">品质家具</a>
             <a href="">宝贝趴</a>
           </div>
-          <!-- 分类 秒杀  优惠券 3-->
-          <div>
+          <!-- 分类 秒杀  优惠券 -->
+          <div class="classify">
             <ul>
               <li>秒杀</li>
               <li>优惠券</li>
@@ -68,14 +81,13 @@
               <li>京东家电</li>
               <li>京东超市</li>
               <li>京东生鲜</li>
-              <li>京东超市</li>
               <li>京东国际</li>
               <li>京东云</li>
             </ul>
           </div>
         </div>
         <!-- 二维码 -->
-        <div>
+        <div class="qr">
           <!-- 白色框 -->
           <div>
             <!-- 二维码显示 -->
@@ -126,11 +138,10 @@
         </div>
       </div>
     </div>
-<!-- 浮动预备 -->
+    <!-- 浮动预备 -->
     <div class="j-app">
-
-    <!-- 右侧浮动小框 -->
-    <!-- <div class="elevator">
+      <!-- 右侧浮动小框 -->
+      <!-- <div class="elevator">
         <ul class="iconfont">
             <li>京东秒杀</li>
             <li>特色优选</li>
@@ -149,55 +160,235 @@
           <div class="spike-item">图片</div>
           <div class="spike-image">魅可大牌秒杀专场</div>
         </div>
-
       </div>
 
       <!-- 1*2每日特价 品牌闪购 -->
       <div class="spe">
-          <div class="spe-entry">
-            <div class="item">每日特价</div>
-            <div class="item">品牌闪购</div>
-          </div>
+        <div class="spe-entry">
+          <div class="item">每日特价</div>
+          <div class="item">品牌闪购</div>
+        </div>
       </div>
       <!-- 发现好货 -->
       <div class="goods">
-          <div class="goods-entry">
-              <div class="found">发现好货</div>
-              <div class="good-items">商品</div>
-          </div>
+        <div class="goods-entry">
+          <div class="found">发现好货</div>
+          <div class="good-items">商品</div>
+        </div>
       </div>
       <!-- 1*4 新品首发  -->
       <div class="starting">
-          <div class="starting-entry">
-              <div class="npl">新品首发</div>
-              <div class="joy">JOY寻宝</div>
-              <div class="good-shops">逛好店</div>
-              <div class="collect-vouchers">领卷中心</div>
-          </div>
+        <div class="starting-entry">
+          <div class="npl">新品首发</div>
+          <div class="joy">JOY寻宝</div>
+          <div class="good-shops">逛好店</div>
+          <div class="collect-vouchers">领卷中心</div>
+        </div>
       </div>
 
       <!-- 频道广场 分类生鲜馆 -->
       <div class="classify">
-        <!-- 频道广场 -->
-        <div class=""></div>
+        <!-- 大字号 频道广场 -->
+        <h2 class="large">频道广场</h2>
+        <!-- 商品项 按照竖行排列-->
+        <div class="classify-entry">
+          <!-- 第一列 -->
+          <div class="classify-item classify-item-1">京东超市</div>
+          <div class="classify-item classify-item-2">企业购</div>
+          <div class="classify-item classify-item-3">JOY寻宝</div>
+          <div class="classify-item classify-item-4">京东超市</div>
+          <!-- 第二列 放大 -->
+          <div class="classify-item classify-item-5">生鲜馆</div>
+          <div class="classify-item classify-item-6">生鲜馆</div>
+          <div class="classify-item classify-item-7">京东京造</div>
+          <div class="classify-item classify-item-8">京东国际</div>
+          <!-- 第三列 -->
+          <div class="classify-item classify-item-9">京东手机</div>
+          <div class="classify-item classify-item-10">家用电器</div>
+          <div class="classify-item classify-item-11">京东时尚</div>
+          <div class="classify-item classify-item-12">大药房</div>
+          <div class="classify-item classify-item-13">厨卫电器</div>
+          <!-- 第三列 -->
+          <div class="classify-item classify-item-14">拍拍二手</div>
+          <div class="classify-item classify-item-15">新机发布</div>
+          <div class="classify-item classify-item-16">电脑办公</div>
+          <div class="classify-item classify-item-17">京东美妆</div>
+          <div class="classify-item classify-item-18">家庄城</div>
+        </div>
       </div>
 
       <!-- 为你推荐 -->
       <div class="reco">
+        <!-- 大字号 -->
+        <h2 class="for-you">为你推荐</h2>
         <!-- 为你推荐导航栏 精选 猜你喜欢 需要浮动-->
-        <div class="reco-menu"></div>
+        <div class="reco-menu">
+          <ul>
+            <li>
+              <div><span>精选</span></div>
+              <span>猜你喜欢</span>
+            </li>
+            <li>
+              <div>智能先锋</div>
+              <span>大电器城</span>
+            </li>
+            <li>
+              <div>居家优品</div>
+              <span>品质生活</span>
+            </li>
+            <li>
+              <div>超市百货</div>
+              <span>百货生鲜</span>
+            </li>
+            <li>
+              <div>时尚达人</div>
+              <span>美妆穿搭</span>
+            </li>
+            <li>
+              <div>进口好物</div>
+              <span>京东国际</span>
+            </li>
+          </ul>
+        </div>
         <!-- 包裹为你推荐类的商品 n个 -->
-        <div class="reco-list"></div>
+        <div class="reco-list">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- 精灵图部分 -->
-      <div class="mod-service"></div>
+      <!-- 精灵图板块 -->
+      <div class="mod-service">
+        <!-- 内胆 -->
+        <div>
+          <!-- 开始 设置flex -->
+          <ul>
+            <li class="genie-1">
+              <div>图片</div>
+              <div>品类齐全,轻松购物</div>
+            </li>
+            <li class="genie-2">
+              <div>图片</div>
+              <div>多仓直发,急速配送</div>
+            </li>
+            <li class="genie-3">
+              <div>图片</div>
+              <div>正品行货,精致服务</div>
+            </li>
+            <li class="genie-4">
+              <div>图片</div>
+              <div>天天低价,畅选天忧</div>
+            </li>
+          </ul>
+        </div>
+      </div>
       <!-- 页脚 -->
       <div class="footer">
         <!-- 分类部分 购物指南等 -->
-        <div class="foot-help"></div>
-        <!-- 关于我们等 -->
+        <div class="foot-help">
+          <!-- 内胆 -->
+          <div>
+            <!-- 每一项 -->
+            <div class="help-item-1">
+              <h4>购物指南</h4>
+              <ul>
+                <li>购物流程</li>
+                <li>会员介绍</li>
+                <li>生活旅行</li>
+                <li>常见问题</li>
+                <li>大家电</li>
+                <li>联系客服</li>
+              </ul>
+            </div>
+            <div class="help-item-1">
+              <h4>配送方式</h4>
+              <ul></ul>
+            </div>
+            <div class="help-item-2">
+              <h4>支付方式</h4>
+              <ul></ul>
+            </div>
+            <div class="help-item-3">
+              <h4>售后服务</h4>
+              <ul></ul>
+            </div>
+            <div class="help-item-4">
+              <h4>特色服务</h4>
+              <ul></ul>
+            </div>
+            <div class="help-item-5">
+              <h4>京东自营覆盖区县</h4>
+              <p>
+                京东已向全国2661个区县提供自营配送服务,支持货到付款、POS机刷卡和售后上门服务。
+                <br />
+                <a href="">查看详情 ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 页脚最下-->
         <div class="foot-end">
+          <!-- 关于我们等项 -->
+          <div class="contact">
+            <p>关于我们</p>
+            <span>|</span>
+            <p>联系我们</p>
+            <span>|</span>
+            <p>联系客服</p>
+            <span>|</span>
+            <p>合作招商</p>
+            <span>|</span>
+            <p>商家帮助</p>
+            <span>|</span>
+            <p>营销中心</p>
+            <span>|</span>
+            <p>手机京东</p>
+            <span>|</span>
+            <p>友情链接</p>
+            <span>|</span>
+            <p>销售联盟</p>
+            <span>|</span>
+            <p>京东社区</p>
+            <span>|</span>
+            <p>风险监测</p>
+            <span>|</span>
+            <p>隐私政策</p>
+            <span>|</span>
+            <p>东京公益</p>
+            <span>|</span>
+            <p>Engli Site</p>
+            <span>|</span>
+            <p>Media & IR</p>
+          </div>
+          <!-- 经营证照等 -->
+          <div class="permit">
+            <p><a href="">京公网安备 110000020000088号</a><span>|</span></p>
+            <p>
+              <a href="">互联网出版许可证编号新出网证（京）字150号</a
+              ><span>|</span>
+            </p>
+            <p>
+              <a href="">Copyright 2004-2022 京东JD.com版权所有</a
+              ><span>|</span>
+            </p>
+            <p><a href="">Global Site</a><span>|</span></p>
+            <p><a href="">京东旗下网站： 京东钱包</a><span>|</span></p>
+          </div>
           <!-- 链接精灵图 -->
           <div class=""></div>
         </div>
