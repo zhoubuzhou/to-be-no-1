@@ -85,6 +85,7 @@ body {
         }
 
     }
+
     // 头部搜索栏
     .header {
         height: vw(141);
@@ -221,14 +222,16 @@ body {
                     width: 550px;
                     height: 20px;
                     line-height: 20px;
+
                     // 分类项
                     >a {
                         margin-right: 10px;
                         text-decoration: none;
                         outline: none;
                         color: #999;
+
                         // 首个单词变红
-                        &:nth-child(1){
+                        &:nth-child(1) {
                             color: #e1251b;
                         }
                     }
@@ -245,21 +248,25 @@ body {
                     bottom: 0;
                     height: 40px;
                     padding-top: 20px;
+
                     >ul {
                         list-style-type: none;
                         display: flex;
                         font-size: 15px;
                         padding-left: 0;
                         height: 40px;
+
                         // 列表项
                         >li {
                             font-size: 15px;
                             margin: 0 12px;
-                            &:nth-child(1){
+
+                            &:nth-child(1) {
                                 font-weight: 700;
                                 color: #e1251b;
                             }
-                            &:nth-child(2){
+
+                            &:nth-child(2) {
                                 font-weight: 700;
                                 color: #e1251b;
                             }
@@ -273,6 +280,7 @@ body {
                 width: vw(190);
                 height: vw(120);
                 position: relative;
+
                 // 白色框
                 >div {
                     width: vw(76);
@@ -307,11 +315,11 @@ body {
         background-color: #f4f4f4;
         margin-bottom: vw(30);
 
-        // 覆盖
+        // 内胆
         >div {
             width: vw(1190);
             margin: auto;
-            height: vw(480);
+            height: vw(470);
             display: flex;
             justify-content: space-between;
             background-color: #f4f4f4;
@@ -320,33 +328,238 @@ body {
             // 左边复杂导航栏
             .cate-menu {
                 width: vw(190);
+                height: vw(470);
                 background-color: #fff;
+                padding: 10px 0px 10px 18px;
+
+                ul {
+
+                    font-size: 14px;
+                    color: #333;
+
+                    li {
+                        width: 172px;
+                        height: 25px;
+                    }
+                }
             }
 
             // 中部
             .slider {
                 width: vw(790);
+                height: vw(470);
                 display: flex;
                 justify-content: space-between;
-                background-color: #fff;
+                background-color: #f4f4f4;
 
                 // 大图片
                 .picture-link {
+                    position: relative;
+
                     >img {
-                        width: vw(590);
+                        height: vw(470);
+                    }
+
+                    // 左右切屏的大小符号样式
+                    .symbol {
+                        >span {
+                            border-color: none;
+                            width: 25px;
+                            height: 35px;
+                            background-color: rgba(0, 0, 0, .15);
+                            color: #fff;
+                            font-size: 20px;
+                            text-align: center;
+
+                            &:nth-of-type(1) {
+                                position: absolute;
+                                top: 50%;
+                                margin-top: -20px;
+                                left: 0;
+                                border-radius: 0 100% 100% 0;
+                            }
+
+                            &:nth-of-type(2) {
+                                position: absolute;
+                                top: 50%;
+                                margin-top: -20px;
+                                right: 0;
+                                border-radius: 100% 0 0 100%;
+                            }
+                        }
                     }
                 }
 
                 .picture-links {
+                    height: vw(470);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    div {
+                        width: 190px;
+                        height: 150px;
+                    }
+
                     img {
-                        width: vw(190);
+                        height: 150px;
                     }
                 }
             }
 
+            // 右侧登录栏
             .login-bar {
                 width: vw(190);
+                height: vw(470);
                 background-color: #fff;
+                position: relative;
+                
+                // 头部登录
+                .login {
+                    width: 190px;
+                    height: 102px;
+                    font-size: 12px;
+                    border-bottom: 1px solid rgba(0, 0, 0, .15);
+
+                    // 头像登录外衣
+                    .login-entry {
+
+                        // 头像框样式
+                        .avatar {
+                            width: 40px;
+                            height: 40px;
+                            border: 2px solid #fff;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 20px;
+                            top: 13px;
+                            width: 44px;
+                            height: 44px;
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.11);
+
+                            // 图片大小
+                            img {
+                                width: 100%;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        // 头像旁 登录文字
+                        .login-item {
+                            position: absolute;
+                            top: 16px;
+                            left: 74px;
+                            right: 10px;
+
+                            // Hi
+                            a {
+                                color: #666;
+                                text-decoration: none;
+                            }
+
+                            // 登陆注册
+                            p {
+                                margin-top: 3px;
+                                height: 20px;
+                                color: #333;
+                            }
+                        }
+                    }
+
+                    // 按钮栏
+                    .login-push {
+                        position: absolute;
+                        left: 15px;
+                        padding-top: 67px;
+                        height: 35px;
+
+                        // 按钮基本样式
+                        button {
+                            border: none;
+                            width: 70px;
+                            height: 25px;
+                            border-radius: 13px;
+                            text-align: center;
+                            font-size: 12px;
+                            margin: 0 5px;
+
+                            // 按钮1 新人
+                            &:nth-child(1) {
+                                color: #fff;
+                                background: #e1251b;
+                            }
+
+                            // 按钮2 plus会员
+                            &:nth-child(2) {
+                                background: #363634;
+                                color: #e5d790;
+
+                            }
+                        }
+                    }
+                }
+
+                // 中部 京东快报
+                .express {
+                    height: 130px;
+                    font-size: 12px;
+                    
+                    border-bottom: 1px solid rgba(0, 0, 0, .15);
+
+                    // 标题
+                    .express-entry {
+                        height: 30px;
+                        padding: 10px 0 0;
+                        margin-bottom: 8px;
+                        position: relative;
+
+                        // 京东快报
+                        div {
+                            display: inline-block;
+                            font-size: 14px;
+                            margin-left: 15px;
+                            font-weight: 700;
+                            color: #333;
+                        }
+
+                        // 更多>
+                        >span {
+                            color: #999;
+                            position: absolute;
+                            right: 15px;
+                            top: 10px;
+                        }
+
+                    }
+
+                    // 京东快报 内容
+                    .express-item {
+                        // 京东快报列表
+                        ul {
+                            margin: 0 15px;
+                            height: 88px;
+                            color: #666;
+                            
+                        }
+                        // 快报列表项
+                        li {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            margin-bottom: 6px;
+                            // 列表项的头部红色部分
+                            span {
+                                display: inline-block;
+                                text-align: center;
+                                color: #e1251b;
+                                background-color: rgba(225, 37, 27, .08);
+                                margin-right: 6px;
+                                height: 16px;
+                                width: 35px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
