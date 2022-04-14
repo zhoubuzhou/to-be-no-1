@@ -22,7 +22,8 @@ div {
     box-sizing: border-box;
 }
 
-* {
+*,
+li {
     box-sizing: border-box;
 }
 
@@ -34,6 +35,8 @@ ul {
 
 body {
     margin: 0;
+    background-color: #f4f4f4;
+
 
     // 灰色顶部导航
     .shortcut {
@@ -89,6 +92,8 @@ body {
     // 头部搜索栏
     .header {
         height: vw(141);
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
 
         // 内胆div
         >div {
@@ -286,7 +291,7 @@ body {
                     width: vw(76);
                     height: vw(76);
                     background-color: #fff;
-                    box-shadow: 0 0 6px rgb(160, 160, 160);
+                    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.107);
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -297,6 +302,7 @@ body {
                     // 二维码样式
                     >div {
                         background-image: url(../picture/dc4cf353fd96922e.png.jpg);
+                        background-color: #f6f6f6;
                         width: vw(66);
                         height: vw(66);
                         background-size: 100%;
@@ -312,7 +318,6 @@ body {
     // 主要导航
     .fs {
         height: vw(480);
-        background-color: #f4f4f4;
         margin-bottom: vw(30);
 
         // 内胆
@@ -322,7 +327,6 @@ body {
             height: vw(470);
             display: flex;
             justify-content: space-between;
-            background-color: #f4f4f4;
             padding-top: vw(10);
 
             // 左边复杂导航栏
@@ -339,7 +343,7 @@ body {
 
                     li {
                         width: 172px;
-                        height: 25px;
+                        height: 24px;
                     }
                 }
             }
@@ -413,7 +417,7 @@ body {
                 height: vw(470);
                 background-color: #fff;
                 position: relative;
-                
+
                 // 头部登录
                 .login {
                     width: 190px;
@@ -503,7 +507,6 @@ body {
                 .express {
                     height: 130px;
                     font-size: 12px;
-                    
                     border-bottom: 1px solid rgba(0, 0, 0, .15);
 
                     // 标题
@@ -534,19 +537,22 @@ body {
 
                     // 京东快报 内容
                     .express-item {
+
                         // 京东快报列表
                         ul {
                             margin: 0 15px;
                             height: 88px;
                             color: #666;
-                            
+
                         }
+
                         // 快报列表项
                         li {
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
                             margin-bottom: 6px;
+
                             // 列表项的头部红色部分
                             span {
                                 display: inline-block;
@@ -560,6 +566,52 @@ body {
                         }
                     }
                 }
+
+                // 3*4图标列表
+                .colorful {
+                    height: 238px;
+                    padding: 10px 0 5px 0;
+                    position: relative;
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        // 基础样式
+                        li {
+                            display: inline-block;
+                            width: 63px;
+                            height: 55px;
+                            text-align: center;
+                            font-size: 12px;
+                        }
+
+                        // 基础样式
+                        .colorful-item {
+                            img {
+                                width: 28px;
+                                height: 28px;
+                            }
+                        }
+
+                        // 红色浮动
+                        .colorful-red {
+                            position: absolute;
+                            right: 10px;
+                            top: 10px;
+                            width: 14px;
+                            height: 14px;
+                            font-size: 12px;
+                            line-height: 14px;
+                            text-align: center;
+                            background: #e1251b;
+                            color: #fff;
+                        }
+
+                    }
+                }
+
+
             }
         }
     }
@@ -605,27 +657,213 @@ body {
     .seckill {
         height: vw(260);
         margin-bottom: vw(20);
+        background-color: #f4f4f4;
 
+        // 内胆
         .seckill-inner {
             width: vw(1190);
             height: vw(260);
             margin: 0px vw(155);
             display: flex;
+            background-color: #fff;
+
 
             // 秒杀计时
             .spike {
                 width: vw(190);
+                background: url(../picture/4a15d8883775742e3efbb850ae14def7.png) no-repeat;
+                color: #fff;
+
+                // 上半部分 头部标题京东秒杀
+                .spike-title {
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin-top: 31px;
+                }
+
+                // 下半部分 秒杀时间
+                .spike-time {
+                    margin-top: 90px;
+                    font-size: 14px;
+                    width: vw(190);
+                    text-align: center;
+
+                    // 场次说明
+                    .spike-sessions {
+                        font-size: 18px;
+                        font-weight: 700;
+                        height: 26px;
+
+                        // 小字部分的样式覆盖
+                        >span {
+                            font-weight: 400;
+                            font-size: 14px;
+                        }
+                    }
+
+                    // 计时板块
+                    .spike-timing {
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-top: 10px;
+
+                        // 数字样式
+                        .spike-timing-num {
+                            width: 30px;
+                            height: 30px;
+                            text-align: center;
+                            background-color: #2f3430;
+                            margin-right: 10px;
+                            display: inline-block;
+                        }
+
+                        // 取消最后一组数字的边距
+                        .num-last {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .spike-item {
+                    background-color: #fff;
+                }
             }
 
             // 中间轮播商品项
             .spike-item {
                 width: vw(800);
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+
+                // 每一项外壳的基本样式
+                .item {
+                    width: 200px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    // 间隔 暂时不设置未成功需要position
+                    // ::after {
+                    //     content: "";
+                    //     height: 200px;
+                    //     width: 1px;
+                    //     background: linear-gradient(180deg, white, #eeeeee, white);
+                    //     color: #666;
+                    // }
+
+                    // 第一个div 包裹img的
+                    .picture {
+                        width: 140px;
+                        height: 140px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    // 第二个 文字
+                    .writing {
+                        font-weight: 400;
+                        color: #333;
+                        width: 160px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 13px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    // 第三个 价格
+                    .price {
+                        margin-top: 7px;
+                        color: #e1251b;
+                        font-weight: 700;
+
+                    }
+                }
             }
 
             // 右侧轮播商品项
-            .spike-image {
+            .spike-recommend {
                 width: vw(180);
                 height: vw(240);
+                margin: auto;
+
+                .spike-entry {
+                    margin: auto;
+                    width: 180px;
+                    height: 240px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    // 图片大小
+                    .spike-image {
+                        img {
+                            width: 120px;
+                        }
+                    }
+
+                    // 下半部分文字样式
+                    .spike-writing {
+                        width: 180px;
+                        height: 90px;
+                        font-size: 14px;
+                        text-align: center;
+                        background: linear-gradient(180deg, rgba(255, 255, 255, .5), rgba(220, 224, 236, .5));
+                        margin-top: 10px;
+
+                        // title
+                        .item-1 {
+                            color: #666;
+                        }
+
+                        // 满300
+                        .item-2 {
+                            font-weight: 700;
+                            margin-top: 2px;
+                            color: #333;
+                        }
+
+                        // 品牌秒杀 带框样式
+                        .item-3 {
+                            font-size: 12px;
+                            color: #e1251b;
+                            border-radius: 14px;
+                            width: 82px;
+                            height: 24px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            display: inline-block;
+                            line-height: 22px;
+                            font-weight: 700;
+                            padding-left: 4px;
+                            font-size: 12px;
+                            border: 1px solid #e1251b;
+                            margin-top: 4px
+                        }
+
+                        // 小点样式
+                        .item-4 {
+                            >span {
+                                display: inline-block;
+                                width: 4px;
+                                height: 4px;
+                                border-radius: 50%;
+                                background: #999;
+
+                                &:nth-child(1) {
+                                    background: #e1251b;
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -636,17 +874,345 @@ body {
         height: vw(340);
         margin-bottom: vw(20);
 
-
+        // 内胆
         .spe-entry {
+            // * {
+            //     border: 1px solid;
+            // }
+
             margin: auto;
             width: vw(1190);
             display: flex;
             justify-content: space-between;
 
-
-            .item {
+            // 两框基本样式
+            >div {
                 width: vw(590);
                 height: vw(340);
+                background-color: #fff;
+            }
+
+            // 每日特价栏
+            .special {
+
+                // 头部
+                .special-head {
+                    width: 590px;
+                    height: 60px;
+                    padding-left: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    // 大标题
+                    .special-title {
+                        font-weight: 700;
+                        font-size: 24px;
+                        color: #333;
+                        line-height: 32px;
+
+                        >span {
+                            width: 18px;
+                            height: 18px;
+                            display: inline-block;
+                            color: orange;
+                            border: 2px solid orange;
+                            border-radius: 50%;
+                            position: relative;
+                            line-height: 16px;
+
+                            >span {
+                                position: absolute;
+                                font-size: 12px;
+                                top: -2px;
+                                left: 3px;
+                            }
+                        }
+                    }
+
+                    // 右侧文字
+                    .special-classify {
+                        font-size: 14px;
+
+                        >span {
+                            margin: 0 13.5px;
+                            color: #999;
+
+                            &:nth-child(1) {
+                                color: #e1251b;
+                            }
+
+                            &:nth-last-child(1) {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+
+                // 商品
+                .special-detail {
+                    padding: 0 15px 15px 15px;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    // 左侧大展示框 红酒
+                    .special-pro {
+                        width: 170px;
+                        height: 265px;
+                        margin-right: 6px;
+                        background-color: rgba(109, 126, 146, .05);
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        // 图片
+                        .pro-img {
+                            width: 120px;
+                            height: 120px;
+
+                            >img {
+                                width: 100%;
+                            }
+                        }
+
+                        // 文字
+                        .pro-writing {
+                            width: 170px;
+                            text-align: center;
+
+                            >div {
+
+                                // 商品名
+                                &:nth-child(1) {
+                                    font-size: 14px;
+                                    color: #333;
+                                    margin-top: 9px;
+                                    margin-bottom: 4px;
+                                }
+
+                                // 价格
+                                &:nth-child(2) {
+                                    font-size: 18px;
+                                    color: #e1251b;
+                                    font-weight: 700;
+                                    margin-top: 4px;
+
+                                    >span {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 浮动
+                        .pro-orange {
+                            width: 90px;
+                            height: 24px;
+                            font-size: 12px;
+                            font-weight: 700;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            text-align: center;
+                            color: #fff;
+                            padding-top: 4px;
+                            background-image: url(../picture/fudong.png);
+                            background-size: auto;
+                        }
+                    }
+
+                    // 2*2商品
+                    .special-com {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        // 4块统一设置
+                        .special-item {
+                            width: 170px;
+                            height: 89px;
+                            font-size: 12px;
+                            display: flex;
+
+                            >div {
+
+                                // 图片
+                                &:nth-child(1) {
+                                    margin-right: 5px;
+
+                                    // 图片大小
+                                    img {
+                                        width: 80px;
+                                        height: 80px;
+                                    }
+                                }
+                            }
+
+                            // 文字样式
+                            .sp {
+                                span {
+                                    display: inline-block;
+
+                                    &:nth-child(2) {
+                                        color: #e1251b;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        margin-top: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
+
+            }
+
+            // 品牌闪购
+            .flash {
+
+                // 头部
+                .flash-head {
+                    width: 590px;
+                    height: 60px;
+                    padding-left: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    // 大标题
+                    .flash-title {
+                        font-weight: 700;
+                        font-size: 24px;
+                        color: #333;
+                        line-height: 32px;
+
+                        // 浮动元素
+                        >span {
+                            width: 18px;
+                            height: 18px;
+                            display: inline-block;
+                            color: orange;
+                            border: 2px solid orange;
+                            border-radius: 50%;
+                            position: relative;
+                            line-height: 16px;
+
+                            >span {
+                                position: absolute;
+                                font-size: 12px;
+                                top: -2px;
+                                left: 3px;
+                            }
+                        }
+                    }
+                }
+
+                // 商品
+                .flash-detail {
+                    display: flex;
+                    padding: 0 20px 0 15px;
+
+                    // 左侧斯凯奇
+                    .flash-pro {
+                        width: 270px;
+                        height: 265px;
+                        margin-right: 15px;
+                        display: inline-block;
+                        background: linear-gradient(180deg, rgba(119, 255, 233, .05), rgba(0, 93, 70, .05));
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        font-size: 12px;
+                        text-align: center;
+
+                        // logo大小
+                        .flash-logo {
+                            width: 70px;
+                            height: 35px;
+                            margin-top: -5px;
+
+                            >img {
+                                width: 100%;
+                            }
+                        }
+
+                        // 斯凯奇文字
+                        .flash-skq {
+                            margin-top: -10px;
+
+                            // 斯凯奇品牌专场
+                            >div {
+                                font-size: 16px;
+                                color: #333;
+                                font-weight: 700;
+                                margin-bottom: 5px;
+                            }
+
+                            // 全场...统一样式
+                            >span {
+                                color: #666;
+                            }
+
+                            // 倒计时样式覆盖
+                            .time {
+                                font-weight: 700;
+                                color: #333;
+                            }
+
+                        }
+
+                        // 鞋子图片大小
+                        .flash-shoe {
+                            width: 130px;
+                            height: 130px;
+
+                            >img {
+                                width: 100%;
+                            }
+                        }
+
+                    }
+
+                    // 2*3品牌列表
+                    .flash-com {
+                        width: 270px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: -20px;
+
+                        // 每一项统一设置
+                        .flash-itme {
+                            box-sizing: border-box;
+                            width: 135px;
+                            height: 100px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            // logo图片大小
+                            >img {
+                                width: 100px;
+                                height: 50px;
+                            }
+
+                            // 文字大小样式
+                            >div {
+                                color: #666;
+                                margin-top: 6px;
+                                font-size: 12px;
+                                text-align: center;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -657,6 +1223,7 @@ body {
         height: vw(260);
         margin-bottom: vw(20);
 
+        // 内胆
         .goods-entry {
             display: flex;
             justify-content: space-between;
@@ -667,11 +1234,102 @@ body {
             // 左侧发现好货
             .found {
                 width: vw(190);
+                background: url(../picture/下载.png) no-repeat;
+
+                // 中间的文字背景
+                .found-img {
+                    background: url(../picture/faxianhaohuo.png) no-repeat;
+                    width: 160px;
+                    height: 90px;
+                    margin-top: 15px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    // 文字
+                    >div {
+                        width: 140px;
+                        height: 24px;
+                        color: rgba(255, 255, 255, .8);
+                        font-size: 16px;
+                        padding-top: 55px;
+                        padding-left: 20px;
+                        padding-bottom: 10px;
+                        position: relative;
+
+                        // 浮动元素
+                        >span {
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                            border: 2px solid #fff;
+                            border-radius: 50%;
+                            text-align: center;
+                            position: absolute;
+                            bottom: -10px;
+                            right: 15px;
+
+                            // 浮动元素里的>
+                            >span {
+                                font-size: 12px;
+                                position: absolute;
+                                top: -3px;
+                                left: 2px;
+                            }
+
+
+                        }
+                    }
+                }
+
             }
 
             // 商品项
-            .good-items {
+            .good-commodity {
                 width: vw(990);
+                background-color: #fff;
+
+                // 内胆
+                .good-entry {
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    // 每一项
+                    .good-item {
+                        width: 150px;
+                        height: 181px;
+                        margin-top: 50px;
+
+                        // 图片大小
+                        >div {
+                            img {
+                                width: 150px;
+                                height: 150px;
+                            }
+                        }
+                    }
+
+                    // 图片上下的文字
+                    .good-writing {
+                        color: #333;
+                        text-align: center;
+                        font-size: 14px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                    }
+
+                    // 图片在上的样式覆盖 3
+                    .top {
+                        margin-top: 20px;
+                        margin-bottom: 0;
+
+                        .good-writing {
+                            margin-top: 10px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
             }
 
         }
@@ -691,6 +1349,109 @@ body {
 
             >div {
                 width: vw(290);
+                background-color: #fff;
+            }
+            
+            // 新品首发
+            .npl {
+                background: url(../picture/beijin.png) no-repeat;
+                background-size: cover;
+                background-color: #fff;
+                position: relative;
+
+                // 大标题
+                .npl-title {
+                    width: 290px;
+                    height: 60px;
+                    padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 32px;
+                    // 箭头
+                    >span {
+                        width: 16px;
+                        height: 16px;
+                        display: inline-block;
+                        margin-left: 10px;
+                        background-image: url(../picture/箭头.png)
+                        ;
+                        background-position: -16px 0;
+                    }
+                }
+                // 图片
+                .npl-item{
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    
+
+                    // 默认样式
+                    img{
+                        width: 104px;
+                        height: 104px;
+                        margin-top: 10px;
+                        // 中间
+                        &:nth-child(2){
+                            width: 130px;
+                            height: 130px;
+                            margin: 10px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    >span{
+                        display: inline-block;
+                        width: 25px;
+                        height: 35px;
+                        color: #fff;
+                        border-top-right-radius:18px;
+                        background-color: rgba(0, 0, 0, .15);
+                        position: absolute;
+                        left: 0; 
+                    }
+                }
+                // 文字
+                .npl-writing{
+                    text-align: center;
+                    // 产品名
+                    .writing-1{
+                        width: 200px;
+                        margin: auto;
+                        margin-top: 20px;
+                        margin-bottom: 4px;
+                        font-size: 14px;
+                        color: #333;
+                        white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                    }
+                    // 下方小字部分
+                    .writing-2{
+                        font-size: 12px;
+                        color: #999;
+                        margin:0;
+                    }
+                }
+                // 金额
+                .npl-amount{
+                    margin-top: 20px;
+                    text-align: center;
+                    color: #e1251b;
+                    font-size: 20px;
+                    // 小子样式覆盖
+                    >span{
+                        &:nth-child(1){
+                            font-size: 12px;
+                        }
+                        &:nth-child(2){
+                            font-size: 16px;
+                        }
+                    }
+                }
+
             }
         }
     }
