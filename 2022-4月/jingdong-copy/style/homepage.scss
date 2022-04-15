@@ -17,10 +17,6 @@
 }
 
 // 边框
-div {
-    // border: 1px solid;
-    box-sizing: border-box;
-}
 
 *,
 li {
@@ -360,6 +356,47 @@ body {
                 .picture-link {
                     position: relative;
 
+                    // 左下角浮动小图标
+                    .round {
+                        position: absolute;
+                        
+                        left: 50px;
+                        bottom: 20px;
+
+                        >i {
+                            width: 8px;
+                            height: 8px;
+                            margin-right: 2px;
+                            border: 1px solid rgba(0, 0, 0, .05);
+                            background: rgba(255, 255, 255, .4);
+                            display: inline-block;
+                            border-radius: 50%;
+
+                            &:nth-child(1) {
+                                position: absolute;
+                                border-radius: 50%;
+                                margin-right: 4px;
+                                background: rgba(255, 255, 255, .4);
+                                border: 11px solid rgba(0, 0, 0, .1);
+                                top: -5px;
+                                left: -25px;
+
+
+                                &::before {
+                                    position: absolute;
+                                    display: inline-block;
+                                    top: -4.5px;
+                                    left: -4px;
+                                    content: " ";
+                                    width: 9px;
+                                    height: 9px;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                    }
+
                     >img {
                         height: vw(470);
                     }
@@ -640,6 +677,13 @@ body {
                 >li {
                     padding: 10px;
                     text-align: center;
+                    font-size: 14px;
+                    color: #333;
+
+                    >span {
+                        display: inline-block;
+                        margin: 0 11px 3px;
+                    }
                 }
             }
 
@@ -649,6 +693,8 @@ body {
                 height: vw(58);
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                color: #e1251b;
             }
         }
     }
@@ -879,8 +925,7 @@ body {
             // * {
             //     border: 1px solid;
             // }
-
-            margin: auto;
+            margin: 0px 156.7px;
             width: vw(1190);
             display: flex;
             justify-content: space-between;
@@ -1926,7 +1971,7 @@ body {
 
     // 为你推荐
     .reco {
-        height: vw(11755);
+        height: vw(6050);
 
         // 标题大字 为你推荐
         .for-you {
@@ -1957,8 +2002,8 @@ body {
 
         // 第一排列表
         .reco-menu {
-            width: vw(1190);
-            margin: auto;
+            width: vw(1180);
+            margin-left: 158px;
             margin-bottom: vw(10);
 
             // 菜单列表
@@ -2014,38 +2059,200 @@ body {
             ul {
                 width: vw(1200);
                 display: flex;
+                // justify-content: space-between;
                 flex-wrap: wrap;
 
                 // 商品项基础样式
                 .reco-item {
                     background-color: #fff;
                     display: inline-block;
-                    width: 226px;
+                    width: 230px;
                     height: 322px;
-                    ;
                     margin: 0 vw(5) vw(10) vw(5);
-                    // w文字
+
+                    // 普通的文字
                     .reco-writing {
+                        height: 48px;
                         font-size: 14px;
                         color: #666;
                         margin-bottom: 6px;
                         padding: 0 20px;
                         clear: both;
                         line-height: 24px;
-                        >p{
-                        word-break: break-all;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        height: 48px; line-height: 24px;
+                        text-align: center;
+
+                        >p {
+                            word-break: break-all;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            height: 48px;
+                            line-height: 24px;
+                            margin: 0;
                         }
                     }
-                    // 
-                    .reco-img{
+
+                    // 图片部分
+                    .reco-img {
                         margin: 30px 40px 40px 40px;
-                        >img{
+
+                        >img {
                             width: 150px;
                         }
 
+                    }
+
+                    // 金额部分
+                    .reco-price {
+                        font-size: 20px;
+                        font-weight: 700;
+                        height: 18px;
+                        color: #e1251b;
+                        padding: 0 20px;
+
+                        >span {
+                            font-size: 12px;
+                        }
+
+                        >b {
+                            font-size: 12px;
+                        }
+                    }
+
+                    // 1.1 第一块特殊
+                    .price-mny {
+                        display: flex;
+                        justify-content: space-between;
+
+                        >div {
+                            span {
+                                font-size: 12px;
+                            }
+
+                            // PLUS会员
+                            &:nth-child(2) {
+                                >span {
+                                    color: #333;
+                                    font-weight: 400;
+                                }
+                            }
+
+                            // 00小数点
+                            b {
+                                font-size: 12px;
+                            }
+
+                        }
+                    }
+
+                }
+
+                // 1.5 部分特殊背景栏
+                .reco-special {
+                    font-size: 12px;
+                    background-image: url(../picture/tuijian/bj.png);
+
+                    // 文字部分
+                    .confined {
+                        margin: 0 20px;
+                        margin-top: -30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        height: 98px;
+
+                        // 蓝色小框
+                        .ksp {
+                            color: #116ce9;
+                            border: 1px solid #116ce9;
+                            border-radius: 2px;
+                            font-weight: 700;
+                            padding: 0 3px;
+                            display: inline-block;
+                            height: 18px;
+                            width: 60px;
+                            margin-bottom: 5px;
+                        }
+
+                        // 第二行粗体 育儿心得
+                        .yexd {
+                            font-size: 14px;
+                            font-weight: 700;
+                            color: #333;
+                            margin-bottom: 5px;
+                        }
+
+                        // 第三排字 养娃不愁
+                        .ywbc {
+                            color: #666;
+                            margin-bottom: 5px;
+                        }
+
+                        // 蓝色背景小图标joy寻宝
+                        .xb {
+                            background-image: url(../picture/tuijian/biao.png);
+                            height: 24px;
+                            width: 95px;
+
+                            >span {
+                                color: #fff;
+                                font-size: 12px;
+                                display: inline-block;
+                                text-align: center;
+                                line-height: 24px;
+                                font-weight: 700;
+                                margin-left: 30px;
+                            }
+                        }
+                    }
+
+
+                }
+
+                // 3.1 特殊表格栏
+                .special-chart {
+                    background: url(../picture/tuijian/bj.png);
+                    background-position: -460px 0;
+                    width: 230px;
+                    height: 322px;
+
+                    >div {
+
+                        // 框内大标题样式
+                        &:nth-child(1) {
+                            width: 110px;
+                            height: 34px;
+                            line-height: 34px;
+                            color: #fff;
+                            background: #f2272b;
+                            margin: 20px auto 37px;
+                            font-size: 16px;
+                            font-weight: 700;
+                            text-align: center;
+                            border-radius: 50px;
+                        }
+
+                        // 框内内容
+                        &:nth-child(2) {
+                            width: 230px;
+                            height: 192px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-evenly;
+                            align-items: space-evenly;
+
+                            // 每一项统一样式
+                            >div {
+                                display: inline-block;
+                                color: #c81623;
+                                border: 1px solid #ffe0e8;
+                                border-radius: 5px;
+                                width: 88px;
+                                height: 36px;
+                                line-height: 36px;
+                                font-size: 14px;
+                                text-align: center;
+                            }
+                        }
                     }
                 }
             }
@@ -2067,14 +2274,74 @@ body {
                 justify-content: space-evenly;
                 align-items: center;
 
+
                 // 精灵图项的基本样式
                 li {
+                    position: relative;
+                    padding-left: 45px;
+
                     >div {
                         display: inline-block;
+                        height: 42px;
+                        line-height: 42px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        color: #444;
                     }
+
+                    .genie-1 {
+                        width: 36px;
+                        height: 42px;
+                        background-image: url(../picture/cc1d8d291ea917c0.png);
+                        background-repeat: no-repeat;
+                        background-position: 0 -192px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    .genie-2 {
+                        width: 36px;
+                        height: 42px;
+                        background-image: url(../picture/cc1d8d291ea917c0.png);
+                        background-repeat: no-repeat;
+                        background-position: -41px -192px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    .genie-3 {
+                        width: 36px;
+                        height: 42px;
+                        background-image: url(../picture/cc1d8d291ea917c0.png);
+                        background-repeat: no-repeat;
+                        background-position: -82px -192px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    .genie-4 {
+                        width: 36px;
+                        height: 42px;
+                        background-image: url(../picture/cc1d8d291ea917c0.png);
+                        background-repeat: no-repeat;
+                        background-position: -123px -192px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
                 }
             }
         }
+    }
+
+    hr {
+        color: #e1e1e1;
     }
 
     // y页脚
@@ -2087,9 +2354,16 @@ body {
             padding: vw(20) 0px;
             width: vw(1190);
             margin: auto;
+            color: #666;
 
-            div {
+            >div {
                 display: inline-block;
+
+                ul {
+                    li {
+                        line-height: 22px;
+                    }
+                }
             }
 
             // 标题基础样式
@@ -2097,6 +2371,8 @@ body {
                 margin: 0;
                 font-size: 14px;
                 text-align: center;
+                margin-bottom: 5px;
+
             }
 
             // 内胆
@@ -2107,12 +2383,15 @@ body {
 
                 // 京东自营文字区
                 .help-item-5 {
-                    width: 200px;
+                    width: 180px;
 
                     a {
                         display: block;
+                        text-decoration: none;
+                        outline: none;
                         color: #666;
                         text-align: right;
+                        margin-top: 5px;
                     }
                 }
             }
@@ -2122,6 +2401,9 @@ body {
         .foot-end {
             height: vw(265.4);
             padding: 15px 0;
+            border-top: 1px solid #e1e1e1;
+            width: 1190px;
+            margin: 0 auto;
 
             // 关于我们联系我们帮助类的项，一行
             .contact {
@@ -2130,6 +2412,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: #666;
 
                 // 文字样式
                 p {
@@ -2149,10 +2432,23 @@ body {
             .permit {
                 font-size: 12px;
                 width: vw(1190);
+                height: 110px;
                 margin: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding: 10px 0;
+
+                a {
+                    text-decoration: none;
+                    outline: none;
+                    color: #999;
+                }
+
+                p {
+                    margin: 5px;
+                    height: 22px;
+                }
 
                 // 竖线样式
                 span {
