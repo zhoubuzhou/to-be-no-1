@@ -1434,6 +1434,358 @@ body .starting .starting-entry .npl .npl-amount > span:nth-child(2) {
   font-size: 16px;
 }
 
+body .starting .starting-entry .joy .joy-title {
+  width: 290px;
+  height: 60px;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+  line-height: 32px;
+}
+
+body .starting .starting-entry .joy .joy-title > span {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 10px;
+  background-image: url(../picture/箭头.png);
+  background-position: -16px 0;
+}
+
+body .starting .starting-entry .joy .joy-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #999;
+  font-size: 12px;
+  height: 40px;
+}
+
+body .starting .starting-entry .joy .joy-head > div {
+  height: 20px;
+  width: 62px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 12px;
+  display: inline-block;
+  background-color: #f6f6f6;
+}
+
+body .starting .starting-entry .joy .joy-head > div:nth-child(1) {
+  background-color: #e1251b;
+  color: #fff;
+}
+
+body .starting .starting-entry .joy .joy-commodity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .starting .starting-entry .joy .joy-commodity .joy-item {
+  height: 75px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+}
+
+body .starting .starting-entry .joy .joy-commodity .joy-item > div:nth-child(1) {
+  margin-right: 5px;
+}
+
+body .starting .starting-entry .joy .joy-commodity .joy-item > div:nth-child(1) img {
+  width: 70px;
+  height: 70px;
+}
+
+body .starting .starting-entry .joy .joy-commodity .joy-item .joy-writing {
+  width: 180px;
+}
+
+body .starting .starting-entry .joy .joy-commodity .joy-item .joy-writing .joy_item_name {
+  font-size: 14px;
+  overflow: hidden;
+  height: 36px;
+}
+
+body .starting .starting-entry .joy .joy-commodity .joy-item .joy-writing span {
+  display: block;
+}
+
+body .starting .starting-entry .joy .joy-commodity .joy-item .joy-writing span:nth-child(2) {
+  color: #e1251b;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+body .starting .starting-entry .good-shops .shops-title {
+  width: 290px;
+  height: 60px;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+  line-height: 32px;
+}
+
+body .starting .starting-entry .good-shops .shops-title > span {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 10px;
+  background-image: url(../picture/箭头.png);
+  background-position: -16px 0;
+}
+
+body .starting .starting-entry .good-shops .shops-body {
+  padding: 0 15px;
+}
+
+body .starting .starting-entry .good-shops .shops-body > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 260px;
+  height: 128px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .starting .starting-entry .good-shops .shops-body > div .shops-img {
+  width: 100px;
+  height: 100px;
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.062);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.062);
+}
+
+body .starting .starting-entry .good-shops .shops-body > div .shops-img > img {
+  width: 90px;
+  height: 90px;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-item-1 {
+  background: url(../picture/xiaobeijin.png) no-repeat;
+  background-size: 100%;
+  margin-bottom: 10px;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-item-2 {
+  background: url(../picture/xiaobeijing.png) no-repeat;
+  background-size: 100%;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-writing {
+  width: 120px;
+  height: 98px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #999;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-writing .writing-head {
+  color: #333;
+  font-size: 14px;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-writing .writing-label {
+  margin-top: -15px;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-writing .writing-label > span {
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 0 2px;
+  height: 18px;
+  line-height: 17px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-writing .writing-label > span:nth-child(1) {
+  color: #e2231a;
+}
+
+body .starting .starting-entry .good-shops .shops-body .shops-writing .writing-label > span:nth-child(2) {
+  color: #596fab;
+}
+
+body .starting .starting-entry .collect .collect-title {
+  width: 290px;
+  height: 60px;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+  line-height: 32px;
+}
+
+body .starting .starting-entry .collect .collect-title > span {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 10px;
+  background-image: url(../picture/箭头.png);
+  background-position: -16px 0;
+}
+
+body .starting .starting-entry .collect .collect-body {
+  width: 293px;
+  height: 283px;
+  padding: 0px 15px;
+  background: url(../picture/红色.png) no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item {
+  width: 260px;
+  height: 82px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .item-img {
+  width: 66px;
+  height: 66px;
+  margin: 8px 0 0 7px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .item-img > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-writing {
+  width: 140px;
+  height: 75px;
+  margin-left: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #999;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-writing .discount {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e33333;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-writing .discount > span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-writing .forbid {
+  color: #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-ver {
+  width: 40px;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-ver > div {
+  width: 1px;
+  height: 60px;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-ver > span {
+  display: block;
+  width: 12px;
+  height: 82px;
+  line-height: 82px;
+}
+
+body .starting .starting-entry .collect .collect-body .collect-item .collect-ver .le {
+  padding-left: 5px;
+}
+
 body .classify {
   height: 66.81148vw;
   margin-bottom: 10px;
@@ -1443,7 +1795,31 @@ body .classify .large {
   margin-top: 0;
   font-size: 28px;
   font-weight: 700px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #333;
+}
+
+body .classify .large > span {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  background-image: url(../picture/guang.png);
+}
+
+body .classify .large > span:nth-of-type(2) {
+  background-position: -25px 0;
+}
+
+body .classify .large > div {
+  margin: 0 20px;
 }
 
 body .classify .classify-entry {
@@ -1466,6 +1842,44 @@ body .classify .classify-entry .classify-item {
   width: 19.08899vw;
   height: 11.84834vw;
   margin-bottom: 10px;
+  background-color: #fff;
+}
+
+body .classify .classify-entry .classify-item .classify-title {
+  width: 290px;
+  height: 60px;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+  line-height: 32px;
+}
+
+body .classify .classify-entry .classify-item .classify-title > span {
+  font-weight: 400;
+  font-size: 14px;
+  color: #999;
+  margin-left: 5px;
+  padding-top: 10px;
+}
+
+body .classify .classify-entry .classify-item .classify-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .classify .classify-entry .classify-item .classify-img > img {
+  width: 100px;
 }
 
 body .classify .classify-entry .classify-item-1 {
@@ -1473,9 +1887,17 @@ body .classify .classify-entry .classify-item-1 {
   height: 24.35492vw;
 }
 
+body .classify .classify-entry .classify-item-1 > img {
+  width: 100%;
+}
+
 body .classify .classify-entry .classify-item-5 {
   width: 19.08899vw;
   height: 24.35492vw;
+}
+
+body .classify .classify-entry .classify-item-5 > img {
+  width: 100%;
 }
 
 body .reco {
@@ -1486,7 +1908,31 @@ body .reco .for-you {
   margin-top: 0;
   font-size: 28px;
   font-weight: 700px;
-  text-align: center;
+  color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .reco .for-you > span {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  background-image: url(../picture/guang.png);
+}
+
+body .reco .for-you > span:nth-of-type(2) {
+  background-position: -25px 0;
+}
+
+body .reco .for-you > div {
+  margin: 0 20px;
 }
 
 body .reco .reco-menu {
@@ -1506,28 +1952,83 @@ body .reco .reco-menu ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  background-color: #fff;
 }
 
 body .reco .reco-menu ul li {
   display: inline-block;
 }
 
+body .reco .reco-menu ul li > div {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+body .reco .reco-menu ul li > span {
+  color: #999;
+  font-size: 14px;
+}
+
+body .reco .reco-menu ul .reco-red > div {
+  background: #e1251b;
+  color: #fff;
+  width: 80px;
+  height: 27px;
+  border-radius: 50px;
+}
+
+body .reco .reco-menu ul .reco-red > span {
+  color: #e1251b;
+}
+
 body .reco .reco-list {
   width: 78.98894vw;
   margin: auto;
-  border: none;
 }
 
 body .reco .reco-list ul {
   width: 78.98894vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-body .reco .reco-list ul li {
-  background-color: gray;
+body .reco .reco-list ul .reco-item {
+  background-color: #fff;
   display: inline-block;
-  width: 14.87625vw;
-  height: 21.19537vw;
+  width: 226px;
+  height: 322px;
   margin: 0 0.32912vw 0.65824vw 0.32912vw;
+}
+
+body .reco .reco-list ul .reco-item .reco-writing {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+  padding: 0 20px;
+  clear: both;
+  line-height: 24px;
+}
+
+body .reco .reco-list ul .reco-item .reco-writing > p {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 48px;
+  line-height: 24px;
+}
+
+body .reco .reco-list ul .reco-item .reco-img {
+  margin: 30px 40px 40px 40px;
+}
+
+body .reco .reco-list ul .reco-item .reco-img > img {
+  width: 150px;
 }
 
 body .mod-service {

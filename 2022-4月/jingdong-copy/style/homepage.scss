@@ -1340,6 +1340,7 @@ body {
         height: vw(340);
         margin-bottom: 20px;
 
+        // 内胆
         .starting-entry {
             display: flex;
             justify-content: space-between;
@@ -1351,7 +1352,7 @@ body {
                 width: vw(290);
                 background-color: #fff;
             }
-            
+
             // 新品首发
             .npl {
                 background: url(../picture/beijin.png) no-repeat;
@@ -1370,54 +1371,59 @@ body {
                     font-size: 24px;
                     color: #333;
                     line-height: 32px;
+
                     // 箭头
                     >span {
                         width: 16px;
                         height: 16px;
                         display: inline-block;
                         margin-left: 10px;
-                        background-image: url(../picture/箭头.png)
-                        ;
+                        background-image: url(../picture/箭头.png);
                         background-position: -16px 0;
                     }
                 }
+
                 // 图片
-                .npl-item{
+                .npl-item {
                     overflow: hidden;
                     display: flex;
                     justify-content: space-evenly;
                     align-items: center;
-                    
+
 
                     // 默认样式
-                    img{
+                    img {
                         width: 104px;
                         height: 104px;
                         margin-top: 10px;
+
                         // 中间
-                        &:nth-child(2){
+                        &:nth-child(2) {
                             width: 130px;
                             height: 130px;
                             margin: 10px;
                             margin-bottom: 0;
                         }
                     }
-                    >span{
+
+                    >span {
                         display: inline-block;
                         width: 25px;
                         height: 35px;
                         color: #fff;
-                        border-top-right-radius:18px;
+                        border-top-right-radius: 18px;
                         background-color: rgba(0, 0, 0, .15);
                         position: absolute;
-                        left: 0; 
+                        left: 0;
                     }
                 }
+
                 // 文字
-                .npl-writing{
+                .npl-writing {
                     text-align: center;
+
                     // 产品名
-                    .writing-1{
+                    .writing-1 {
                         width: 200px;
                         margin: auto;
                         margin-top: 20px;
@@ -1425,33 +1431,388 @@ body {
                         font-size: 14px;
                         color: #333;
                         white-space: nowrap;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
                     }
+
                     // 下方小字部分
-                    .writing-2{
+                    .writing-2 {
                         font-size: 12px;
                         color: #999;
-                        margin:0;
+                        margin: 0;
                     }
                 }
+
                 // 金额
-                .npl-amount{
+                .npl-amount {
                     margin-top: 20px;
                     text-align: center;
                     color: #e1251b;
                     font-size: 20px;
+
                     // 小子样式覆盖
-                    >span{
-                        &:nth-child(1){
+                    >span {
+                        &:nth-child(1) {
                             font-size: 12px;
                         }
-                        &:nth-child(2){
+
+                        &:nth-child(2) {
                             font-size: 16px;
                         }
                     }
                 }
 
+            }
+
+            // JOY
+            .joy {
+
+                // 大标题
+                .joy-title {
+                    width: 290px;
+                    height: 60px;
+                    padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 32px;
+
+                    // 箭头
+                    >span {
+                        width: 16px;
+                        height: 16px;
+                        display: inline-block;
+                        margin-left: 10px;
+                        background-image: url(../picture/箭头.png);
+                        background-position: -16px 0;
+                    }
+
+                }
+
+                // 小头部导航
+                .joy-head {
+                    display: flex;
+                    justify-content: space-evenly;
+                    color: #999;
+                    font-size: 12px;
+                    height: 40px;
+
+                    // 外层背景
+                    >div {
+                        height: 20px;
+                        width: 62px;
+                        text-align: center;
+                        line-height: 20px;
+                        border-radius: 12px;
+                        display: inline-block;
+                        background-color: #f6f6f6;
+
+                        // 轮播样式覆盖
+                        &:nth-child(1) {
+                            background-color: #e1251b;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                // 商品
+                .joy-commodity {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: space-evenly;
+                    flex-wrap: wrap;
+
+                    // 4块统一设置
+                    .joy-item {
+                        height: 75px;
+                        font-size: 12px;
+                        display: flex;
+                        color: #333;
+
+                        >div {
+
+                            // 图片
+                            &:nth-child(1) {
+                                margin-right: 5px;
+
+                                // 图片大小
+                                img {
+                                    width: 70px;
+                                    height: 70px;
+                                }
+                            }
+                        }
+
+                        // 文字样式
+                        .joy-writing {
+                            width: 180px;
+
+                            // 商品名称的样式
+                            .joy_item_name {
+                                font-size: 14px;
+                                overflow: hidden;
+                                height: 36px;
+                            }
+
+                            // 金额
+                            span {
+                                display: block;
+
+                                &:nth-child(2) {
+                                    color: #e1251b;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            // 逛好店
+            .good-shops {
+
+                // 大标题
+                .shops-title {
+                    width: 290px;
+                    height: 60px;
+                    padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 32px;
+
+                    // 箭头
+                    >span {
+                        width: 16px;
+                        height: 16px;
+                        display: inline-block;
+                        margin-left: 10px;
+                        background-image: url(../picture/箭头.png);
+                        background-position: -16px 0;
+                    }
+
+                }
+
+                // 内容
+                .shops-body {
+                    padding: 0 15px;
+
+                    // 每一项的基本样式
+                    >div {
+                        box-sizing: border-box;
+                        width: 260px;
+                        height: 128px;
+                        font-size: 12px;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        // 图片框
+                        .shops-img {
+                            width: 100px;
+                            height: 100px;
+                            background: white;
+                            padding: 5px;
+                            border-radius: 4px;
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.062);
+
+                            // 图片大小
+                            >img {
+                                width: 90px;
+                                height: 90px;
+                            }
+                        }
+                    }
+
+                    // 第一部分样式
+                    .shops-item-1 {
+                        background: url(../picture/xiaobeijin.png) no-repeat;
+                        background-size: 100%;
+                        margin-bottom: 10px;
+
+                    }
+
+                    // 第二部分样式
+                    .shops-item-2 {
+                        background: url(../picture/xiaobeijing.png) no-repeat;
+                        background-size: 100%;
+                    }
+
+                    // 字体部分 两个通用
+                    .shops-writing {
+                        width: 120px;
+                        height: 98px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        color: #999;
+
+                        // 商品名
+                        .writing-head {
+                            color: #333;
+                            font-size: 14px;
+                        }
+
+                        // 标签行
+                        .writing-label {
+                            margin-top: -15px;
+
+                            // 2个小标签的基本样式
+                            >span {
+                                border: 1px solid;
+                                border-radius: 2px;
+                                padding: 0 2px;
+                                height: 18px;
+                                line-height: 17px;
+                                box-sizing: border-box;
+                                margin-right: 2px;
+                                display: inline-block;
+
+                                // 第一个小标签 自营
+                                &:nth-child(1) {
+                                    color: #e2231a;
+                                }
+
+                                // 第二个小标签
+                                &:nth-child(2) {
+                                    color: #596fab;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 领卷中心
+            .collect {
+
+                // 大标题
+                .collect-title {
+                    width: 290px;
+                    height: 60px;
+                    padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 32px;
+
+                    // 箭头
+                    >span {
+                        width: 16px;
+                        height: 16px;
+                        display: inline-block;
+                        margin-left: 10px;
+                        background-image: url(../picture/箭头.png);
+                        background-position: -16px 0;
+                    }
+
+                }
+
+                // 内容部分
+                .collect-body {
+                    width: 293px;
+                    height: 283px;
+                    padding: 0px 15px;
+                    background: url(../picture/红色.png) no-repeat;
+                    background-size: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    // 每一项统一的基本样式
+                    .collect-item {
+                        width: 260px;
+                        height: 82px;
+                        font-size: 12px;
+                        display: flex;
+                        margin-bottom: 5px;
+
+                        // 图片
+                        .item-img {
+                            width: 66px;
+                            height: 66px;
+                            margin: 8px 0 0 7px;
+                            padding: 8px;
+                            background-color: #fff;
+                            border-radius: 50%;
+
+                            // 图片大小
+                            >img {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 20%;
+                            }
+                        }
+
+                        // 文字部分
+                        .collect-writing {
+                            width: 140px;
+                            height: 75px;
+                            margin-left: 14px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            // 大字折扣
+                            color: #999;
+
+                            .discount {
+                                font-size: 28px;
+                                font-weight: 700;
+                                color: #e33333;
+
+                                >span {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                }
+                            }
+
+                            // 最下行
+                            .forbid {
+                                color: #333;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+                        }
+
+                        // 右侧竖字
+                        .collect-ver {
+                            width: 40px;
+                            color: #666;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            // 更多好卷
+                            >div {
+                                width: 1px;
+                                height: 60px;
+                            }
+
+                            // 小箭头
+                            >span {
+                                display: block;
+                                width: 12px;
+                                height: 82px;
+                                line-height: 82px;
+                            }
+
+                            // 覆盖第三块被挤压的部分
+                            .le {
+                                padding-left: 5px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -1466,7 +1827,26 @@ body {
             margin-top: 0;
             font-size: 28px;
             font-weight: 700px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+
+            // 左右小图标
+            >span {
+                display: inline-block;
+                width: 25px;
+                height: 20px;
+                background-image: url(../picture/guang.png);
+
+                &:nth-of-type(2) {
+                    background-position: -25px 0;
+                }
+            }
+
+            >div {
+                margin: 0 20px;
+            }
         }
 
         // 内胆
@@ -1485,18 +1865,61 @@ body {
                 width: vw(290);
                 height: vw(180);
                 margin-bottom: 10px;
+                background-color: #fff;
+
+                // 大标题
+                .classify-title {
+                    width: 290px;
+                    height: 60px;
+                    padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 32px;
+
+                    // 小字部分
+                    >span {
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #999;
+                        margin-left: 5px;
+                        padding-top: 10px;
+                    }
+                }
+
+                // 图片一行
+                .classify-img {
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    // 图片大小
+                    >img {
+                        width: 100px;
+                    }
+                }
+
             }
 
             // 第一列第一个放大
             .classify-item-1 {
                 width: vw(290);
                 height: vw(370);
+
+                >img {
+                    width: 100%;
+                }
             }
 
             // 第二列 第一个放大
             .classify-item-5 {
                 width: vw(290);
                 height: vw(370);
+
+                >img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -1510,7 +1933,26 @@ body {
             margin-top: 0;
             font-size: 28px;
             font-weight: 700px;
-            text-align: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // 左右小图标
+            >span {
+                display: inline-block;
+                width: 25px;
+                height: 20px;
+                background-image: url(../picture/guang.png);
+
+                &:nth-of-type(2) {
+                    background-position: -25px 0;
+                }
+            }
+
+            >div {
+                margin: 0 20px;
+            }
         }
 
         // 第一排列表
@@ -1519,14 +1961,47 @@ body {
             margin: auto;
             margin-bottom: vw(10);
 
+            // 菜单列表
             ul {
                 height: vw(60);
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
+                text-align: center;
+                background-color: #fff;
 
                 li {
                     display: inline-block;
+
+                    // 大标题部分
+                    >div {
+                        color: #333;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 27px;
+                    }
+
+                    // 小字灰色部分
+                    >span {
+                        color: #999;
+                        font-size: 14px;
+                    }
+                }
+
+                // 第一个红色部分样式覆盖
+                .reco-red {
+                    >div {
+                        background: #e1251b;
+                        color: #fff;
+                        width: 80px;
+                        height: 27px;
+                        border-radius: 50px;
+                    }
+
+                    // 小字部分
+                    >span {
+                        color: #e1251b;
+                    }
                 }
             }
         }
@@ -1535,18 +2010,43 @@ body {
         .reco-list {
             width: vw(1200);
             margin: auto;
-            border: none;
 
             ul {
                 width: vw(1200);
+                display: flex;
+                flex-wrap: wrap;
 
                 // 商品项基础样式
-                li {
-                    background-color: rgb(128, 128, 128);
+                .reco-item {
+                    background-color: #fff;
                     display: inline-block;
-                    width: vw(226);
-                    height: vw(322);
+                    width: 226px;
+                    height: 322px;
+                    ;
                     margin: 0 vw(5) vw(10) vw(5);
+                    // w文字
+                    .reco-writing {
+                        font-size: 14px;
+                        color: #666;
+                        margin-bottom: 6px;
+                        padding: 0 20px;
+                        clear: both;
+                        line-height: 24px;
+                        >p{
+                        word-break: break-all;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        height: 48px; line-height: 24px;
+                        }
+                    }
+                    // 
+                    .reco-img{
+                        margin: 30px 40px 40px 40px;
+                        >img{
+                            width: 150px;
+                        }
+
+                    }
                 }
             }
         }
