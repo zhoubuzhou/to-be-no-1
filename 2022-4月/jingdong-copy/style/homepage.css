@@ -33,6 +33,8 @@ body .shortcut {
   height: 2.04055vw;
   background-color: #e3e4e5;
   border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 999;
 }
 
 body .shortcut > div {
@@ -94,9 +96,131 @@ body .header {
   border-bottom: 1px solid #ddd;
 }
 
+body .header .float {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  border-bottom: 2px solid #f10214;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.203);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.203);
+}
+
+body .header .float > div {
+  position: relative;
+  height: 50px;
+}
+
+body .header .float > div .float-logo {
+  background-image: url(../picture/sprite.png);
+  background-position: 0 -120px;
+  background-repeat: no-repeat;
+  display: block;
+  width: 125px;
+  height: 40px;
+  position: absolute;
+  left: 165px;
+  top: 6px;
+}
+
+body .header .float > div .from {
+  display: inline-block;
+  width: 546px;
+  height: 36px;
+  border: 2px solid #e2231a;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  position: absolute;
+  top: 8px;
+  left: 425px;
+}
+
+body .header .float > div .from > input {
+  border: none;
+  padding: 2px 44px 2px 17px;
+  width: 425px;
+  height: 26px;
+  border: 1px solid transparent;
+  color: #333;
+  font-size: 12px;
+}
+
+body .header .float > div .from > span {
+  font-size: 19px;
+  color: #999;
+  display: inline-block;
+  position: absolute;
+  right: 70px;
+}
+
+body .header .float > div .from > button {
+  border: none;
+  width: 58px;
+  height: 32px;
+  background-color: #e1251b;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+body .header .float > div .shop {
+  position: absolute;
+  top: 8px;
+  left: 995px;
+}
+
+body .header .float > div .shop > div {
+  width: 130px;
+  height: 34px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 34px;
+  border: 1px solid #e3e4e5;
+  position: absolute;
+}
+
+body .header .float > div .shop > div span {
+  color: #e1251b;
+}
+
+body .header .float > div .shop > div span:nth-child(1) {
+  margin-right: 13px;
+}
+
+body .header .float > div .shop > div span:nth-child(2) {
+  font-size: 12px;
+}
+
+body .header .float > div .shop > div span:nth-child(3) {
+  position: absolute;
+  top: 1px;
+  left: 29px;
+  right: auto;
+  font-size: 12px;
+  line-height: 12px;
+  min-width: 20px;
+  padding: 1px 3px;
+  color: #fff;
+  background-color: #e1251b;
+  border-radius: 7px;
+  text-align: center;
+}
+
 body .header > div {
-  margin: auto;
-  width: 78.3307vw;
+  width: 100%;
+  padding: 0px 158px;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,6 +228,7 @@ body .header > div {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  z-index: 999;
 }
 
 body .header > div .jd-icon {

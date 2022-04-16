@@ -677,12 +677,6 @@
   margin-right: 8px;
 }
 
-.main .list > div:nth-of-type(2) {
-  width: 1376px;
-  overflow-y: scroll;
-  height: 273px;
-}
-
 .main .list > div:nth-of-type(2) > table {
   width: 1376px;
   border-collapse: collapse;
@@ -968,6 +962,12 @@
   background-color: #00796a;
   border-radius: 2px;
   margin-right: 8px;
+}
+
+.main .list > div:nth-of-type(2) {
+  height: 273px;
+  overflow-y: scroll;
+  width: 1376px;
 }
 
 .main .list > div:nth-child(3) button {

@@ -1,0 +1,89 @@
+// 设置12栅格
+.grid{
+    display: flex;
+    flex-wrap: wrap; 
+    &.grid-left{justify-content: flex-start;}
+    .grid-cell{
+        flex: 0 0 auto;
+        @for $i from 1 to 13 {
+            &.col-#{$i}{
+                flex-basis: $i / 12 * 100%;
+            }
+        }
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,ol,body {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px solid;
+}
+// 引入图标
+@font-face {
+    font-family: 'iconfont';
+    src: url(../iconfont/iconfont.ttf) format("truetype");
+}
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+@import url(./pc.scss);
+@import url(./pad.scss);
+@import url(./phone.scss);
+
+// 分割线
+
+// pc端样式
+@media (min-width:992px) {
+    .main{
+        // 头部菜单
+        .head{
+            height: 51px;
+            display: flex;
+            line-height: 51px;
+            // logo
+            .head-logo{
+                width: 60px;
+                font-size: 60px;
+                margin-left: 20px;
+            }
+            // 中间菜单栏
+            .head-menu{
+                flex-grow: 1;
+                ul{
+                    margin-left: 20px;
+                    // 去除li的默认样式 让他一行显示
+                    li{
+                        display: inline-block;
+                        margin-right: 25px;
+                    }
+                }
+            }
+            // 右侧
+            .head-individual{
+                padding-right: 20px;
+                >div{
+                    display: inline-block;
+                }
+                span{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

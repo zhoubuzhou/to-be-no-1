@@ -244,6 +244,11 @@
         }
 
         >div {
+            &:nth-of-type(2){
+                height: 273px;
+                overflow-y: scroll;
+                width: 1376px;
+            }
             // 右下角页数索引
             &:nth-child(3) {
                 button {
