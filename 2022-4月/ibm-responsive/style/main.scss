@@ -1,37 +1,63 @@
-// 设置12栅格
-.grid{
+@import './pc.scss';
+@import './pad.scss';
+@import './phone.scss';
+
+
+// 设置8栅格
+.grid {
     display: flex;
-    flex-wrap: wrap; 
-    &.grid-left{justify-content: flex-start;}
-    .grid-cell{
+    flex-wrap: wrap;
+
+    &.grid-left {
+        justify-content: flex-start;
+    }
+
+    .grid-cell {
         flex: 0 0 auto;
-        @for $i from 1 to 13 {
-            &.col-#{$i}{
-                flex-basis: $i / 12 * 100%;
+
+        @for $i from 1 to 9 {
+            &.col-8-#{$i} {
+                flex-basis: $i / 8 * 100%;
             }
         }
     }
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 0;
+
+* {
+    box-sizing: border-box;
 }
 
-ul,ol,body {
+@function vw($px) {
+    @return $px / 1519.2 * 100vw;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+ul,
+ol,
+body {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-div {
-    border: 1px solid;
-}
+
 // 引入图标
 @font-face {
     font-family: 'iconfont';
     src: url(../iconfont/iconfont.ttf) format("truetype");
 }
+
 .iconfont {
     font-family: "iconfont";
     font-size: 16px;
@@ -42,47 +68,615 @@ div {
 
 
 
-@import url(./pc.scss);
-@import url(./pad.scss);
-@import url(./phone.scss);
 
-// 分割线
+// pad端样式
+@media (min-width:768px) and (max-width:992px) {
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
-// pc端样式
-@media (min-width:992px) {
-    .main{
+        .none {
+            display: none;
+        }
+
         // 头部菜单
-        .head{
+        .head {
+            width: 100%;
             height: 51px;
             display: flex;
             line-height: 51px;
+
             // logo
-            .head-logo{
+            .head-logo {
                 width: 60px;
-                font-size: 60px;
+                font-size: 62px;
                 margin-left: 20px;
-            }
-            // 中间菜单栏
-            .head-menu{
                 flex-grow: 1;
-                ul{
-                    margin-left: 20px;
-                    // 去除li的默认样式 让他一行显示
-                    li{
-                        display: inline-block;
-                        margin-right: 25px;
+            }
+
+            // 中间菜单栏
+            .head-menu {
+                display: none;
+            }
+
+            // 右侧
+            .head-individual {
+                margin-right: 20px;
+
+                >div {
+                    display: inline-block;
+                }
+
+                .head-search {
+                    font-size: 1rem;
+                    line-height: 1.625rem;
+                    width: 220px;
+                    height: 100%;
+                    border-left: 1px solid #e0e0e0;
+                    border-right: 1px solid #e0e0e0;
+                    position: relative;
+                    top: -5px;
+
+                    >input {
+                        border: none;
+                        padding-left: 10px;
+                        height: 48px;
+                        line-height: 48px;
+                        color: #323232;
+                    }
+
+                    >span {
+                        font-size: 28px;
+                        position: absolute;
+                        top: 12px;
+                        right: 5px;
+                    }
+                }
+
+                // 右边图标
+                .head-icon {
+                    >span {
+                        margin-left: 20px;
+                    }
+                }
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .liner {
+
+            // 大标题图片
+            .show {
+                height: 560px;
+                background-image: url(../img/20220405-ibm-z-multiframe-annc-2304x983_0.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 50%;
+
+                // 内容
+                .show-writing {
+                    width: 50%;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    padding: 2rem 1rem;
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    // 内容标题
+                    .show-title {
+                        width: 80%;
+                        align-self: flex-start;
+                        margin-bottom: 32px;
+                        color: #262626;
+                        line-height: 1.17;
+
+                        >h1 {
+                            font-weight: 300;
+                            line-height: 1.22;
+                            font-size: calc(2.25rem + .375 * ((100vw - 42rem)/ 24));
+                        }
+                    }
+
+                    // 下半部分详情
+                    .show-detail {
+                        width: 100%;
+                        align-self: flex-end;
+                        font-size: 1rem;
+
+                        // 详情 在混合云
+                        >p {
+                            width: 75%;
+                            color: #525252;
+                            font-weight: 400;
+                            line-height: 1.4;
+                            letter-spacing: 0;
+                            font-size: calc(1.25rem + 0 * ((100vw - 20rem)/ 62));
+                        }
+
+                        // 左下角蓝色框
+                        >div {
+                            display: flex;
+                            min-width: 13.75rem;
+                            height: 48px;
+                            margin-top: 32px;
+                            background-color: #0062ff;
+                            border-color: #0062ff;
+                            color: #fff;
+                            position: relative;
+
+                            // 文字
+                            .weo {
+                                padding: calc(.875rem - 1px) 3.9375rem calc(.875rem - .1875rem) .9375rem;
+
+                            }
+
+                            // 箭头
+                            .z16 {
+                                position: absolute;
+                                right: 30px;
+                                top: 25%;
+                                width: 1.25rem;
+                                height: 1.25rem;
+                                font-size: 1.5rem;
+
+                            }
+
+                        }
+                    }
+
+                }
+
+
+            }
+
+            .liner-content {
+
+                // 板块1
+                .content-item-1 {
+                    padding-bottom: 2rem;
+                    padding-top: 2rem;
+                    background-color: #fff;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+
+                    // 左侧大标题
+                    .idea-title {
+                        width: 100%;
+                        padding-left: 16px;
+                        padding-right: 16px;
+
+                        >h2 {
+                            color: #262626;
+                            font-weight: 600;
+                            line-height: 1.375;
+                            letter-spacing: 0;
+                            height: 46px;
+                        }
+                    }
+
+                    // 1*3内容区
+                    .idea-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+
+                        // 每一块共同样式
+                        .idea-item {
+                            height: 26.48rem;
+                            box-sizing: border-box;
+                            background-color: #f2f4f8;
+                            margin-left: 1rem;
+                            margin-right: 1rem;
+
+                            // 图片大小
+                            .idea-item-img {
+                                height: 12.65rem;
+
+                                >img {
+                                    width: 22.25rem;
+                                }
+                            }
+
+                            // 文字区
+                            .idea-liner {
+                                width: 22.4rem;
+                                height: 11.4rem;
+                                padding: 1rem;
+                                padding-bottom: 24px;
+
+                                // 内容标题
+                                .idea-item-title {
+                                    height: 52px;
+                                    padding-right: 16px;
+                                    color: #262626;
+                                    font-weight: 600;
+                                    line-height: 1.375;
+                                    letter-spacing: 0;
+                                }
+
+                                .idea-item-writing {
+                                    color: #525252;
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                    line-height: 1.375;
+                                    width: 15rem;
+                                }
+                            }
+
+                            .idea-blue {
+                                padding: 0px 1rem;
+                                align-self: flex-end;
+                                color: rgb(15, 98, 254);
+
+                                >span {
+                                    &:nth-child(2) {
+                                        font-size: 1.25rem;
+                                        font-weight: 500;
+                                        margin-left: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 1板块左下角翻页
+                        .idea-flip {
+                            margin-top: 2rem;
+                            display: flex;
+                            justify-content: flex-end;
+                            padding-right: 1rem;
+
+                            button {
+                                height: 2rem;
+                                z-index: 10;
+                                background-color: #0f62fe;
+                                border: none;
+                                color: #fff;
+                                width: 2rem;
+                                height: 2rem;
+                            }
+
+                            span {
+                                margin: 0 0.8rem;
+
+                            }
+                        }
+                    }
+                }
+
+                // 板块2
+                .content-item-2 {
+                    padding-bottom: 2rem;
+                    padding-top: 2rem;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    display: flex;
+                    background-color: #f2f4f8;
+
+                    // 左侧大标题
+                    .products-title {
+                        width: 100%;
+                        padding-left: 16px;
+                        padding-right: 16px;
+
+                        >h2 {
+                            color: #262626;
+                            font-weight: 600;
+                            line-height: 1.375;
+                            letter-spacing: 0;
+                        }
+
+                        >div {
+                            margin: 24px 0;
+                            color: #0f62fe;
+
+                            >span {
+                                margin-right: .5rem;
+                            }
+                        }
+                    }
+
+                    // 1*3内容区
+                    .products-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        background-color: rgb(242, 244, 248);
+
+                        // 每一块共同样式
+                        .products-item {
+                            height: 26.48rem;
+                            box-sizing: border-box;
+                            background-color: #fff;
+                            margin-left: 1rem;
+                            margin-right: 1rem;
+
+                            // 图片大小
+                            .products-item-img {
+                                height: 12.65rem;
+                                background-color: #fff;
+
+                                >img {
+                                    width: 22.25rem;
+                                }
+                            }
+
+                            // 文字区
+                            .products-liner {
+                                width: 22.4rem;
+                                height: 11.4rem;
+                                padding: 1rem;
+                                padding-bottom: 24px;
+
+                                // 内容标题
+                                .products-item-title {
+                                    height: 52px;
+                                    padding-right: 16px;
+                                    color: #262626;
+                                    font-weight: 600;
+                                    line-height: 1.375;
+                                    letter-spacing: 0;
+                                    width: 15.9rem;
+                                }
+
+                                .products-item-writing {
+                                    color: #525252;
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                    line-height: 1.375;
+                                    width: 17.59rem;
+                                }
+                            }
+
+                            .products-blue {
+                                color: #0f62fe;
+                                padding: 0px 1rem;
+
+                                >span {
+                                    &:nth-child(2) {
+                                        font-size: 1.25rem;
+                                        font-weight: 500;
+                                        margin-left: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 1板块左下角翻页
+                        .products-flip {
+                            left: 61.3rem;
+                            margin-top: 2rem;
+                            background-color: #f2f4f8;
+                            display: flex;
+                            justify-content: flex-end;
+                            padding-right: 1rem;
+
+                            >button {
+                                height: 2rem;
+                                z-index: 10;
+                                background-color: #0f62fe;
+                                border: none;
+                                color: #fff;
+                                width: 2rem;
+                                height: 2rem;
+                            }
+
+                            >span {
+                                margin: 0 0.8rem;
+                            }
+                        }
+                    }
+                }
+
+                // 板块3
+                .content-item-3 {
+                    padding-bottom: 2rem;
+                    padding-top: 2rem;
+                    background-color: #fff;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    height: 38rem;
+
+                    // 左侧标题
+                    .nav-title {
+                        padding-left: 1rem;
+
+                        >h2 {
+                            color: #262626;
+                            font-weight: 600;
+                            line-height: 1.375rem;
+                        }
+                    }
+
+                    // 1*3列表
+                    .nav-content {
+                        display: flex;
+                        justify-content: space-between;
+
+                        // 每一项共同样式
+                        .nav-item {
+                            padding: 1rem;
+                            width: 22.4rem;
+                            height: 29.5rem;
+                            background-color: #f2f4f8;
+                            margin-left: 1rem;
+                            margin-right: 1rem;
+
+                            .nav-item-title {
+                                font-weight: 600;
+                                color: #525252;
+                                height: 3rem;
+                            }
+
+                            >ul {
+                                line-height: 1.625rem;
+
+                                >li {
+                                    color: #0062ff;
+                                    padding-left: 28px;
+                                    height: 33px;
+
+                                    // 小圆点
+                                    &::before {
+                                        color: #959595;
+                                        content: '\2022';
+                                        display: inline-block;
+                                        font-family: Arial, sans-serif;
+                                        font-size: 1.5rem;
+                                        margin-left: -1.3rem;
+                                        position: absolute;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                // 板块4
+                .content-item-4 {
+                    height: 496px;
+
+                    // 左侧
+                    .car-item-1 {
+                        overflow: hidden;
+                        height: 100%;
+                        background-image: url(../img/FAW.jpg);
+                        background-size: cover;
+                        background-position: right center;
+                        background-repeat: no-repeat;
+                        color: #fff;
+                        position: relative;
+
+                    }
+
+                    // 右侧
+                    .car-item-2 {
+                        overflow: hidden;
+                        height: 100%;
+                        background-image: url(../img/cs-hub-logos-1042x1130.jpg);
+
+                        background-size: cover;
+                        background-position: right center;
+                        background-repeat: no-repeat;
+                        color: #fff;
+                        position: relative;
+                    }
+
+                    // 标题
+                    .car-title {
+                        height: 100%;
+                        padding-top: 2rem;
+                        padding-left: 1rem;
+
+                        >h2 {
+                            font-size: calc(3rem + .75 * ((100vw - 82rem)/ 17));
+                            width: 28rem;
+                            font-weight: 300;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        >p {
+                            color: rgb(198, 198, 198);
+                            width: 20rem;
+
+                        }
+
+                    }
+
+                    //  左下角蓝色框
+                    .car-bule {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #0062ff;
+                        width: 40%;
+                        height: 25%;
+                        font-size: calc(1.25rem + .25 * ((100vw - 82rem)/ 17));
+                        position: absolute;
+                        bottom: -10px;
+                        right: 0;
+                        font-size: 1.25rem;
+
+                        .zo {
+                            padding: 1rem;
+                        }
+
+                        .yo {
+                            align-self: flex-end;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // 页脚
+        .footer {
+            padding: 0 1.85rem;
+            background-color: #f2f4f8;
+
+            h3 {
+                color: #464646;
+                font-weight: 600;
+                font-size: 1rem;
+                line-height: 1.625rem;
+                padding-bottom: 15px;
+            }
+
+            .footer-manu {
+                display: flex;
+                flex-direction: column;
+                padding: 0 10px 30px;
+                border-bottom: 1px solid rgb(90, 90, 90);
+
+                .footer-item {
+                    padding: 40px 10px 0;
+
+                    >ul {
+                        padding: 0 0 15px;
+
+                        >li {
+                            padding-bottom: 7px;
+                            line-height: 1.625rem;
+                            font-weight: 400;
+                            color: rgb(50, 50, 50);
+                        }
+                    }
+                }
+
+                // 多选框位置
+                .footer-country {
+                    align-self: flex-end;
+
+                    // 多选框
+                    >select {
+                        line-height: 38px;
+                        padding: 0 27px 0 10px;
+                        margin-right: 10px;
+                        color: #444;
+                        background-color: #fff;
+                        border: 1px solid #aaa;
+                        height: 40px;
+                        width: 340px;
+                        font-weight: 400;
+                        cursor: pointer;
+                        display: block;
                     }
                 }
             }
-            // 右侧
-            .head-individual{
-                padding-right: 20px;
-                >div{
-                    display: inline-block;
-                }
-                span{
-                    font-size: 20px;
-                }
+
+            .end {
+                padding: 11px 20px;
+                color: rgb(90, 90, 90);
             }
         }
     }
