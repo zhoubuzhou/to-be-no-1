@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url(../iconfont/iconfont.ttf) format("truetype");
+}
+
+.iconfont {
+  font-family: "iconfont";
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol,
+body {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  border: 1px solid;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main .header {
+  width: 100%;
+  height: 30px;
+}
+
+.main .header .header-liner {
+  width: 1210px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .header .header-liner .header-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .header .header-liner .header-nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .search {
+  width: 1210px;
+  margin: auto;
+  height: 100px;
+}
+
+.main .search .search-liner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .search .search-liner .search-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .search .search-liner .search-left .search-left-img {
+  background: url(../picture/jdlogo-201708-@1x.png) 0 0 no-repeat;
+  width: 200px;
+  height: 60px;
+}
+
+.main .search .search-liner .search-left > div select {
+  color: #ccc;
+  width: 70px;
+  height: 25px;
+  border: 1px solid #ccc;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.main .search .search-liner .search-center {
+  padding: 20px 0;
+}
+
+.main .search .search-liner .search-center .search-center-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 560px;
+  height: 36px;
+}
+
+.main .search .search-liner .search-center .search-center-search > input {
+  height: 36px;
+  width: 446px;
+  color: #999999;
+  padding: 4px;
+  border: none;
+  border: 2px solid #B61D1D;
+}
+
+.main .search .search-liner .search-center .search-center-search > div {
+  line-height: 36px;
+  font-size: 12px;
+  padding: 0 8px;
+  height: 36px;
+  width: 55px;
+}
+
+.main .search .search-liner .search-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 60px;
+}
+
+.main .ads .ads-strip {
+  width: 100%;
+  height: 110px;
+  background-image: url(../picture/1cc871cb9a958d61.jpg);
+  background-position: center;
+}
+
+.main .ads .ads-search {
+  width: 100%;
+  height: 40px;
+  background-color: #ECC29A;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .ads .ads-search > div {
+  width: 990px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .ads .ads-search ul {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .page-nav {
+  width: 100%;
+  height: 44px;
+}
+
+.main .content .content-commodity {
+  height: 690px;
+  width: 1210px;
+  margin: auto;
+}
+
+.main .content .content-related {
+  height: 251.2px;
+  width: 1210px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.main .content .content-similar {
+  height: 279px;
+  width: 1210px;
+  margin: auto;
+}
+
+.main .content .content-detail {
+  height: 279px;
+  width: 1210px;
+  margin: auto;
+}
+/*# sourceMappingURL=page.css.map */

@@ -1,6 +1,4 @@
 
-
-
 @media (min-width:992px) {
      
 // 设置16栅格
@@ -151,16 +149,17 @@
                         >div {
                             display: flex;
                             width: 40%;
+                            min-width: 300px;
                             height: 48px;
                             margin-top: 32px;
                             background-color: #0062ff;
                             border-color: #0062ff;
                             color: #fff;
                             position: relative;
-
                             // 文字
                             .weo {
                                 padding: calc(.875rem - 1px) 3.9375rem calc(.875rem - .1875rem) .9375rem;
+                               
                             }
 
                             // 箭头
@@ -187,7 +186,7 @@
 
                 // 板块1
                 .content-item-1 {
-                    padding-bottom: 2rem;
+                    padding-bottom: 6rem;
                     padding-top: 2rem;
                     background-color: #fff;
                     margin-left: 16px;
@@ -212,6 +211,8 @@
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: space-between;
+                        position: relative;
+
 
 
 
@@ -223,16 +224,13 @@
 
                             // 图片大小
                             .idea-item-img {
-                                height: 12.65rem;
-
                                 >img {
-                                    width: 22.25rem;
+                                    width: 100%;
                                 }
                             }
 
                             // 文字区
                             .idea-liner {
-                                width: 22.4rem;
                                 height: 11.4rem;
                                 padding: 1rem;
                                 padding-bottom: 24px;
@@ -252,7 +250,6 @@
                                     font-size: 1rem;
                                     font-weight: 400;
                                     line-height: 1.375;
-                                    width: 17.59rem;
                                 }
                             }
 
@@ -272,8 +269,9 @@
 
                         // 1板块左下角翻页
                         .idea-flip {
-                            position: relative;
-                            left: 61.3rem;
+                            position:absolute;
+                            bottom: -4rem;
+                            right: 0;
                             margin-top: 2rem;
 
                              button {
@@ -295,7 +293,7 @@
 
                 // 板块2
                 .content-item-2 {
-                    padding-bottom: 2rem;
+                    padding-bottom: 6rem;
                     padding-top: 2rem;
                     padding-left: 16px;
                     padding-right: 16px;
@@ -330,6 +328,7 @@
                         flex-wrap: wrap;
                         justify-content: space-between;
                         background-color: rgb(242, 244, 248);
+                        position: relative;
 
                         // 每一块共同样式
                         .products-item {
@@ -339,17 +338,15 @@
 
                             // 图片大小
                             .products-item-img {
-                                height: 12.65rem;
                                 background-color: #fff;
 
                                 >img {
-                                    width: 22.25rem;
+                                    width: 100%;
                                 }
                             }
 
                             // 文字区
                             .products-liner {
-                                width: 22.4rem;
                                 height: 11.4rem;
                                 padding: 1rem;
                                 padding-bottom: 24px;
@@ -362,7 +359,6 @@
                                     font-weight: 600;
                                     line-height: 1.375;
                                     letter-spacing: 0;
-                                    width: 15.9rem;
                                 }
 
                                 .products-item-writing {
@@ -370,7 +366,6 @@
                                     font-size: 1rem;
                                     font-weight: 400;
                                     line-height: 1.375;
-                                    width: 17.59rem;
                                 }
                             }
 
@@ -390,9 +385,9 @@
 
                         // 1板块左下角翻页
                         .products-flip {
-                            position: relative;
-                            left: 61.3rem;
-                            margin-top: 2rem;
+                            position:absolute;
+                            bottom: -4rem;
+                            right: 0;
                             background-color: #f2f4f8;
 
                             >button {
@@ -575,6 +570,7 @@
                     >ul{
                         padding: 0 0 15px;
                         >li{
+                            display:block;
                             padding-bottom: 7px;
                             line-height: 1.625rem;
                             font-weight: 400;

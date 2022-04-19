@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url(../iconfont/iconfont.ttf) format("truetype");
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol,
+body {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px solid;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+.main {
+
+    // 顶部灰色导航
+    .header {
+        width: 100%;
+        height: 30px;
+
+        .header-liner {
+            width: 1210px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+            // 左边图标 
+            .header-icon {
+                display: flex;
+            }
+
+            // 右侧导航
+            .header-nav {
+                >ul {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    // 头部搜索 京东logo
+    .search {
+        width: 1210px;
+        margin: auto;
+        height: 100px;
+
+        // 内胆
+        .search-liner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            // 左边logo区域
+            .search-left {
+                display: flex;
+                align-items: center;
+
+                // 背景图片logo
+                .search-left-img {
+                    background: url(../picture/jdlogo-201708-@1x.png) 0 0 no-repeat;
+                    width: 200px;
+                    height: 60px;
+                }
+
+                >div {
+                    select {
+                        color: #ccc;
+                        width: 70px;
+                        height: 25px;
+                        border: 1px solid #ccc;
+                        line-height: 25px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            // 中间搜索框区
+            .search-center {
+                padding: 20px 0;
+
+                .search-center-search {
+                    display: flex;
+                    width: 560px;
+                    height: 36px;
+
+                    >input {
+                        height: 36px;
+                        width: 446px;
+                        color: rgb(153, 153, 153);
+                        padding: 4px;
+                        border: none;
+                        border: 2px solid #B61D1D;
+                        ;
+                    }
+
+                    >div {
+                        line-height: 36px;
+                        font-size: 12px;
+                        padding: 0 8px;
+                        height: 36px;
+                        width: 55px;
+                    }
+                }
+            }
+
+            .search-right {
+                display: flex;
+                margin-right: 60px;
+            }
+        }
+    }
+
+    // 品牌导航栏
+    .ads {
+
+        // 广告条
+        .ads-strip {
+            width: 100%;
+            height: 110px;
+            background-image: url(../picture/1cc871cb9a958d61.jpg);
+            background-position: center;
+        }
+
+        // 商家导航
+        .ads-search {
+            width: 100%;
+            height: 40px;
+            background-color: #ECC29A;
+            color: #fff;
+            display:flex;
+            >div{
+                width: 990px;
+                margin: auto;
+                display: flex;
+            }
+            ul {
+                
+                height: 40px;
+                display: flex;
+            }
+        }
+    }
+
+    // 页面导航
+    .page-nav {
+        width: 100%;
+        height: 44px;
+    }
+
+    // 内容部分
+    .content {
+
+        // 主要购买详情
+        .content-commodity {
+            // 高度由内容撑起 后期取消
+            height: 690px;
+            width: 1210px;
+            margin: auto;
+
+        }
+
+        // 为你推挤
+        .content-related {
+            // 高度由内容撑起 后期取消
+            height: 251.2px;
+            width: 1210px;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+
+        // 店长推荐
+        .content-similar {
+            // 高度由内容撑起 后期取消
+            height: 279px;
+            width: 1210px;
+            margin: auto;
+        }
+
+        // 详情页
+        .content-detail {
+            // 高度由内容撑起 后期取消
+            height: 279px;
+            width: 1210px;
+            margin: auto;
+        }
+    }
+}

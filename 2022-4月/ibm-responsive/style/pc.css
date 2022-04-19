@@ -196,6 +196,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 40%;
+    min-width: 300px;
     height: 48px;
     margin-top: 32px;
     background-color: #0062ff;
@@ -218,7 +219,7 @@
     width: 100%;
   }
   .main .liner .liner-content .content-item-1 {
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
     padding-top: 2rem;
     background-color: #fff;
     margin-left: 16px;
@@ -246,6 +247,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: relative;
   }
   .main .liner .liner-content .content-item-1 .idea-content .idea-item {
     height: 26.48rem;
@@ -253,14 +255,10 @@
             box-sizing: border-box;
     background-color: #f2f4f8;
   }
-  .main .liner .liner-content .content-item-1 .idea-content .idea-item .idea-item-img {
-    height: 12.65rem;
-  }
   .main .liner .liner-content .content-item-1 .idea-content .idea-item .idea-item-img > img {
-    width: 22.25rem;
+    width: 100%;
   }
   .main .liner .liner-content .content-item-1 .idea-content .idea-item .idea-liner {
-    width: 22.4rem;
     height: 11.4rem;
     padding: 1rem;
     padding-bottom: 24px;
@@ -278,7 +276,6 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.375;
-    width: 17.59rem;
   }
   .main .liner .liner-content .content-item-1 .idea-content .idea-item .idea-blue {
     color: #0f62fe;
@@ -290,8 +287,9 @@
     margin-left: 0.5rem;
   }
   .main .liner .liner-content .content-item-1 .idea-content .idea-flip {
-    position: relative;
-    left: 61.3rem;
+    position: absolute;
+    bottom: -4rem;
+    right: 0;
     margin-top: 2rem;
   }
   .main .liner .liner-content .content-item-1 .idea-content .idea-flip button {
@@ -307,7 +305,7 @@
     margin: 0 0.8rem;
   }
   .main .liner .liner-content .content-item-2 {
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
     padding-top: 2rem;
     padding-left: 16px;
     padding-right: 16px;
@@ -343,6 +341,7 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     background-color: #f2f4f8;
+    position: relative;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-item {
     height: 26.48rem;
@@ -351,14 +350,12 @@
     background-color: #fff;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-item .products-item-img {
-    height: 12.65rem;
     background-color: #fff;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-item .products-item-img > img {
-    width: 22.25rem;
+    width: 100%;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-item .products-liner {
-    width: 22.4rem;
     height: 11.4rem;
     padding: 1rem;
     padding-bottom: 24px;
@@ -370,14 +367,12 @@
     font-weight: 600;
     line-height: 1.375;
     letter-spacing: 0;
-    width: 15.9rem;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-item .products-liner .products-item-writing {
     color: #525252;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.375;
-    width: 17.59rem;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-item .products-blue {
     color: #0f62fe;
@@ -389,9 +384,9 @@
     margin-left: 0.5rem;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-flip {
-    position: relative;
-    left: 61.3rem;
-    margin-top: 2rem;
+    position: absolute;
+    bottom: -4rem;
+    right: 0;
     background-color: #f2f4f8;
   }
   .main .liner .liner-content .content-item-2 .products-content .products-flip > button {
@@ -550,6 +545,7 @@
     padding: 0 0 15px;
   }
   .main .footer .footer-manu .footer-item > ul > li {
+    display: block;
     padding-bottom: 7px;
     line-height: 1.625rem;
     font-weight: 400;
