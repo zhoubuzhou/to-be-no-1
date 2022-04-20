@@ -19,10 +19,6 @@ body {
   padding: 0;
 }
 
-div {
-  border: 1px solid;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -31,14 +27,22 @@ div {
 .main .header {
   width: 100%;
   height: 30px;
+  background: #e3e4e5;
+  border-bottom: solid 1px #ddd;
+  color: #999;
+  font-size: 12px;
 }
 
 .main .header .header-liner {
+  height: 30px;
   width: 1210px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -50,10 +54,32 @@ div {
   display: flex;
 }
 
+.main .header .header-liner .header-icon > div {
+  margin-right: 10px;
+}
+
+.main .header .header-liner .header-icon > div > span {
+  font-size: 14px;
+  color: #5c5452;
+  padding-right: 5px;
+}
+
 .main .header .header-liner .header-nav > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.main .header .header-liner .header-nav > ul > li > span {
+  padding-left: 5px;
+}
+
+.main .header .header-liner .header-nav > ul > li .red {
+  color: #f30213;
+}
+
+.main .header .header-liner .header-nav > ul .nav-margin {
+  margin: 0 10px;
 }
 
 .main .search {
@@ -75,6 +101,7 @@ div {
 }
 
 .main .search .search-liner .search-left {
+  margin-top: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,6 +116,10 @@ div {
   height: 60px;
 }
 
+.main .search .search-liner .search-left > div {
+  margin-left: -10px;
+}
+
 .main .search .search-liner .search-left > div select {
   color: #ccc;
   width: 70px;
@@ -99,7 +130,7 @@ div {
 }
 
 .main .search .search-liner .search-center {
-  padding: 20px 0;
+  padding: 25px 0 20px;
 }
 
 .main .search .search-liner .search-center .search-center-search {
@@ -125,13 +156,79 @@ div {
   padding: 0 8px;
   height: 36px;
   width: 55px;
+  color: #fff;
+}
+
+.main .search .search-liner .search-center .search-center-search .search-red {
+  background: #B61D1D;
+}
+
+.main .search .search-liner .search-center .search-center-search .search-black {
+  background: #474e5c;
+}
+
+.main .search .search-liner .search-center .search-center-writing {
+  color: #666;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.main .search .search-liner .search-center .search-center-writing > span {
+  margin-right: 5px;
 }
 
 .main .search .search-liner .search-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: -20px;
   margin-right: 60px;
+}
+
+.main .search .search-liner .search-right > button {
+  width: 139px;
+  height: 34px;
+  border: 1px solid #DFDFDF;
+  background: #F9F9F9;
+  text-align: center;
+  line-height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  font-size: 12px;
+  color: #666;
+}
+
+.main .search .search-liner .search-right > button > i {
+  color: #c81623;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.main .search .search-liner .search-right > button > span {
+  font-size: 12px;
+}
+
+.main .search .search-liner .search-right > button > div {
+  padding: 1px 2px;
+  font-size: 12px;
+  line-height: 12px;
+  height: 14px;
+  width: 16px;
+  color: #fff;
+  background-color: #c81623;
+  border-radius: 7px 7px 7px 0;
+  min-width: 12px;
+  text-align: center;
+  position: absolute;
+  right: 15px;
+  top: -5px;
 }
 
 .main .ads .ads-strip {
@@ -151,14 +248,6 @@ div {
   display: flex;
 }
 
-.main .ads .ads-search > div {
-  width: 990px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .main .ads .ads-search ul {
   height: 40px;
   display: -webkit-box;
@@ -166,33 +255,1124 @@ div {
   display: flex;
 }
 
+.main .ads .ads-search ul > li {
+  padding: 0 20px;
+  line-height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.main .ads .ads-search > div {
+  width: 990px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .ads .ads-search > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .ads .ads-search > div > div input {
+  width: 90px;
+  height: 20px;
+  background-color: #ffffff;
+  color: #333333;
+  vertical-align: top;
+  outline: none;
+  line-height: 20px;
+  padding-left: 5px;
+  color: #333333;
+  border: none;
+}
+
+.main .ads .ads-search > div > div span {
+  display: inline-block;
+  margin-left: -5px;
+  padding: 0 10px;
+  border: 0;
+  height: 20px;
+  background-color: #646464;
+  color: #ffffff;
+  vertical-align: top;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+}
+
 .main .page-nav {
   width: 100%;
   height: 44px;
+  background: #f2f2f2;
+}
+
+.main .page-nav .nav-liner {
+  width: 1210px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.main .page-nav .nav-liner .nav-liner-left {
+  padding: 13px 0 9px;
+}
+
+.main .page-nav .nav-liner .nav-liner-left > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .page-nav .nav-liner .nav-liner-left > ul .left-padding {
+  padding: 0 10px;
+}
+
+.main .page-nav .nav-liner .nav-liner-left > ul .left-hideen {
+  width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.main .page-nav .nav-liner .nav-liner-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 13px 0 0;
+}
+
+.main .page-nav .nav-liner .nav-liner-right .right-red > span {
+  display: inline-block;
+  color: #fff;
+  background: #e4393c;
+  margin-left: 6px;
+  cursor: pointer;
+  height: 16px;
+  width: 27px;
+  padding: 1px;
+  line-height: 15px;
+  margin-right: 10px;
+}
+
+.main .page-nav .nav-liner .nav-liner-right .right-blue {
+  margin: 0 10px;
+}
+
+.main .page-nav .nav-liner .nav-liner-right .right-blue > span {
+  color: #0099ff;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.main .page-nav .nav-liner .nav-liner-right .right-oran > span {
+  color: #e4393c;
+  font-size: 14px;
+  margin-right: 5px;
 }
 
 .main .content .content-commodity {
-  height: 690px;
   width: 1210px;
   margin: auto;
-}
-
-.main .content .content-related {
-  height: 251.2px;
-  width: 1210px;
-  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
   margin-bottom: 15px;
 }
 
-.main .content .content-similar {
-  height: 279px;
+.main .content .content-commodity .commodity-img {
+  width: 352px;
+}
+
+.main .content .content-commodity .commodity-img .img-big {
+  position: relative;
+  height: 350px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+}
+
+.main .content .content-commodity .commodity-img .img-big > img {
+  width: 350px;
+}
+
+.main .content .content-commodity .commodity-img .img-big > span {
+  color: #fff;
+  background-color: rgba(153, 153, 153, 0.333);
+  border-radius: 50%;
+  font-size: 50px;
+  position: absolute;
+  bottom: 62px;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.main .content .content-commodity .commodity-img .img-imgs {
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 18px;
+}
+
+.main .content .content-commodity .commodity-img .img-imgs > div {
+  display: inline-block;
+  font-size: 20px;
+  color: #999;
+}
+
+.main .content .content-commodity .commodity-img .img-imgs > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 8px;
+}
+
+.main .content .content-commodity .commodity-img .img-imgs > ul > li {
+  margin: 0 2px;
+}
+
+.main .content .content-commodity .commodity-img .img-imgs img {
+  width: 54px;
+}
+
+.main .content .content-commodity .commodity-img .img-writing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #666;
+  font-size: 12px;
+}
+
+.main .content .content-commodity .commodity-img .img-writing span {
+  font-size: 16px;
+  color: #e4393c;
+  margin-right: 5px;
+}
+
+.main .content .content-commodity .commodity-img .img-button {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.main .content .content-commodity .commodity-img .img-button > button {
+  height: 28px;
+  display: inline-block;
+  line-height: 28px;
+  padding: 0 16px;
+  border: 1px solid #ccc;
+  color: #666;
+  background-color: #fff;
+}
+
+.main .content .content-commodity .commodity-writing {
+  margin-left: 30px;
+  margin-right: 24px;
+  width: 590px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-title {
+  color: #666;
+  padding-top: 10px;
+  line-height: 28px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.main .content .content-commodity .commodity-writing .writing-title img {
+  margin-right: 5px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-marking {
+  color: #e4393c;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price {
+  padding: 10px 10px 5px;
+  background: #f3f3f3;
+  color: #999;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price > div {
+  margin-bottom: 5px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-jd {
+  position: relative;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-jd .red {
+  color: #e4393c;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-jd .price-float {
+  border-left: solid 1px #e6e6e6;
+  width: 78px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-jd .price-float span {
+  text-align: center;
+  padding: 0 10px;
+  line-height: 15px;
+  margin-left: 5px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-jd .price-float .blue {
+  font-size: 14px;
+  color: #005ea7;
+  margin-left: 5px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-ticket {
+  margin-bottom: 3px;
+  line-height: 32px;
+  margin-bottom: 3px;
+  line-height: 32px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-ticket > div {
+  display: inline-block;
+  margin-left: 10px;
+  height: 17px;
+  padding-left: 2px;
+  border: 1px solid #df3033;
+  background: #ffdedf;
+  line-height: 16px;
+  text-align: center;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-ticket > div > span {
+  display: inline-block;
+  padding: 0 10px;
+  color: #df3033;
+  font-size: 12px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-ticket > span {
+  margin-left: 13px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-activity .cu {
+  color: #999;
+  font-weight: 400;
+  letter-spacing: 8px;
+  display: inline-block;
+  width: 55px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-activity > span {
+  display: inline-block;
+  color: #df3033;
+  background: 0 0;
+  border: 1px solid #df3033;
+  padding: 2px 3px;
+  margin-right: 5px;
+  display: inline-block;
+  line-height: 16px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-price .price-activity > b {
+  font-weight: 400;
+  color: #666;
+}
+
+.main .content .content-commodity .commodity-writing .writing-line {
+  width: 590px;
+  border-bottom: 1px dotted #dfdfdf;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-pick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 590px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-pick .pick-title {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  width: 58px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-pick .picks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 510px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-pick .picks > div {
+  display: inline-block;
+  background-color: #f7f7f7;
+  color: #666;
+  margin-right: 7px;
+  margin-bottom: 4px;
+  border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-pick .picks > div > img {
+  height: 40px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-pick .picks > div > b {
+  font-weight: 400;
+  margin: 0 8px 0;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push div {
+  display: inline-block;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push .push-1 {
+  width: 58px;
+  height: 44px;
+  border: 1px solid #ccc;
+  position: relative;
+  margin-right: 10px;
+  float: left;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push .push-1 .num {
+  width: 43px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push .push-1 > span {
+  display: inline-block;
+  width: 15px;
+  text-align: center;
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push .push-1 > span:nth-of-type(1) {
+  position: absolute;
+  top: -1px;
+  right: 0;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push .push-1 > span:nth-of-type(2) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push .push-car {
+  margin-right: 10px;
+  float: left;
+  border: 1px solid #ebebeb;
+  color: #ccc;
+  background-color: #f7f7f7;
+  cursor: not-allowed;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 26px 0 25px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main .content .content-commodity .commodity-writing .writing-push .push-dao {
+  color: #e4393c;
+  margin-right: 10px;
+  background: #fff;
+  border: 1px solid #e4393c;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 26px 0 25px;
+  font-size: 18px;
+}
+
+.main .content .content-commodity .commodity-look {
+  width: 210px;
+}
+
+.main .content .content-commodity .commodity-look .look-title {
+  line-height: 50px;
+  color: #666;
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+}
+
+.main .content .content-commodity .commodity-look .look-title > span {
+  width: 50px;
+  display: inline-block;
+  border-top: 1px solid #f2f2f2;
+  background: #f2f2f2;
+  line-height: 50px;
+}
+
+.main .content .content-commodity .commodity-look .look-goods {
+  width: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.main .content .content-commodity .commodity-look .look-goods > img {
+  width: 150px;
+}
+
+.main .content .content-commodity .commodity-look .look-goods > div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 6px;
+  color: #666;
+}
+
+.main .content .content-commodity .commodity-look .look-goods .goods-red {
+  line-height: 18px;
+  color: #c81623;
+  text-align: center;
+  padding: 0;
+}
+
+.main .content .content-related {
   width: 1210px;
   margin: auto;
+  margin-bottom: 25px;
+}
+
+.main .content .content-related .related-title {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .content .content-related .related-title > span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+}
+
+.main .content .content-related .related-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main .content .content-related .related-content .related-left {
+  width: 22px;
+  height: 32px;
+  display: inline-block;
+  background-image: url(../picture/jiantou.png);
+  background-position: -22px 0;
+}
+
+.main .content .content-related .related-content .related-right {
+  width: 22px;
+  height: 32px;
+  display: inline-block;
+  background-image: url(../picture/jiantou.png);
+}
+
+.main .content .content-related .related-content .content-liner {
+  margin-top: 20px;
+}
+
+.main .content .content-related .related-content .content-liner > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .content .content-related .related-content .content-liner > ul li {
+  float: left;
+  width: 100px;
+  margin: 0 28px;
+  color: #666;
+  font-size: 12px;
+}
+
+.main .content .content-related .related-content .content-liner > ul li > div {
+  margin-bottom: 5px;
+  line-height: 1.5em;
+}
+
+.main .content .content-related .related-content .content-liner > ul li .related-red {
+  color: #e4393c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.main .content .content-similar {
+  width: 1210px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.main .content .content-similar .similar-title {
+  height: 37px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  border-bottom: 1px solid #e4393c;
+}
+
+.main .content .content-similar .similar-title > div {
+  width: 106px;
+  height: 36px;
+  background-color: #e4393c;
+  color: #fff;
+  cursor: default;
+  padding: 8px 25px;
+  font-size: 14px;
+}
+
+.main .content .content-similar .similar-content {
+  padding: 15px 0;
+}
+
+.main .content .content-similar .similar-content > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .content .content-similar .similar-content > ul li {
+  margin: 10px 20px;
+}
+
+.main .content .content-similar .similar-content > ul li > img {
+  height: 160px;
+  padding-bottom: 5px;
+}
+
+.main .content .content-similar .similar-content > ul li > div {
+  text-align: center;
+  color: #e4393c;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .main .content .content-detail {
-  height: 279px;
   width: 1210px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .content .content-detail .detail-etc {
+  color: #666;
+  width: 210px;
+  margin-bottom: 20px;
+}
+
+.main .content .content-detail .detail-etc > div .item-title {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+}
+
+.main .content .content-detail .detail-etc > div .item-title > span {
+  color: #367bfa;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-1 {
+  margin-bottom: 15px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-1 .item-1-liner {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .content .content-detail .detail-etc .detail-item-1 .item-1-liner > div {
+  width: 88px;
+  height: 34px;
+  line-height: 34px;
+  margin-right: 8px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  color: #666;
+}
+
+.main .content .content-detail .detail-etc .detail-item-1 .item-1-liner > div > i {
+  font-style: normal;
+  font-size: 16px;
+  margin-right: 5px;
+  color: #df3033;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 {
+  margin-bottom: 15px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 .item-2-liner {
+  border: 1px solid #eee;
+  padding: 10px;
+  padding-left: 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 .item-2-liner input {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 .item-2-liner .in-1 {
+  width: 110px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 .item-2-liner .in-2 {
+  width: 46px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 .item-2-liner .row-1 {
+  padding: 2px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 .item-2-liner .row-2 {
+  padding: 2px;
+  margin-left: 10px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-2 .item-2-liner .row-3 > button {
+  margin-left: -10px;
+  background: #fff;
+  color: #000;
+  padding: 3px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+
+.main .content .content-detail .detail-etc .detail-item-3 {
+  margin-bottom: 15px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-3 .item-3-liner {
+  border: 1px solid #eee;
+}
+
+.main .content .content-detail .detail-etc .detail-item-3 .item-3-liner > ul > li {
+  font-size: 12px;
+  background: #f7f7f7;
+  height: 28px;
+  border-top: 1px solid #ddd;
+  padding-left: 10px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-3 .item-3-liner > ul > li > span {
+  line-height: 28px;
+  padding-left: 5px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-3 .item-3-liner > ul > li > div {
+  display: inline-block;
+  background-color: #d8d7d7;
+  margin-top: 5px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-3 .item-3-liner > ul > li > div > i {
+  display: inline-block;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  font-weight: 900;
+}
+
+.main .content .content-detail .detail-etc .detail-item-4 .item-4-title {
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  border-bottom: 1px solid #e4393c;
+  height: 38px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-4 .item-4-title > span {
+  padding: 10px 18px;
+  line-height: 38px;
+}
+
+.main .content .content-detail .detail-etc .detail-item-4 .item-4-title .title-red {
+  background-color: #e4393c;
+  color: #fff;
+  cursor: default;
+}
+
+.main .content .content-detail .detail-etc .detail-item-4 .item-4-liner {
+  border: 1px solid #eee;
+  padding: 10px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.main .content .content-detail .detail-describes {
+  width: 990px;
+}
+
+.main .content .content-detail .detail-describes .desc-title {
+  height: 38px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  border-bottom: 1px solid #e4393c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.main .content .content-detail .detail-describes .desc-title > div {
+  padding: 9px 25px;
+  color: #666;
+}
+
+.main .content .content-detail .detail-describes .desc-title > div:nth-child(1) {
+  background-color: #e4393c;
+  color: #fff;
+}
+
+.main .content .content-detail .detail-describes .desc-writing {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #666;
+  padding: 30px 10px 10px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.main .content .content-detail .detail-describes .desc-writing > div {
+  margin-bottom: 5px;
+  padding-left: 42px;
+}
+
+.main .content .content-detail .detail-describes .desc-writing > ul {
+  padding: 20px 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .content .content-detail .detail-describes .desc-writing > ul > li {
+  width: 242px;
+  padding-left: 42px;
+  float: left;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main .content .content-detail .detail-describes .desc-writing > p {
+  color: #005aa0;
+  padding-right: 20px;
+  margin-top: -5px;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.main .content .content-detail .detail-describes .desc-img {
+  padding-bottom: 60px;
+}
+
+.main .content .content-detail .detail-describes .desc-img > div {
+  margin: 0 auto;
+  width: 750px;
+  overflow: hidden;
+}
+
+.main .content .content-detail .detail-describes .desc-img > div > div:nth-child(n+3) {
+  margin-top: -3px;
+}
+
+.main .content .content-detail .detail-describes .after-sales {
+  width: 990px;
+  margin: auto;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-title {
+  color: #666;
+  padding-top: 10px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-liner {
+  padding: 30px 30px 0px 62px;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-liner h4 {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  color: #e4393c;
+  font-family: "microsoft yahei";
+  margin: 0;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-liner p {
+  padding: 10px 0 30px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-liner span {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  background-position: -32px -75px;
+  background-image: url(../picture/jingl.png);
+  position: absolute;
+  left: -42px;
+  top: 5px;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-liner .sales-item {
+  position: relative;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-writing {
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-writing > div > h5 {
+  color: #e4393c;
+  margin: 0;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-writing > div > p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.main .content .content-detail .detail-describes .after-sales .sales-content .sales-writing > div > p > span {
+  font-weight: 700;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-title {
+  color: #666;
+  padding-top: 10px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-grade {
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-grade .grade-left {
+  width: 90px;
+  padding: 15px 0 0 40px;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-grade .grade-left > span {
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-grade .grade-left > div {
+  line-height: 110%;
+  font-size: 45px;
+  color: #e4393c;
+  font-family: arial;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-grade .grade-left > div > b {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-grade .grade-right {
+  padding-left: 40px;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-grade .grade-right > span {
+  color: #999;
+  border-color: #e0e0e0;
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 9px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail {
+  border: 1px solid #f5f5f5;
+  background-color: #fafafa;
+  padding-left: 10px;
+  width: 990px;
+  height: 30px;
+  margin-bottom: 500px;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-title > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-title > ul > li {
+  font-size: 12px;
+  color: #666;
+  padding: 5px 10px;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-title > ul .detail-red {
+  color: #e4393c;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-title div {
+  font-size: 12px;
+  color: #666;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  padding-top: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-detail .detail-person {
+  color: #666;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-detail .detail-person .plus {
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  background: #414141;
+  color: #fff38f;
+  border-radius: 1px;
+  margin: 5px 5px 0 0;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-detail .evaluation {
+  width: 810px;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-detail .evaluation > div {
+  color: #df3033;
+}
+
+.main .content .content-detail .detail-describes .appraise .appraise-detail .detail-detail .evaluation > p {
+  font-size: 14px;
+  padding: 10px 0;
+  line-height: 180%;
+  color: #333;
 }
 /*# sourceMappingURL=page.css.map */
