@@ -1,0 +1,158 @@
+// 隐藏目录 后期做浮动
+.menu {
+    display: none;
+}
+
+.menu-content {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.grid-left {
+        justify-content: space-between;
+    }
+
+    .grid-cell {
+        flex: 0 0 auto;
+
+        @for $i from 1 to 13 {
+            &.col-#{$i} {
+                flex-basis: $i / 12 * 100%;
+            }
+        }
+    }
+}
+
+// 首页
+.facade {
+    width: 100%;
+    height: 100vh;
+    background: no-repeat url(../img/paper-3155438.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    // 内胆
+    .facade-liner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+
+        // 头部大标题
+        .facade-title {
+            font-size: 38px;
+            font-weight: 400;
+            color: rgb(237, 240, 228);
+
+            >p {
+                font-size: 20px;
+            }
+        }
+
+        // 1*4板块
+        .facade-nav {
+            .nav-liner {
+
+                // 板块统一样式
+                >div {
+                    height: 15rem;
+                    border-radius: 20px;
+                    margin: 1rem;
+                    color: rgb(77, 77, 77);
+                    padding: 2rem;
+                    font-size: 24px;
+                }
+
+                .nav-item-1 {
+                    box-shadow: 5px 5px 16px rgba(128, 128, 128, 0.8);
+                    background: linear-gradient(138deg, rgba(248, 242, 223, 1) 36%, rgba(255, 255, 255, 0.5) 95%);
+                }
+
+                .nav-item-2 {
+                    box-shadow: -5px 5px 16px rgba(128, 128, 128, 0.8);
+                    background: linear-gradient(225deg, rgba(248, 242, 223, 0.7990546560421043) 34%, rgba(255, 255, 255, 0.49933476808692223) 75%);
+                }
+
+                .nav-item-3 {
+                    box-shadow: 5px -5px 16px rgba(128, 128, 128, 0.8);
+                    background: linear-gradient(52deg, rgba(248, 242, 223, 1) 36%, rgba(255, 255, 255, 0.5) 95%);
+                }
+
+                .nav-item-4 {
+                    box-shadow: -5px -5px 16px rgba(128, 128, 128, 0.8);
+                    background: linear-gradient(317deg, rgba(248, 242, 223, 1) 36%, rgba(255, 255, 255, 0.5) 95%);
+                }
+            }
+        }
+
+        // 往下箭头 abslout 
+        .facade-under {
+            display: none;
+        }
+
+    }
+}
+
+// 内容大区
+.content {
+    width: 100%;
+
+    // 文章区域
+    .essay {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(243, 242, 242);
+        color: rgb(77, 77, 77);
+        // color: rgb(237, 240, 228);
+
+
+        // 内胆
+        .essay-liner {
+            height: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            // 标题
+            .essay-title {}
+
+            // 内容
+            .essay-content {
+
+                // 1*3列表统一
+                .essay-item {
+                    margin: 0.5rem;
+                    width: 50rem;
+                    height: 8rem;
+                    border-radius: 15px;
+                    color: rgb(77, 77, 77);
+
+                    // background-color:rgb(123, 123, 123) ;
+                    // background: linear-gradient(69deg, rgba(249,244,228,1) 0%, rgba(243,242,221,1) 49%, rgba(239,241,217,1) 81%, rgba(247,255,230,1) 100%);
+                    background-color: #fff;
+                    box-shadow: 5px 5px 16px rgba(164, 164, 164, 0.8);
+                }
+            }
+        }
+    }
+
+
+}

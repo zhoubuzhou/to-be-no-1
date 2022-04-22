@@ -1,17 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./style/homepage.css" />
+  </head>
+  <body>
+    <!-- 使用12栅格布局，transform动画 -->
     <!-- 菜单 -->
-    <div></div>
+    <div class="menu">菜单按钮</div>
     <!-- 菜单内容-模态-transform 倾斜45° -->
-    <div></div>
+    <div class="menu-content">
+      <ul>
+        <li>首页</li>
+        <li>博客</li>
+        <li>关于</li>
+      </ul>
+    </div>
     <!-- 首页 -->
-    <div></div>
-</body>
+    <!-- 此框back ground -->
+    <div class="facade">
+      <div class="facade-liner grid">
+        <!-- 文字 -->
+        <div class="facade-title grid-cell col-6">
+          <h1>zhou</h1>
+          <p>一个网页</p>
+        </div>
+        <div class="facade-nav grid-cell col-6">
+          <div class="nav-liner grid">
+            <div class="nav-item-1 grid-cell col-4">我的文章</div>
+            <div class="nav-item-2 grid-cell col-4">板块2</div>
+            <div class="nav-item-3 grid-cell col-4">板块3</div>
+            <div class="nav-item-4 grid-cell col-4">板块4</div>
+          </div>
+        </div>
+        <!-- 点击往下滑看见内容 -->
+        <div class="facade-under">箭头</div>
+      </div>
+    </div>
+
+    <!-- 内容大区 -->
+    <div class="content">
+      <!-- 文章区 -->
+      <div class="essay">
+        <div class="essay-liner">
+          <!-- 标题 -->
+          <div class="essay-title">
+            <h2>文章</h2>
+            <p>详情</p>
+          </div>
+          <!-- 1*4板块 -->
+          <div class="essay-content">
+            <!-- 左右结构  -->
+            <!-- 1 -->
+            <div class="essay-item grid">
+              <div class=" grid-cell col-4">图片</div>
+              <div class=" grid-cell col-8">
+                <h3>文章1</h3>
+                <p>内容</p>
+              </div>
+            </div>
+            <!--  2  -->
+            <div class="essay-item grid">
+              <div  class=" grid-cell col-4">图片</div>
+              <div  class=" grid-cell col-8">
+                <h3>文章2</h3>
+                <p>内容</p>
+              </div>
+            </div>
+            <!-- 3  -->
+            <div class="essay-item grid">
+              <div class=" grid-cell col-4">图片</div>
+              <div  class=" grid-cell col-8">
+                <h3>文章3</h3>
+                <p>内容</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 个人简介区 -->
+      <div class="briefly">
+        <div class="briefly-liner">
+          <!-- 简介头部 -->
+          <div class="briefly-title">
+            <h4>个人</h4>
+          </div>
+          <!-- 内容 -->
+          <div class="briefly-content">
+            <p>123</p>
+          </div>
+        </div>
+      </div>
+      <!-- 浮动锚点链接 置顶部 -->
+      <div>top</div>
+      <!-- 页脚 -->
+      <div class="fooder">
+        <div class="fooder-liner">
+          <!-- 第一列 -->
+          <div class="fooder-item">
+            <ul>
+              <li>1</li>
+            </ul>
+          </div>
+          <!-- 第二列 -->
+          <div class="fooder-item">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <!-- 第三列 -->
+          <div class="fooder-item">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
