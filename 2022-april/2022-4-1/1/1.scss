@@ -1,0 +1,18 @@
+@function vw($px){
+    @return $px /375 *100vw;
+}
+.box{
+    border: solid;
+    display: flex;
+    .d1{
+        width: vw(82);
+        height: vw(57);
+        border: solid;
+        box-sizing: border-box;
+        font-size: vw(14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

@@ -1,0 +1,22 @@
+$num: 40px;
+$ber: 20px;
+$blue: blue;
+$green: green;
+
+.d1 {
+  color: $green;
+  font-size: $ber;
+  > div {
+    color: $blue;
+    > div {
+      color: $green;
+    }
+    span {
+      color: $green;
+      font-size: 40px;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: blue;
+        }
+    /* 此时HI 1依旧是默认样式 */
+        
+        p{
+            color: aqua;
+        }
+        /* HI 23变色，但HI依旧保持不变 */
+
+        a{
+            color:inherit;
+        }
+        /* 成功变色，inherit是设置标签样式 如颜色继承父级标签的意思 */
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>   Hello
+        <p><a href="">HI 1</a></p>
+        <p>HI 2</p>
+        <p>HI 3</p>
+    </div>
+    <div>Hello</div>
+
+
+</body>
+</html>

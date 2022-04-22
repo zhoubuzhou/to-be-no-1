@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child{
+            color: blue;
+        }
+        p:last-child{
+            color: aqua;
+        }
+    </style>
+</head>
+<!-- first：任何元素下的第一个p标签都会被选中
+     last：与上同理，任何标签的最后一个标签都会被选中
+    故 p1和p00 都会变蓝色 -->
+<body>
+    <p>p1</p>
+    <p>p2</p>
+    <div>
+        <p>p00</p>
+        <p>p00</p>
+    </div>
+    <p>p2</p>
+    <p>p1</p>
+    <p>p3</p>
+    <p>p4</p>
+</body>
+</html>

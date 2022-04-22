@@ -1,0 +1,189 @@
+@import "./4page.scss";
+
+.modal {
+    background-color: rgba(170, 169, 169, 0.411);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow:0px 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius:8px 8px 8px 8px;
+    // 模态框内容
+    .options {
+        position: fixed;
+        top: 50%;
+        margin-top: -180px;
+        left: 50%;
+        margin-left: -400px;
+        width: 800px;
+        height: 360px;
+        background-color: #fff;
+        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+        border-radius:8px 8px 8px 8px;
+        position: relative;
+
+        // 大标题框
+        .list {
+            border-radius:8px 8px 0px 0px;
+            // 头部标题样式
+
+            @include title;
+
+            div:nth-child(2) {
+                flex-grow: 1;
+
+            }
+
+            span {
+                @include sgm;
+            }
+
+            .xx {
+                color: #8c8c8c;
+                font-size: 22px;
+            }
+        }
+
+        // 模态框内容
+        .modal-content {
+            padding-top: 52px;
+            padding-left: 41px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: #fbfbfb;
+            border-radius:8px 8px 0px 0px;
+
+
+            // 第一排
+            .content-1 {
+                display: flex;
+
+                >div {
+                    margin-right: 126px;
+                    color: #333333;
+                    font-size: 14px;
+                    line-height: 15px;
+
+                    >span {
+                        margin-left: 16px;
+                        color: #31969a;
+                        font-size: 14px;
+                        line-height: 15px;
+                    }
+                }
+            }
+
+            // 第二排
+            .content-2 {
+                display: flex;
+                color: #333333;
+                font-size: 14px;
+                line-height: 15px;
+
+                // 传输样式
+                .transmit {
+                    position: relative;
+
+                    // 边框统一设置
+                    >div {
+                        width: 200px;
+                        height: 32px;
+                        background-color: #31969a;
+                        border-radius: 30px;
+                        color: #fff;
+                        line-height: 32px;
+
+                        >span {
+                            margin-left: 16px;
+                            font-size: 14px;
+                        }
+                    }
+                    // 中间线的样式
+                    .line {
+                        width: 145px;
+                        height: 6px;
+                        position: absolute;
+                        top: 14px;
+                        left: 197px;
+                    }
+                    // 禁止图表的样式
+                    .forbid {
+                        color: #ec404f;
+                        font-size: 20px;
+                        padding-top: 2px;
+                        margin: 0 55px;
+                        position: relative;
+                        background-color: #fff;
+                        z-index: 999;
+                    }
+                }
+
+                // 间距
+                >div:nth-child(1) {
+                    margin-right: 16px;
+                }
+
+                // 所有据一行
+                div {
+                    display: inline-block;
+                }
+            }
+
+            // 第三排
+            .content-3 {
+                display: flex;
+
+                >div:nth-child(1) {
+                    margin-right: 16px;
+                    color: #333333;
+                    font-size: 14px;
+                    line-height: 15px;
+                    margin-top: 5px;
+                }
+
+                >textarea {
+                    width: 633px;
+                    height: 72px;
+                    background-color: #ffffff;
+                    border: 2px solid;
+                    border-color: #d9d9d9;
+                    border-radius: 4px;
+                    color: #ec404f;
+                    font-size: 14px;
+                    line-height: 15px;
+                    padding: 9px 16px;
+                }
+            }
+        }
+
+        // 按钮样式
+        .content-button {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 60px;
+            padding-right: 16px;
+            box-shadow:0px 2px 8px rgba(3, 43, 36, 0.08);
+            border-radius:0px 0px 8px 8px;
+
+            >button {
+                width: 90px;
+                height: 32px;
+                background-color: #ffffff;
+                border: 1px solid;
+                border-color: #d9d9d9;
+                border-radius: 6px;
+
+                &:nth-last-child(1) {
+                    background-color: #519499;
+                    color: #fff;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@media all {
+  div {
+    border: solid;
+    color: blueviolet;
+  }
+}
+
+@media screen {
+  div {
+    border: solid 1px blueviolet;
+    color: aquamarine;
+  }
+  .d2 {
+    font-size: 20px;
+  }
+}
+
+@media print {
+  div {
+    color: black;
+    border: none;
+  }
+}
+/*# sourceMappingURL=1.css.map */

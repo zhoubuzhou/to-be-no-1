@@ -1,0 +1,60 @@
+@media only screen and (max-width:768px) {
+    @import './phone.scss';
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    @import './pad.scss';
+}
+
+
+@media (min-width:992px) {
+    @import './pc.scss';
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+@function vw($px) {
+    @return $px / 1519.2 * 100vw;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+ul,
+ol,
+body {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+// 引入图标
+@font-face {
+    font-family: 'iconfont';
+    src: url(../iconfont/iconfont.ttf) format("truetype");
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.end{
+    height: 73px;
+}

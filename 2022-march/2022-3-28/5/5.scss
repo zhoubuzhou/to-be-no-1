@@ -1,0 +1,19 @@
+
+// @each $bo in (1,2,3,4,5) {
+//     .d#{$bo}:before{
+//         content:'#{$bo}';
+//         font-size: 21px-$bo;
+//         color: red;
+//     }
+// }
+
+
+
+@each $bo in (1,2,3,4,5)
+{
+    .d#{$bo}:before{
+        content:'#{$bo}';
+        font-size: 21px-$bo;
+        color: red;
+    }
+}

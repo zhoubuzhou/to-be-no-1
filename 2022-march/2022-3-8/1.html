@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>基本信息</legend>
+        <p>
+            <!-- label与id关联，实现点击文字也选中输入的效果-->
+            <label for="username">用户</label>
+        <input id="username" type="text" placeholder="请输入姓名" value="王小明">
+        </p>
+        <P>
+            <label for="pwd">密码</label>
+            <input id="pwd" type="password" value="123" placeholder="请输入密码">
+        </P>
+        <p>
+            <label for="age">年龄</label>
+            <input id="age" type="number">
+        </p>
+        <p>
+            性别
+            <!-- 单选 -->
+            <!-- name进行分组 -->
+            <input checked type="radio" id="boy" name="gender">
+            <label for="boy">男</label>
+            <input type="radio" id="girl" name="gender">
+            <label for="girl">女</label>
+        </p>
+        </fieldset>
+        <fieldset>
+            <legend>扩展信息</legend>
+        <p>
+            <!-- 多选 -->
+            爱好
+            <input type="checkbox" id="html" name="hobby" checked>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="hobby" checked>
+            <label for="css">CSS</label>  
+            <input type="checkbox" id="js" name="hobby">
+            <label for="js">JS</label>
+        </p>
+        <p>
+            城市
+            <select>
+                <option >请选择</option>
+                <option selected>南京</option>
+                <option >上海</option>
+                <option >苏州</option>
+                <option >北京</option>
+            </select>
+        </p>
+        </fieldset>
+        <p>
+            <button type="button">普通按钮</button>
+            <button type="reset">重置按钮</button>
+            <button type="submit">提交按钮</button>
+            <!-- input可以代替但是不推荐，可以写作,<input type="button" value="普通按钮"> -->
+        </p>
+
+    </form>
+</body>
+</html>

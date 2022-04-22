@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可调资源预测</title>
+    <link rel="stylesheet" href="./style/init.css" />
+    <link rel="stylesheet" href="./style/3page.css">
+</head>
+<body>
+    <div class="main iconfont">
+         <!-- 头部导航 -->
+      <div class="header">
+        <div class="left">
+          <span>&#xe608;</span>
+          <span>新一代用电信息采集系统</span>
+          <span>导航 &#xeb6d; </span>
+        </div>
+        <div class="right">
+          <span>
+            <input type="text" placeholder="输入关键词搜索" />
+            <span class="loupe">&#xf00d9;</span>
+          </span>
+          <span>&#xe8c7;</span>
+          <span>&#xe8c0;</span>
+          <span>&#xe6de;</span>
+          <div class="nine"><span>99</span></div>
+        </div>
+      </div>
+      <!-- 面包蟹状态栏 -->
+      <div class="Bread-crab">
+        <span class="house">&#xe501;</span>
+        <div class="tab">
+          <span class="vertical"></span>
+          <span>&#xe605;</span>
+          <div class="options">
+            <div class="options-1">
+              <span>非业务功能</span>
+              <span>&#xe6a4;</span>
+            </div>
+            <div class="options-2">
+              <span>台区状态分析</span>
+              <span> <span>&#xe6a4;</span></span>
+            </div>
+          </div>
+          <span>&#xe6e0;</span>
+          <span class="vertical"></span>
+        </div>
+        <span class="magnify">
+          <span>&#xe622;</span>
+          <span>&#xe666;</span>
+        </span>
+      </div>
+      <!-- 搜索栏 -->
+      <div class="search">
+        <label for="date">管理单位
+          <input type="text" placeholder="请输入" />
+        </label>
+        <label for="date">台区名称
+          <input type="text" placeholder="请输入" />
+        </label>
+        <label for="date">台区编号
+            <input type="text" placeholder="请输入" />
+        </label>
+        <div>
+          <button>重 置</button>
+          <button>查 询</button>
+        </div>
+      </div>
+      <!-- 1*5记录板块 -->
+      <div class="count">
+        <div class="item">
+          <div class="writing">
+            <span>光伏上网电量</span>
+            <span><p>196</p>MWh</span>
+          </div>
+          <div class="mark">
+            <span class="voltmeter-1">&#xe682;</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="writing">
+            <span>邀约控制可调度负荷</span>
+            <span><p>321</p>MW</span>
+          </div>
+          <div class="mark">
+            <span class="voltmeter-2">&#xe629;</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="writing">
+            <span>充电桩可调度负荷</span>
+            <span><p>85</p>MW</span>
+          </div>
+          <div class="mark">
+            <span class="clock-1">&#xe60d;</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="writing">
+            <span>负荷集成商控制可调度负荷</span>
+            <span><p>102</p>kW</span>
+          </div>
+          <div class="mark">
+            <span class="clock-2">&#xe615;</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="writing">
+            <span>协商控制可调度负荷</span>
+            <span><p>236</p>MW</span>
+          </div>
+          <div class="mark">
+            <span class="undulation">&#xe66e;</span>
+          </div>
+        </div>
+      </div>
+      <!-- 统计图板块 -->
+      <div class="charts">
+        <!-- child 1 -->
+        <div>
+          <div>
+          <div>邀约控制可调度潜力预测<span></span></div>
+          <div>充电桩可调度潜力预测</div>
+          <div>负荷集成商可调度潜力预测</div>
+          <div>协商控制可调度潜力预测</div>
+          </div>
+        </div>
+        <!-- child 2 -->
+        <div>
+          <div><span>&#xe502; </span> 总负荷</div>
+          <div><span>&#xe502; </span> 可调度负荷</div>
+        </div>
+        <!-- child-3 -->
+        <div>单位 （MW）</div>
+        <!-- 底虚线计数 child-4-->
+        <div>
+          <div>
+            <span>5</span>
+            <span></span>
+          </div>
+          <div>
+            <span>4</span>
+            <span></span>
+          </div>
+          <div>
+            <span>3</span>
+            <span></span>
+          </div>
+          <div>
+            <span>2</span>
+            <span></span>
+          </div>
+          <div>
+            <span>1</span>
+            <span></span>
+          </div>
+          <div>
+            <span>0</span>
+            <span></span>
+          </div>
+        </div>
+        <!-- 时间时段列表 child-5-->
+        <div>
+          <div>
+            00:00<span><span></span></span>
+          </div>
+          <div>
+            01:00<span><span></span></span>
+          </div>
+          <div>
+            02:00<span><span></span></span>
+          </div>
+          <div>
+            03:00<span><span></span></span>
+          </div>
+          <div>
+            04:00<span><span></span></span>
+          </div>
+          <div>
+            05:00<span><span></span></span>
+          </div>
+          <div>
+            06:00<span><span></span></span>
+          </div>
+          <div>
+            07:00<span><span></span></span>
+          </div>
+          <div>
+            08:00<span><span></span></span>
+          </div>
+          <div>
+            09:00<span><span></span></span>
+          </div>
+          <div>
+            10:00<span><span></span></span>
+          </div>
+          <div>
+            11:00<span><span></span></span>
+          </div>
+          <div>
+            12:00<span><span></span></span>
+          </div>
+          <div>
+            13:00<span><span></span></span>
+          </div>
+          <div>
+            14:00<span><span></span></span>
+          </div>
+          <div>
+            15:00<span><span></span></span>
+          </div>
+          <div>
+            16:00<span><span></span></span>
+          </div>
+          <div>
+            17:00<span><span></span></span>
+          </div>
+          <div>
+            18:00<span><span></span></span>
+          </div>
+          <div>
+            19:00<span><span></span></span>
+          </div>
+          <div>
+            20:00<span><span></span></span>
+          </div>
+          <div>
+            21:00<span><span></span></span>
+          </div>
+          <div>
+            22:00<span><span></span></span>
+          </div>
+          <div>
+            23:00<span><span></span></span>
+          </div>
+          <div>
+            24:00<span><span></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@import "./basic-settings.scss";
+
+.main {
+
+    .search{
+        >label{
+            display: flex;
+            align-items: center;
+            &:nth-child(1){
+                flex-grow: 1;
+                input {
+                    width: 260px;
+                    height: 31px;
+                    border-color: rgba(0, 0, 0, 0.15);
+                    border-radius: 4px;
+                    margin-left: 17px;
+                    padding-left: 12px;
+                    color: rgba(0, 0, 0, 0.15);
+                }
+            }
+            &:nth-child(2){
+                flex-grow: 1;
+                input{
+                    width: 260px;
+                }
+            }
+
+            &:nth-child(3){
+                flex-grow: 2;
+                input {
+                    width: 260px;
+                    height: 31px;
+                    border-color: rgba(0, 0, 0, 0.15);
+                    border-radius: 4px;
+                    margin-left: 17px;
+                    padding-left: 12px;
+                    color: rgba(0, 0, 0, 0.15);
+                }
+            }
+
+            
+        }
+    }
+    // 1*5图标块
+    .count {
+        .item {
+            width: 268px;
+            height: 95px;
+        }
+    }
+
+    // 统计图
+    .charts {
+        height: 563px;
+
+        >div {
+            // 头部框架
+            &:nth-child(1) {
+                height: 83.5px;
+
+                // 头部文字类具体样式
+                >div {
+                    width: 875px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: space-between;
+                    color: rgba(102, 102, 102, 1);
+                    >div {
+                        // 第一块文字变绿
+                        &:nth-child(1) {
+                            color: rgba(0, 121, 106, 1)
+                        }
+
+                        // 覆盖基础框架的样式@basic
+                        &:nth-child(2) {
+                            flex-grow: 0;
+                        }
+                    }
+                }
+            }
+            // 标记注释2
+            &:nth-child(2){
+                position: absolute;
+                top: 133px;
+                justify-content: space-between;
+                align-items: center;
+                width: 220px;
+                >div{
+                    // 标记1 颜色覆盖
+                    &:nth-child(1) {
+                        span{
+                            color: rgba(65, 215, 156, 1);
+                        }
+                    }
+                }
+            }
+            // 单位 长度覆盖
+            &:nth-child(3){
+                margin-top: 94px;
+            }
+            // 计数底样式
+            &:nth-child(4) {
+                height: 309px;
+                >div {
+                    >span {
+                        // 字体大小覆盖
+                        font-size: 12px;
+
+                        // 虚线长度
+                        &:nth-child(2) {
+                            width: 1338px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(5){
+                width: 1358px;
+                >div{
+                    >span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

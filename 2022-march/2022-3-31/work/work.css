@@ -1,0 +1,62 @@
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-490deg);
+            transform: rotateZ(-490deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-490deg);
+            transform: rotateZ(-490deg);
+  }
+}
+
+.main {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.main .box {
+  width: 400px;
+  height: 400px;
+  background: url(./p3.jpg);
+  background-size: contain;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.main .zhen {
+  width: 100px;
+  height: 100px;
+  background: url(./p2.png) center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -50px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  z-index: 9999;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.main .zhen:hover {
+  -webkit-animation: move 3s cubic-bezier(0.44, 0.34, 0, 1.01) infinite both;
+          animation: move 3s cubic-bezier(0.44, 0.34, 0, 1.01) infinite both;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  cursor: pointer;
+}
+/*# sourceMappingURL=work.css.map */
