@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "PingFangSC-Semibold";
+  src: url(../font/PingFangTC-Semibold.ttf);
+}
+
+@font-face {
+  font-family: "PingFangSC-Regular";
+  src: url(../font/PingFang-Regular.ttf);
+}
+
+body,
+p,
+a,
+h1 {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 3.73333vw;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background: #FFFFFF;
+}
+
+.main .header {
+  height: 11.73333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F9F9F9;
+}
+
+.main .header .return {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .header .return img {
+  height: 8vw;
+  padding-left: 2.66667vw;
+}
+
+.main .header .wraparound {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "PingFangSC-Regular";
+}
+
+.main .header .more {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main .header .more img {
+  height: 8vw;
+  padding-right: 2.66667vw;
+}
+
+.main .search {
+  width: 92vw;
+  height: 9.06667vw;
+  margin: 3.46667vw 4vw;
+}
+
+.main .search > input {
+  border: none;
+  background: #F3F4F6;
+  font-size: 3.2vw;
+  width: 92vw;
+  height: 9.06667vw;
+  border-radius: 4.53333vw;
+  text-align: center;
+}
+
+.kk {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(170, 169, 169, 0.411);
+  z-index: 999;
+}
+
+.kk .fen {
+  width: 100vw;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+.kk .fen img {
+  width: 13.33333vw;
+}
+
+.kk .fen .xiang {
+  font-size: 3.2vw;
+  color: #9DA3B4;
+  padding-top: 5.33333vw;
+  padding-bottom: 2.66667vw;
+  text-align: center;
+}
+
+.kk .fen .photo {
+  padding: 10.66667vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  font-size: 3.46667vw;
+  color: #9DA3B4;
+}
+
+.kk .fen .cancel {
+  font-size: 4.53333vw;
+  line-height: 10.66667vw;
+  border-top: 0.26667vw solid #dededf;
+  height: 10.66667vw;
+  text-align: center;
+}
+
+.main .header .more img {
+  height: 6.66667vw;
+  padding-right: 2.66667vw;
+}
+
+.main .detail {
+  padding: 4vw;
+}
+
+.main .detail .detail-title {
+  font-size: 6.4vw;
+  font-weight: 600;
+  color: #333333;
+  padding: 2.66667vw 0;
+}
+
+.main .detail .somm {
+  font-size: 3.2vw;
+  color: #9DA3B4;
+  padding: 0.53333vw 0;
+}
+
+.main .detail .writing * {
+  margin-top: 4vw;
+}
+
+.main .detail .writing p {
+  font-size: 4.53333vw;
+  color: #333333;
+  line-height: 7.46667vw;
+}
+
+.main .detail .writing > img {
+  width: 100%;
+}
+
+.main .detail .writing .img {
+  position: relative;
+}
+
+.main .detail .writing .img .tu {
+  margin: 0;
+  width: 100%;
+}
+
+.main .detail .writing .img .bo {
+  height: 13.33333vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -6.66667vw;
+  margin-left: -6.66667vw;
+}
+
+.main .share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10.66667vw 4vw;
+}
+
+.main .share > div {
+  font-size: 4.8vw;
+  color: #5B5B5B;
+}
+
+.main .share > img {
+  width: 8vw;
+  margin-left: 10.66667vw;
+}
+
+.kong {
+  background: #F5F5F5;
+  height: 18.66667vw;
+}
+/*# sourceMappingURL=6-1-1.css.map */

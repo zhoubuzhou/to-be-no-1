@@ -1,0 +1,35 @@
+@import "./basis.scss";
+
+.information {
+    .item {
+        display: flex;
+        padding: vw(13) vw(10);
+        border-bottom: vw(1) solid #dbdbdb;
+
+        .img {
+            >img {
+                width: vw(115);
+                height: vw(75);
+            }
+        }
+
+        .item-writing {
+            padding-left: vw(10);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .item-title {
+                font-size: vw(17);
+                color: #333333;
+                letter-spacing: 0;
+                line-height: vw(22);
+            }
+
+            >div {
+                font-size: vw(11);
+                color: #9DA3B4;
+                line-height: vw(22);
+            }
+        }
+    }
+}

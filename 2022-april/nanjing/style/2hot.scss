@@ -1,0 +1,86 @@
+@import "./basis.scss";
+
+.main {
+    background: #FFFFFF;
+
+    // 搜索框
+    .search {
+        width: vw(345);
+        height: vw(34);
+        margin: vw(13) vw(15);
+
+        >input {
+            border: none;
+            background: #F3F4F6;
+            font-size: vw(12);
+            width: vw(345);
+            height: vw(34);
+            border-radius: vw(17);
+            text-align: center;
+        }
+    }
+
+    // 内容  
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: vw(70);
+
+        // 每一项统一
+        .item {
+            display: inline-block;
+            width: vw(345);
+            height: vw(264);
+            background: #FFFFFF;
+            box-shadow: 0 0 vw(15) 0 rgba(0, 0, 0, 0.10);
+            border-radius: vw(4);
+            margin-bottom: vw(15);
+            padding: vw(15);
+
+            // 图片
+            >img {
+                width: vw(315);
+                height: vw(168);
+                border-radius: vw(4);
+                // width: auto;
+            }
+
+            // 标题
+            .item-title {
+                display: flex;
+                justify-content: space-between;
+                font-size: vw(18);
+                line-height: vw(25);
+                color: #333333;
+                font-weight: 500;
+                padding-bottom: vw(5);
+                padding-top: vw(13);
+                // 价格
+                .red {
+                    font-size: vw(17);
+                    font-weight: 600;
+                    color: #E52F17;
+
+                    >span {
+                        font-size: vw(12);
+                        color: #151515;
+                        line-height: vw(17);
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            // 地址栏
+            .address {
+                font-size: vw(14);
+                color: #BBBBBB;
+
+                >img {
+                    width: vw(16);
+                }
+            }
+
+        }
+    }
+}

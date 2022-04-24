@@ -117,9 +117,8 @@ ul>li {
     .essay {
         width: 100%;
         height: 100vh;
-        background-color: rgb(243, 242, 242);
+        background-color: rgb(249, 247, 247);
         color: rgb(77, 77, 77);
-        // color: rgb(237, 240, 228);
 
 
         // 内胆
@@ -132,7 +131,12 @@ ul>li {
             justify-content: space-evenly;
 
             // 标题
-            .essay-title {}
+            .essay-title {
+                line-height: 2rem;
+                >p{
+                    text-align: center;
+                }
+            }
 
             // 内容
             .essay-content {
@@ -144,15 +148,29 @@ ul>li {
                     height: 8rem;
                     border-radius: 15px;
                     color: rgb(77, 77, 77);
-
-                    // background-color:rgb(123, 123, 123) ;
-                    // background: linear-gradient(69deg, rgba(249,244,228,1) 0%, rgba(243,242,221,1) 49%, rgba(239,241,217,1) 81%, rgba(247,255,230,1) 100%);
                     background-color: #fff;
-                    box-shadow: 5px 5px 16px rgba(164, 164, 164, 0.8);
+                    box-shadow: 5px 5px 15px rgba(164, 164, 164, 0.8);
                 }
             }
         }
     }
 
-
+    // 个人简介区
+    .briefly{
+        width: 100%;
+        height: 100vh;
+        .briefly-liner{
+            height: 100%;
+            padding: 1rem;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .briefly-title{
+                font-size:24px ;
+            }
+            .briefly-content{}
+        }
+    }
 }

@@ -147,6 +147,10 @@ h1 {
             flex-direction: column;
             font-size: vw(14);
             font-family: "PingFangSC-Semibold";
+            
+            p:nth-child(1){
+                color: #333333;
+            }
 
             p:nth-child(2) {
                 color: #BBBBBB;

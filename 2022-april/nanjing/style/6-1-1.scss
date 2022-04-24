@@ -1,0 +1,139 @@
+@import "./basis.scss";
+// 模态框
+.kk {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(170, 169, 169, 0.411);
+    z-index: 999;
+    
+    .fen {
+        width: 100vw;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        img {
+            width: vw(50);
+        }
+
+        .xiang {
+            font-size: vw(12);
+            color: #9DA3B4;
+            padding-top: vw(20);
+            padding-bottom: vw(10);
+            text-align: center;
+        }
+
+        .photo {
+            padding: vw(40);
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            font-size: vw(13);
+            color: #9DA3B4;
+
+        }
+
+        // 取消
+        .cancel {
+            font-size: vw(17);
+            line-height: vw(40);
+            border-top: vw(1) solid #dededf;
+            height: vw(40);
+            text-align: center;
+
+        }
+    }
+}
+
+
+.main {
+
+    // 右上角分享样式覆盖
+    .header {
+        .more {
+            img {
+                height: vw(25);
+                padding-right: vw(10);
+            }
+        }
+    }
+
+    // 内容详情
+    .detail {
+        padding: vw(15);
+
+        .detail-title {
+            font-size: vw(24);
+            font-weight: 600;
+            color: #333333;
+            padding: vw(10) 0;
+        }
+
+        .somm {
+            font-size: vw(12);
+            color: #9DA3B4;
+            padding: vw(2) 0;
+        }
+
+        .writing {
+            * {
+                margin-top: vw(15);
+            }
+
+            p {
+                font-size: vw(17);
+                color: #333333;
+                line-height: vw(28);
+            }
+
+            // 图片
+            >img {
+                width: 100%;
+
+            }
+
+            .img {
+                position: relative;
+
+                .tu {
+                    margin: 0;
+                    width: 100%;
+                }
+
+                .bo {
+                    height: vw(50);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: vw(-25);
+                    margin-left: vw(-25);
+                }
+            }
+        }
+    }
+
+    // 分享
+    .share {
+        display: flex;
+        align-items: center;
+        padding: vw(40) vw(15);
+
+        >div {
+            font-size: vw(18);
+            color: #5B5B5B;
+        }
+
+        >img {
+            width: vw(30);
+            margin-left: vw(40);
+        }
+    }
+}
+
+.kong {
+    background: #F5F5F5;
+    height: vw(70);
+}

@@ -174,7 +174,7 @@ ul > li {
 .content .essay {
   width: 100%;
   height: 100vh;
-  background-color: #f3f2f2;
+  background-color: #f9f7f7;
   color: #4d4d4d;
 }
 
@@ -196,6 +196,14 @@ ul > li {
           justify-content: space-evenly;
 }
 
+.content .essay .essay-liner .essay-title {
+  line-height: 2rem;
+}
+
+.content .essay .essay-liner .essay-title > p {
+  text-align: center;
+}
+
 .content .essay .essay-liner .essay-content .essay-item {
   margin: 0.5rem;
   width: 50rem;
@@ -203,7 +211,35 @@ ul > li {
   border-radius: 15px;
   color: #4d4d4d;
   background-color: #fff;
-  -webkit-box-shadow: 5px 5px 16px rgba(164, 164, 164, 0.8);
-          box-shadow: 5px 5px 16px rgba(164, 164, 164, 0.8);
+  -webkit-box-shadow: 5px 5px 15px rgba(164, 164, 164, 0.8);
+          box-shadow: 5px 5px 15px rgba(164, 164, 164, 0.8);
+}
+
+.content .briefly {
+  width: 100%;
+  height: 100vh;
+}
+
+.content .briefly .briefly-liner {
+  height: 100%;
+  padding: 1rem;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .briefly .briefly-liner .briefly-title {
+  font-size: 24px;
 }
 /*# sourceMappingURL=homepage.css.map */

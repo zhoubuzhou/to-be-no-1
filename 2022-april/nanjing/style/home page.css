@@ -183,6 +183,10 @@ h1 {
   font-family: "PingFangSC-Semibold";
 }
 
+.main .col-nav .item p:nth-child(1) {
+  color: #333333;
+}
+
 .main .col-nav .item p:nth-child(2) {
   color: #BBBBBB;
   font-family: "PingFangSC-Regular";

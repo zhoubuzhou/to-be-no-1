@@ -5,15 +5,15 @@
 
 .iconfont {
     font-family: "iconfont";
-    font-size: 16px;
+    font-size: vw(16);
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 
-@function vw($px) {
-    @return $px / 1519.2 * 100vw;
+@function vw($px:1) {
+    @return $px / 1519 * 100vw;
 }
 
 // 边框
@@ -32,20 +32,22 @@ ul {
 body {
     margin: 0;
     background-color: #f4f4f4;
+    overflow-x: hidden;
+    
 
 
     // 灰色顶部导航
     .shortcut {
-        height: vw(31);
+        height: 31px;
         background-color: #e3e4e5;
-        border-bottom: 1px solid #ddd;
+        border-bottom: vw(1) solid #ddd;
         position: relative;
         z-index: 999;
-
+    
         >div {
             width: vw(1190);
             margin: auto;
-            height: vw(31);
+            height: 31px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -53,14 +55,14 @@ body {
             // 定位位置 江苏
             >p {
                 flex-grow: 1;
-                font-size: 12px;
+                font-size: vw(12);
                 color: #999;
-                padding: 0px 13px;
+                padding: 0 vw(13);
 
                 >span {
-                    font-size: 14px;
+                    font-size: vw(14);
                     color: #f10215;
-                    margin-right: 4px;
+                    margin-right: vw(4);
                 }
             }
 
@@ -74,8 +76,8 @@ body {
                 padding: 0;
 
                 >li {
-                    padding: 0px vw(7);
-                    font-size: 12px;
+                    padding: 0 vw(7);
+                    font-size: vw(12);
                     color: #999;
 
                     .red {
@@ -89,23 +91,28 @@ body {
 
     // 头部搜索栏
     .header {
-        height: vw(141);
+        height: 141px;
         background-color: #fff;
-        border-bottom: 1px solid #ddd;
-        
+        border-bottom: vw(1) solid #ddd;
+        overflow: hidden;
 
+        // 浮动框
         .float {
             position: fixed;
+            // width: 100%;
             z-index: 100;
             left: 0;
-            top: 0px;
-            width: 100%;
-            border-bottom: 2px solid #f10214;
+            top: 0;
+            border-bottom: vw(2) solid #f10214;
             background-color: #fff;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.203);
+            box-shadow: vw(2) vw(2) vw(2) rgba(0, 0, 0, 0.203);
+            display: flex;
+            justify-content: space-between;
+
             >div {
                 position: relative;
                 height: 50px;
+
                 // 浮动的logo
                 .float-logo {
                     background-image: url(../picture/sprite.png);
@@ -114,16 +121,15 @@ body {
                     display: block;
                     width: 125px;
                     height: 40px;
-                    position: absolute;
-                    left: 165px;
-                    top: 6px;
+                    margin-top: 6px;
                 }
+
                 // 搜索框
                 .from {
                     display: inline-block;
-                    width: 546px;
+                    width: vw(546);
                     height: 36px;
-                    border: 2px solid #e2231a;
+                    border: vw(2) solid #e2231a;
                     background: #fff;
                     display: flex;
                     justify-content: space-between;
@@ -131,48 +137,49 @@ body {
                     position: relative;
                     position: absolute;
                     top: 8px;
-                    left: 425px;
+                    left: 180%;
 
                     >input {
                         border: none;
                         padding: 2px 44px 2px 17px;
-                        width: 425px;
+                        width: vw(425);
                         height: 26px;
-                        border: 1px solid transparent;
+                        border: vw(1) solid transparent;
                         color: #333;
-                        font-size: 12px;
+                        font-size: vw(12);
                     }
 
                     >span {
-                        font-size: 19px;
+                        font-size: vw(19);
                         color: #999;
                         display: inline-block;
                         position: absolute;
-                        right: 70px;
+                        right: vw(70);
                     }
 
                     >button {
                         border: none;
-                        width: 58px;
+                        width: vw(58);
                         height: 32px;
                         background-color: #e1251b;
-                        font-size: 18px;
+                        font-size: vw(18);
                         font-weight: 700;
                         color: #fff;
                     }
                 }
+
                 .shop {
                     position: absolute;
                     top: 8px;
-                    left: 995px;
+                    left: 60vw;
 
                     >div {
-                        width: 130px;
+                        width: vw(130);
                         height: 34px;
                         background-color: #fff;
                         text-align: center;
-                        line-height: 34px;
-                        border: 1px solid #e3e4e5;
+                        line-height: vw(34);
+                        border: vw(1) solid #e3e4e5;
                         position: absolute;
 
                         span {
@@ -180,27 +187,27 @@ body {
 
                             // 购物车
                             &:nth-child(1) {
-                                margin-right: 13px;
+                                margin-right: vw(13);
                             }
 
                             // 文字
                             &:nth-child(2) {
-                                font-size: 12px;
+                                font-size: vw(12);
                             }
 
                             // 漂浮0
                             &:nth-child(3) {
                                 position: absolute;
-                                top: 1px;
-                                left: 29px;
+                                top: vw(1);
+                                left: vw(29);
                                 right: auto;
-                                font-size: 12px;
-                                line-height: 12px;
-                                min-width: 20px;
-                                padding: 1px 3px;
+                                font-size: vw(12);
+                                line-height: vw(12);
+                                min-width: vw(20);
+                                padding: vw(1) vw(3);
                                 color: #fff;
                                 background-color: #e1251b;
-                                border-radius: 7px;
+                                border-radius: vw(7);
                                 text-align: center;
                             }
                         }
@@ -212,7 +219,7 @@ body {
         // 内胆div
         >div {
             width: 100%;
-            padding: 0px 158px;
+            padding: 0 vw(158);
             background-color: #fff;
             display: flex;
             justify-content: space-between;
@@ -226,14 +233,14 @@ body {
                 width: vw(190);
                 height: vw(120);
                 position: relative;
-                top: 10px;
+                top: vw(10);
             }
 
             // header 中部
             .search {
                 position: relative;
                 flex-grow: 1;
-                height: 130px;
+                height: vw(130);
 
                 .search-m {
                     position: relative;
@@ -245,42 +252,42 @@ body {
                     // 搜索框
                     .from {
                         display: inline-block;
-                        width: 546px;
-                        height: 36px;
-                        border: 2px solid #e2231a;
+                        width: vw(546);
+                        height: vw(36);
+                        border: vw(2) solid #e2231a;
                         background: #fff;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         position: relative;
                         position: absolute;
-                        top: 25px;
-                        left: 76px;
+                        top: vw(25);
+                        left: vw(76);
 
                         >input {
                             border: none;
-                            padding: 2px 44px 2px 17px;
-                            width: 425px;
-                            height: 26px;
-                            border: 1px solid transparent;
+                            padding: vw(2) vw(44) vw(2) vw(17);
+                            width: vw(425);
+                            height: vw(26);
+                            border: vw(1) solid transparent;
                             color: #333;
-                            font-size: 12px;
+                            font-size: vw(12);
                         }
 
                         >span {
-                            font-size: 19px;
+                            font-size: vw(19);
                             color: #999;
                             display: inline-block;
                             position: absolute;
-                            right: 70px;
+                            right: vw(70);
                         }
 
                         >button {
                             border: none;
-                            width: 58px;
-                            height: 32px;
+                            width: vw(58);
+                            height: vw(32);
                             background-color: #e1251b;
-                            font-size: 18px;
+                            font-size: vw(18);
                             font-weight: 700;
                             color: #fff;
                         }
@@ -289,16 +296,16 @@ body {
                     // 购物车样式
                     .shop {
                         position: absolute;
-                        top: 25px;
-                        left: 645px;
+                        top: vw(25);
+                        left: vw(645);
 
                         >div {
-                            width: 130px;
-                            height: 34px;
+                            width: vw(130);
+                            height: vw(34);
                             background-color: #fff;
                             text-align: center;
-                            line-height: 34px;
-                            border: 1px solid #e3e4e5;
+                            line-height: vw(34);
+                            border: vw(1) solid #e3e4e5;
                             position: relative;
 
                             span {
@@ -306,27 +313,27 @@ body {
 
                                 // 购物车
                                 &:nth-child(1) {
-                                    margin-right: 13px;
+                                    margin-right: vw(13);
                                 }
 
                                 // 文字
                                 &:nth-child(2) {
-                                    font-size: 12px;
+                                    font-size: vw(12);
                                 }
 
                                 // 漂浮0
                                 &:nth-child(3) {
                                     position: absolute;
-                                    top: 1px;
-                                    left: 29px;
+                                    top: vw(1);
+                                    left: vw(29);
                                     right: auto;
-                                    font-size: 12px;
-                                    line-height: 12px;
-                                    min-width: 20px;
-                                    padding: 1px 3px;
+                                    font-size: vw(12);
+                                    line-height: vw(12);
+                                    min-width: vw(20);
+                                    padding: vw(1) vw(3);
                                     color: #fff;
                                     background-color: #e1251b;
-                                    border-radius: 7px;
+                                    border-radius: vw(7);
                                     text-align: center;
                                 }
                             }
@@ -338,15 +345,15 @@ body {
                 .small-categories {
                     font-size: vw(12);
                     position: absolute;
-                    left: 75px;
-                    top: 65px;
-                    width: 550px;
-                    height: 20px;
-                    line-height: 20px;
+                    left: vw(75);
+                    top: vw(65);
+                    width: vw(550);
+                    height: vw(20);
+                    line-height: vw(20);
 
                     // 分类项
                     >a {
-                        margin-right: 10px;
+                        margin-right: vw(10);
                         text-decoration: none;
                         outline: none;
                         color: #999;
@@ -360,27 +367,31 @@ body {
 
                 // 分类 秒杀 优惠券等等
                 .classify {
-                    display: flex;
-                    flex-direction: column;
-                    height: 60px;
+                    // display: flex;
+                    // flex-direction: column;
+                    height: vw(60);
                     margin-bottom: 0;
                     position: absolute;
-                    left: 18px;
+                    left: vw(18);
                     bottom: 0;
-                    height: 40px;
-                    padding-top: 20px;
+                    height: vw(40);
+                    padding-top: vw(20);
 
                     >ul {
+
                         list-style-type: none;
-                        display: flex;
-                        font-size: 15px;
+                        font-size: vw(15);
                         padding-left: 0;
-                        height: 40px;
+                        height: vw(40);
+                        display: flex;
+
 
                         // 列表项
                         >li {
-                            font-size: 15px;
-                            margin: 0 12px;
+                            display: inline-block;
+                            font-size: vw(15);
+                            margin: 0 vw(12);
+                            white-space: nowrap;
 
                             &:nth-child(1) {
                                 font-weight: 700;
@@ -407,13 +418,13 @@ body {
                     width: vw(76);
                     height: vw(76);
                     background-color: #fff;
-                    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.107);
+                    box-shadow: 0 vw(2) vw(8) rgba(255, 255, 255, 0.107);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     position: absolute;
-                    top: 1px;
-                    left: 20px;
+                    top: vw(1);
+                    left: vw(20);
 
                     // 二维码样式
                     >div {
@@ -450,16 +461,16 @@ body {
                 width: vw(190);
                 height: vw(470);
                 background-color: #fff;
-                padding: 10px 0px 10px 18px;
+                padding: vw(10) 0 vw(10) vw(18);
 
                 ul {
 
-                    font-size: 14px;
+                    font-size: vw(14);
                     color: #333;
 
                     li {
-                        width: 172px;
-                        height: 24px;
+                        width: vw(172);
+                        height: vw(24);
                     }
                 }
             }
@@ -480,14 +491,14 @@ body {
                     .round {
                         position: absolute;
 
-                        left: 50px;
-                        bottom: 20px;
+                        left: vw(50);
+                        bottom: vw(20);
 
                         >i {
-                            width: 8px;
-                            height: 8px;
-                            margin-right: 2px;
-                            border: 1px solid rgba(0, 0, 0, .05);
+                            width: vw(8);
+                            height: vw(8);
+                            margin-right: vw(2);
+                            border: vw(1) solid rgba(0, 0, 0, .05);
                             background: rgba(255, 255, 255, .4);
                             display: inline-block;
                             border-radius: 50%;
@@ -495,21 +506,21 @@ body {
                             &:nth-child(1) {
                                 position: absolute;
                                 border-radius: 50%;
-                                margin-right: 4px;
+                                margin-right: vw(4);
                                 background: rgba(255, 255, 255, .4);
-                                border: 11px solid rgba(0, 0, 0, .1);
-                                top: -5px;
-                                left: -25px;
+                                border: vw(11) solid rgba(0, 0, 0, .1);
+                                top: 5px;
+                                left: vw(-25);
 
 
                                 &::before {
                                     position: absolute;
                                     display: inline-block;
-                                    top: -4.5px;
-                                    left: -4px;
+                                    top: vw(-4.5);
+                                    left: vw(-4);
                                     content: " ";
-                                    width: 9px;
-                                    height: 9px;
+                                    width: vw(9);
+                                    height: vw(9);
                                     border-radius: 50%;
                                     background-color: #fff;
                                 }
@@ -525,17 +536,17 @@ body {
                     .symbol {
                         >span {
                             border-color: none;
-                            width: 25px;
-                            height: 35px;
+                            width: vw(25);
+                            height: vw(35);
                             background-color: rgba(0, 0, 0, .15);
                             color: #fff;
-                            font-size: 20px;
+                            font-size: vw(20);
                             text-align: center;
 
                             &:nth-of-type(1) {
                                 position: absolute;
                                 top: 50%;
-                                margin-top: -20px;
+                                margin-top: vw(-20);
                                 left: 0;
                                 border-radius: 0 100% 100% 0;
                             }
@@ -543,7 +554,7 @@ body {
                             &:nth-of-type(2) {
                                 position: absolute;
                                 top: 50%;
-                                margin-top: -20px;
+                                margin-top: vw(-20);
                                 right: 0;
                                 border-radius: 100% 0 0 100%;
                             }
@@ -558,12 +569,12 @@ body {
                     justify-content: space-between;
 
                     div {
-                        width: 190px;
-                        height: 150px;
+                        width: vw(190);
+                        height: vw(150);
                     }
 
                     img {
-                        height: 150px;
+                        height: vw(150);
                     }
                 }
             }
@@ -577,26 +588,26 @@ body {
 
                 // 头部登录
                 .login {
-                    width: 190px;
-                    height: 102px;
-                    font-size: 12px;
-                    border-bottom: 1px solid rgba(0, 0, 0, .15);
+                    width: vw(190);
+                    height: vw(102);
+                    font-size: vw(12);
+                    border-bottom: vw(1) solid rgba(0, 0, 0, .15);
 
                     // 头像登录外衣
                     .login-entry {
 
                         // 头像框样式
                         .avatar {
-                            width: 40px;
-                            height: 40px;
+                            width: vw(40);
+                            height: vw(40);
                             border: 2px solid #fff;
                             border-radius: 50%;
                             position: absolute;
-                            left: 20px;
-                            top: 13px;
-                            width: 44px;
-                            height: 44px;
-                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.11);
+                            left: vw(20);
+                            top: vw(13);
+                            width: vw(44);
+                            height: vw(44);
+                            box-shadow: 0 vw(2) vw(8) rgba(0, 0, 0, 0.11);
 
                             // 图片大小
                             img {
@@ -608,9 +619,10 @@ body {
                         // 头像旁 登录文字
                         .login-item {
                             position: absolute;
-                            top: 16px;
-                            left: 74px;
-                            right: 10px;
+                            top: vw(16);
+                            left: vw(74);
+                            right: vw(10);
+                            white-space: nowrap;
 
                             // Hi
                             a {
@@ -620,8 +632,8 @@ body {
 
                             // 登陆注册
                             p {
-                                margin-top: 3px;
-                                height: 20px;
+                                margin-top: vw(3);
+                                height: vw(20);
                                 color: #333;
                             }
                         }
@@ -630,30 +642,34 @@ body {
                     // 按钮栏
                     .login-push {
                         position: absolute;
-                        left: 15px;
-                        padding-top: 67px;
-                        height: 35px;
+                        left: vw(15);
+                        padding-top: vw(67);
+                        height: vw(35);
 
                         // 按钮基本样式
                         button {
                             border: none;
-                            width: 70px;
-                            height: 25px;
-                            border-radius: 13px;
+                            width: vw(70);
+                            height: vw(25);
+                            border-radius: vw(13);
                             text-align: center;
-                            font-size: 12px;
-                            margin: 0 5px;
+                            font-size: vw(12);
+                            margin: 0 vw(5);
 
                             // 按钮1 新人
                             &:nth-child(1) {
                                 color: #fff;
                                 background: #e1251b;
+                                white-space: nowrap;
+
                             }
 
                             // 按钮2 plus会员
                             &:nth-child(2) {
                                 background: #363634;
                                 color: #e5d790;
+                                white-space: nowrap;
+
 
                             }
                         }
@@ -662,22 +678,22 @@ body {
 
                 // 中部 京东快报
                 .express {
-                    height: 130px;
-                    font-size: 12px;
-                    border-bottom: 1px solid rgba(0, 0, 0, .15);
+                    height: vw(130);
+                    font-size: vw(12);
+                    border-bottom: vw(1) solid rgba(0, 0, 0, .15);
 
                     // 标题
                     .express-entry {
-                        height: 30px;
-                        padding: 10px 0 0;
-                        margin-bottom: 8px;
+                        height: vw(30);
+                        padding: vw(10) 0 0;
+                        margin-bottom: vw(8);
                         position: relative;
 
                         // 京东快报
                         div {
                             display: inline-block;
-                            font-size: 14px;
-                            margin-left: 15px;
+                            font-size: vw(14);
+                            margin-left: vw(15);
                             font-weight: 700;
                             color: #333;
                         }
@@ -686,8 +702,8 @@ body {
                         >span {
                             color: #999;
                             position: absolute;
-                            right: 15px;
-                            top: 10px;
+                            right: vw(15);
+                            top: vw(10);
                         }
 
                     }
@@ -697,8 +713,8 @@ body {
 
                         // 京东快报列表
                         ul {
-                            margin: 0 15px;
-                            height: 88px;
+                            margin: 0 vw(15);
+                            height: vw(88);
                             color: #666;
 
                         }
@@ -708,7 +724,7 @@ body {
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
-                            margin-bottom: 6px;
+                            margin-bottom: vw(6);
 
                             // 列表项的头部红色部分
                             span {
@@ -716,9 +732,9 @@ body {
                                 text-align: center;
                                 color: #e1251b;
                                 background-color: rgba(225, 37, 27, .08);
-                                margin-right: 6px;
-                                height: 16px;
-                                width: 35px;
+                                margin-right: vw(6);
+                                height: vw(16);
+                                width: vw(35);
                             }
                         }
                     }
@@ -726,8 +742,8 @@ body {
 
                 // 3*4图标列表
                 .colorful {
-                    height: 238px;
-                    padding: 10px 0 5px 0;
+                    height: vw(238);
+                    padding: vw(10) 0 vw(5) 0;
                     position: relative;
 
                     ul {
@@ -737,17 +753,17 @@ body {
                         // 基础样式
                         li {
                             display: inline-block;
-                            width: 63px;
-                            height: 55px;
+                            width: vw(63);
+                            height: vw(55);
                             text-align: center;
-                            font-size: 12px;
+                            font-size: vw(12);
                         }
 
                         // 基础样式
                         .colorful-item {
                             img {
-                                width: 28px;
-                                height: 28px;
+                                width: vw(28);
+                                height: vw(28);
                             }
                         }
 
@@ -781,17 +797,15 @@ body {
             width: vw(58);
             position: sticky;
             top: vw(80);
-            right: vw(80);
             z-index: 999;
             background-color: #fff;
             float: right;
 
             // 浮动项
             ul {
-                height: vw(358);
+                height: 358px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
                 align-items: center;
 
                 >li {
@@ -829,7 +843,7 @@ body {
         .seckill-inner {
             width: vw(1190);
             height: vw(260);
-            margin: 0px vw(155);
+            margin: 0 vw(155);
             display: flex;
             background-color: #fff;
 
@@ -838,49 +852,50 @@ body {
             .spike {
                 width: vw(190);
                 background: url(../picture/4a15d8883775742e3efbb850ae14def7.png) no-repeat;
+                background-size: cover;
                 color: #fff;
 
                 // 上半部分 头部标题京东秒杀
                 .spike-title {
                     text-align: center;
-                    font-size: 30px;
+                    font-size: vw(30);
                     font-weight: 700;
-                    margin-top: 31px;
+                    margin-top: vw(31);
                 }
 
                 // 下半部分 秒杀时间
                 .spike-time {
-                    margin-top: 90px;
-                    font-size: 14px;
+                    margin-top: vw(90);
+                    font-size: vw(14);
                     width: vw(190);
                     text-align: center;
 
                     // 场次说明
                     .spike-sessions {
-                        font-size: 18px;
+                        font-size: vw(18);
                         font-weight: 700;
-                        height: 26px;
+                        height: vw(26);
 
                         // 小字部分的样式覆盖
                         >span {
                             font-weight: 400;
-                            font-size: 14px;
+                            font-size: vw(14);
                         }
                     }
 
                     // 计时板块
                     .spike-timing {
-                        font-size: 20px;
+                        font-size: vw(20);
                         font-weight: 700;
-                        margin-top: 10px;
+                        margin-top: vw(10);
 
                         // 数字样式
                         .spike-timing-num {
-                            width: 30px;
-                            height: 30px;
+                            width: vw(30);
+                            height: vw(30);
                             text-align: center;
                             background-color: #2f3430;
-                            margin-right: 10px;
+                            margin-right: vw(10);
                             display: inline-block;
                         }
 
@@ -901,28 +916,20 @@ body {
                 width: vw(800);
                 display: flex;
                 align-items: center;
-                font-size: 12px;
+                font-size: vw(12);
 
                 // 每一项外壳的基本样式
                 .item {
-                    width: 200px;
+                    width: vw(200);
                     text-align: center;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    // 间隔 暂时不设置未成功需要position
-                    // ::after {
-                    //     content: "";
-                    //     height: 200px;
-                    //     width: 1px;
-                    //     background: linear-gradient(180deg, white, #eeeeee, white);
-                    //     color: #666;
-                    // }
 
                     // 第一个div 包裹img的
                     .picture {
-                        width: 140px;
-                        height: 140px;
+                        width: vw(140);
+                        height: vw(140);
 
                         img {
                             width: 100%;
@@ -933,10 +940,10 @@ body {
                     .writing {
                         font-weight: 400;
                         color: #333;
-                        width: 160px;
+                        width: vw(160);
                         margin-left: auto;
                         margin-right: auto;
-                        margin-top: 13px;
+                        margin-top: vw(13);
                         white-space: nowrap;
                         text-overflow: ellipsis;
                         overflow: hidden;
@@ -944,7 +951,7 @@ body {
 
                     // 第三个 价格
                     .price {
-                        margin-top: 7px;
+                        margin-top: vw(7);
                         color: #e1251b;
                         font-weight: 700;
 
@@ -960,8 +967,8 @@ body {
 
                 .spike-entry {
                     margin: auto;
-                    width: 180px;
-                    height: 240px;
+                    width: vw(180);
+                    height: vw(240);
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -970,18 +977,18 @@ body {
                     // 图片大小
                     .spike-image {
                         img {
-                            width: 120px;
+                            width: vw(120);
                         }
                     }
 
                     // 下半部分文字样式
                     .spike-writing {
-                        width: 180px;
-                        height: 90px;
-                        font-size: 14px;
+                        width: vw(180);
+                        height: vw(90);
+                        font-size: vw(14);
                         text-align: center;
                         background: linear-gradient(180deg, rgba(255, 255, 255, .5), rgba(220, 224, 236, .5));
-                        margin-top: 10px;
+                        margin-top: vw(10);
 
                         // title
                         .item-1 {
@@ -991,34 +998,34 @@ body {
                         // 满300
                         .item-2 {
                             font-weight: 700;
-                            margin-top: 2px;
+                            margin-top: vw(2);
                             color: #333;
                         }
 
                         // 品牌秒杀 带框样式
                         .item-3 {
-                            font-size: 12px;
+                            font-size: vw(12);
                             color: #e1251b;
-                            border-radius: 14px;
-                            width: 82px;
-                            height: 24px;
+                            border-radius: vw(14);
+                            width: vw(82);
+                            height: vw(24);
                             box-sizing: border-box;
                             text-align: center;
                             display: inline-block;
-                            line-height: 22px;
+                            line-height: vw(22);
                             font-weight: 700;
-                            padding-left: 4px;
-                            font-size: 12px;
-                            border: 1px solid #e1251b;
-                            margin-top: 4px
+                            padding-left: vw(4);
+                            font-size: vw(12);
+                            border: vw(1) solid #e1251b;
+                            margin-top: vw(4);
                         }
 
                         // 小点样式
                         .item-4 {
                             >span {
                                 display: inline-block;
-                                width: 4px;
-                                height: 4px;
+                                width: vw(4);
+                                height: vw(4);
                                 border-radius: 50%;
                                 background: #999;
 
@@ -1042,10 +1049,7 @@ body {
 
         // 内胆
         .spe-entry {
-            // * {
-            //     border: 1px solid;
-            // }
-            margin: 0px 156.7px;
+            margin: 0 vw(156.7);
             width: vw(1190);
             display: flex;
             justify-content: space-between;
@@ -1062,9 +1066,9 @@ body {
 
                 // 头部
                 .special-head {
-                    width: 590px;
-                    height: 60px;
-                    padding-left: 20px;
+                    width: vw(590);
+                    height: vw(60);
+                    padding-left: vw(20);
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -1072,23 +1076,23 @@ body {
                     // 大标题
                     .special-title {
                         font-weight: 700;
-                        font-size: 24px;
+                        font-size: vw(24);
                         color: #333;
-                        line-height: 32px;
+                        line-height: vw(32);
 
                         >span {
-                            width: 18px;
-                            height: 18px;
+                            width: vw(18);
+                            height: vw(18);
                             display: inline-block;
                             color: orange;
-                            border: 2px solid orange;
+                            border: vw(2) solid orange;
                             border-radius: 50%;
                             position: relative;
-                            line-height: 16px;
+                            line-height: vw(16);
 
                             >span {
                                 position: absolute;
-                                font-size: 12px;
+                                font-size: vw(12);
                                 top: -2px;
                                 left: 3px;
                             }
@@ -1097,10 +1101,10 @@ body {
 
                     // 右侧文字
                     .special-classify {
-                        font-size: 14px;
+                        font-size: vw(14);
 
                         >span {
-                            margin: 0 13.5px;
+                            margin: 0 vw(13.5);
                             color: #999;
 
                             &:nth-child(1) {
@@ -1108,7 +1112,7 @@ body {
                             }
 
                             &:nth-last-child(1) {
-                                margin-right: 10px;
+                                margin-right: vw(10);
                             }
                         }
                     }
@@ -1116,15 +1120,15 @@ body {
 
                 // 商品
                 .special-detail {
-                    padding: 0 15px 15px 15px;
+                    padding: 0 vw(15) vw(15) vw(15);
                     display: flex;
                     justify-content: space-evenly;
 
                     // 左侧大展示框 红酒
                     .special-pro {
-                        width: 170px;
-                        height: 265px;
-                        margin-right: 6px;
+                        width: vw(170);
+                        height: vw(265);
+                        margin-right: vw(6);
                         background-color: rgba(109, 126, 146, .05);
                         position: relative;
                         display: flex;
@@ -1134,8 +1138,8 @@ body {
 
                         // 图片
                         .pro-img {
-                            width: 120px;
-                            height: 120px;
+                            width: vw(120);
+                            height: vw(120);
 
                             >img {
                                 width: 100%;
@@ -1144,7 +1148,7 @@ body {
 
                         // 文字
                         .pro-writing {
-                            width: 170px;
+                            width: vw(170);
                             text-align: center;
 
                             >div {
@@ -1153,19 +1157,19 @@ body {
                                 &:nth-child(1) {
                                     font-size: 14px;
                                     color: #333;
-                                    margin-top: 9px;
-                                    margin-bottom: 4px;
+                                    margin-top: vw(9);
+                                    margin-bottom: vw(4);
                                 }
 
                                 // 价格
                                 &:nth-child(2) {
-                                    font-size: 18px;
+                                    font-size: vw(18);
                                     color: #e1251b;
                                     font-weight: 700;
-                                    margin-top: 4px;
+                                    margin-top: vw(4);
 
                                     >span {
-                                        font-size: 12px;
+                                        font-size: vw(12);
                                     }
                                 }
                             }
@@ -1190,23 +1194,19 @@ body {
 
                     // 2*2商品
                     .special-com {
-                        display: flex;
-                        justify-content: space-evenly;
-                        align-items: center;
-                        flex-wrap: wrap;
+                        display: grid;
+                        grid-template-columns: 50% 50%;
 
                         // 4块统一设置
                         .special-item {
-                            width: 170px;
-                            height: 89px;
-                            font-size: 12px;
+                            font-size: vw(12);
                             display: flex;
 
                             >div {
 
                                 // 图片
                                 &:nth-child(1) {
-                                    margin-right: 5px;
+                                    margin-right: vw(5);
 
                                     // 图片大小
                                     img {
@@ -1243,9 +1243,9 @@ body {
 
                 // 头部
                 .flash-head {
-                    width: 590px;
-                    height: 60px;
-                    padding-left: 20px;
+                    width: vw(590);
+                    height: vw(60);
+                    padding-left: vw(20);
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -1253,24 +1253,24 @@ body {
                     // 大标题
                     .flash-title {
                         font-weight: 700;
-                        font-size: 24px;
+                        font-size: vw(24);
                         color: #333;
-                        line-height: 32px;
+                        line-height: vw(32);
 
                         // 浮动元素
                         >span {
-                            width: 18px;
-                            height: 18px;
+                            width: vw(18);
+                            height: vw(18);
                             display: inline-block;
                             color: orange;
                             border: 2px solid orange;
                             border-radius: 50%;
                             position: relative;
-                            line-height: 16px;
+                            line-height: vw(16);
 
                             >span {
                                 position: absolute;
-                                font-size: 12px;
+                                font-size: vw(12);
                                 top: -2px;
                                 left: 3px;
                             }
@@ -1281,26 +1281,26 @@ body {
                 // 商品
                 .flash-detail {
                     display: flex;
-                    padding: 0 20px 0 15px;
+                    padding: 0 vw(15) 0 vw(15);
 
                     // 左侧斯凯奇
                     .flash-pro {
-                        width: 270px;
-                        height: 265px;
-                        margin-right: 15px;
+                        width: vw(270);
+                        height: vw(265);
+                        margin-right: vw(10);
                         display: inline-block;
                         background: linear-gradient(180deg, rgba(119, 255, 233, .05), rgba(0, 93, 70, .05));
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         justify-content: space-evenly;
-                        font-size: 12px;
+                        font-size: vw(12);
                         text-align: center;
 
                         // logo大小
                         .flash-logo {
-                            width: 70px;
-                            height: 35px;
+                            width: vw(70);
+                            height: vw(35);
                             margin-top: -5px;
 
                             >img {
@@ -1310,14 +1310,14 @@ body {
 
                         // 斯凯奇文字
                         .flash-skq {
-                            margin-top: -10px;
+                            margin-top: vw(-10);
 
                             // 斯凯奇品牌专场
                             >div {
-                                font-size: 16px;
+                                font-size: vw(16);
                                 color: #333;
                                 font-weight: 700;
-                                margin-bottom: 5px;
+                                margin-bottom: vw(5);
                             }
 
                             // 全场...统一样式
@@ -1335,8 +1335,8 @@ body {
 
                         // 鞋子图片大小
                         .flash-shoe {
-                            width: 130px;
-                            height: 130px;
+                            width: vw(130);
+                            height: vw(130);
 
                             >img {
                                 width: 100%;
@@ -1347,31 +1347,33 @@ body {
 
                     // 2*3品牌列表
                     .flash-com {
-                        width: 270px;
+                        width: vw(270);
                         display: flex;
                         flex-wrap: wrap;
-                        margin-top: -20px;
+                        margin-top: vw(-10);
+                        display: grid;
+                        grid-template-columns: 50% 50%;
 
                         // 每一项统一设置
                         .flash-itme {
                             box-sizing: border-box;
-                            width: 135px;
-                            height: 100px;
+                            width: vw(135);
+                            height: vw(100);
                             display: flex;
                             flex-direction: column;
                             align-items: center;
 
                             // logo图片大小
                             >img {
-                                width: 100px;
-                                height: 50px;
+                                width: vw(100);
+                                height: vw(50);
                             }
 
                             // 文字大小样式
                             >div {
                                 color: #666;
-                                margin-top: 6px;
-                                font-size: 12px;
+                                margin-top: vw(6);
+                                font-size: vw(12);
                                 text-align: center;
                                 font-weight: 400;
                             }
@@ -1460,15 +1462,15 @@ body {
 
                     // 每一项
                     .good-item {
-                        width: 150px;
-                        height: 181px;
-                        margin-top: 50px;
+                        width: vw(150);
+                        height: vw(181);
+                        margin-top: vw(50);
 
                         // 图片大小
                         >div {
                             img {
-                                width: 150px;
-                                height: 150px;
+                                width: vw(150);
+                                height: vw(150);
                             }
                         }
                     }
@@ -1502,8 +1504,8 @@ body {
 
     // 1*4 新品首发
     .starting {
-        height: vw(340);
-        margin-bottom: 20px;
+        height: 340px;
+        margin-bottom: vw(20);
 
         // 内胆
         .starting-entry {
@@ -1511,7 +1513,7 @@ body {
             justify-content: space-between;
             margin: auto;
             width: vw(1190);
-            height: vw(340);
+            height: 340px;
 
             >div {
                 width: vw(290);
@@ -1662,14 +1664,14 @@ body {
                     justify-content: space-evenly;
                     color: #999;
                     font-size: 12px;
-                    height: 40px;
+                    height: vw(40);
 
                     // 外层背景
                     >div {
-                        height: 20px;
-                        width: 62px;
+                        height: vw(20);
+                        width: vw(62);
                         text-align: center;
-                        line-height: 20px;
+                        line-height: vw(20);
                         border-radius: 12px;
                         display: inline-block;
                         background-color: #f6f6f6;
@@ -1704,21 +1706,21 @@ body {
 
                                 // 图片大小
                                 img {
-                                    width: 70px;
-                                    height: 70px;
+                                    width: vw(70);
+                                    height: vw(70);
                                 }
                             }
                         }
 
                         // 文字样式
                         .joy-writing {
-                            width: 180px;
+                            width: vw(180);
 
                             // 商品名称的样式
                             .joy_item_name {
-                                font-size: 14px;
+                                font-size: vw(14);
                                 overflow: hidden;
-                                height: 36px;
+                                height: vw(36);
                             }
 
                             // 金额
@@ -1768,13 +1770,13 @@ body {
 
                 // 内容
                 .shops-body {
-                    padding: 0 15px;
+                    padding: 0 vw(15);
 
                     // 每一项的基本样式
                     >div {
                         box-sizing: border-box;
-                        width: 260px;
-                        height: 128px;
+                        width: vw(260);
+                        height: vw(128);
                         font-size: 12px;
                         display: flex;
                         justify-content: space-evenly;
@@ -1782,17 +1784,17 @@ body {
 
                         // 图片框
                         .shops-img {
-                            width: 100px;
-                            height: 100px;
+                            width: vw(100);
+                            height: vw(100);
                             background: white;
-                            padding: 5px;
+                            padding: vw(5);
                             border-radius: 4px;
                             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.062);
 
                             // 图片大小
                             >img {
-                                width: 90px;
-                                height: 90px;
+                                width: vw(90);
+                                height: vw(90);
                             }
                         }
                     }
@@ -1808,13 +1810,12 @@ body {
                     // 第二部分样式
                     .shops-item-2 {
                         background: url(../picture/xiaobeijing.png) no-repeat;
-                        background-size: 100%;
                     }
 
                     // 字体部分 两个通用
                     .shops-writing {
-                        width: 120px;
-                        height: 98px;
+                        width: vw(120);
+                        height: vw(98);
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -1823,7 +1824,7 @@ body {
                         // 商品名
                         .writing-head {
                             color: #333;
-                            font-size: 14px;
+                            font-size: vw(14);
                         }
 
                         // 标签行
@@ -1858,6 +1859,7 @@ body {
 
             // 领卷中心
             .collect {
+                overflow: hidden;
 
                 // 大标题
                 .collect-title {
@@ -1885,26 +1887,29 @@ body {
 
                 // 内容部分
                 .collect-body {
-                    width: 293px;
+                    width: vw(293);
+
                     height: 283px;
-                    padding: 0px 15px;
+                    padding: 0px vw(10);
                     background: url(../picture/红色.png) no-repeat;
-                    background-size: 100%;
+                    background-size: 105%;
+                    background-position: center;
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-evenly;
 
                     // 每一项统一的基本样式
                     .collect-item {
-                        width: 260px;
-                        height: 82px;
+                        width: vw(260);
+                        height: vw(82);
                         font-size: 12px;
                         display: flex;
                         margin-bottom: 5px;
 
                         // 图片
                         .item-img {
-                            width: 66px;
-                            height: 66px;
+                            width: vw(66);
+                            height: vw(66);
                             margin: 8px 0 0 7px;
                             padding: 8px;
                             background-color: #fff;
@@ -1912,17 +1917,17 @@ body {
 
                             // 图片大小
                             >img {
-                                width: 50px;
-                                height: 50px;
+                                width: vw(50);
+                                height: vw(50);
                                 border-radius: 20%;
                             }
                         }
 
                         // 文字部分
                         .collect-writing {
-                            width: 140px;
+                            width: vw(140);
                             height: 75px;
-                            margin-left: 14px;
+                            margin-left: 10px;
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
@@ -1930,12 +1935,12 @@ body {
                             color: #999;
 
                             .discount {
-                                font-size: 28px;
+                                font-size: vw(28);
                                 font-weight: 700;
                                 color: #e33333;
 
                                 >span {
-                                    font-size: 14px;
+                                    font-size: vw(14);
                                     font-weight: 400;
                                 }
                             }
@@ -2023,34 +2028,33 @@ body {
             flex-wrap: wrap;
             flex-direction: column;
             // justify-content: space-evenly;
-            border: none;
 
             // 每一项的基础样式
             .classify-item {
                 width: vw(290);
                 height: vw(180);
-                margin-bottom: 10px;
+                margin-bottom: vw(10);
                 background-color: #fff;
 
                 // 大标题
                 .classify-title {
-                    width: 290px;
+                    width: vw(290);
                     height: 60px;
                     padding-left: 20px;
                     display: flex;
                     align-items: center;
                     font-weight: 700;
-                    font-size: 24px;
+                    font-size: vw(24);
                     color: #333;
-                    line-height: 32px;
+                    line-height: vw(32);
 
                     // 小字部分
                     >span {
                         font-weight: 400;
-                        font-size: 14px;
+                        font-size: vw(14);
                         color: #999;
                         margin-left: 5px;
-                        padding-top: 10px;
+                        padding-top: vw(10);
                     }
                 }
 
@@ -2061,7 +2065,7 @@ body {
 
                     // 图片大小
                     >img {
-                        width: 100px;
+                        width: vw(100);
                     }
                 }
 
@@ -2123,7 +2127,7 @@ body {
         // 第一排列表
         .reco-menu {
             width: vw(1180);
-            margin-left: 158px;
+            margin-left: vw(158);
             margin-bottom: vw(10);
 
             // 菜单列表
@@ -2186,48 +2190,48 @@ body {
                 .reco-item {
                     background-color: #fff;
                     display: inline-block;
-                    width: 230px;
-                    height: 322px;
-                    margin: 0 vw(5) vw(10) vw(5);
+                    width: vw(230);
+                    height: vw(322);
+                    margin: 0 vw(5) vw(5) vw(5);
 
                     // 普通的文字
                     .reco-writing {
-                        height: 48px;
-                        font-size: 14px;
+                        height: vw(48);
+                        font-size: vw(14);
                         color: #666;
-                        margin-bottom: 6px;
-                        padding: 0 20px;
+                        margin-bottom: vw(6);
+                        padding: 0 vw(20);
                         clear: both;
-                        line-height: 24px;
+                        line-height: vw(24);
                         text-align: center;
 
                         >p {
                             word-break: break-all;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                            height: 48px;
-                            line-height: 24px;
+                            height: vw(48);
+                            line-height: vw(24);
                             margin: 0;
                         }
                     }
 
                     // 图片部分
                     .reco-img {
-                        margin: 30px 40px 40px 40px;
+                        margin: vw(30) vw(40) vw(40) vw(40);
 
                         >img {
-                            width: 150px;
+                            width: vw(150);
                         }
 
                     }
 
                     // 金额部分
                     .reco-price {
-                        font-size: 20px;
+                        font-size: vw(16);
                         font-weight: 700;
-                        height: 18px;
+                        height: vw(18);
                         color: #e1251b;
-                        padding: 0 20px;
+                        padding: 0 vw(20);
 
                         >span {
                             font-size: 12px;
@@ -2273,29 +2277,29 @@ body {
 
                     // 文字部分
                     .confined {
-                        margin: 0 20px;
-                        margin-top: -30px;
+                        margin: 0 vw(20);
+                        margin-top: vw(-30);
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
-                        height: 98px;
+                        height: vw(98);
 
                         // 蓝色小框
                         .ksp {
                             color: #116ce9;
                             border: 1px solid #116ce9;
-                            border-radius: 2px;
+                            border-radius: vw(2);
                             font-weight: 700;
-                            padding: 0 3px;
+                            padding: 0 vw(3);
                             display: inline-block;
-                            height: 18px;
+                            height: vw(18);
                             width: 60px;
                             margin-bottom: 5px;
                         }
 
                         // 第二行粗体 育儿心得
                         .yexd {
-                            font-size: 14px;
+                            font-size: vw(14);
                             font-weight: 700;
                             color: #333;
                             margin-bottom: 5px;
@@ -2310,17 +2314,17 @@ body {
                         // 蓝色背景小图标joy寻宝
                         .xb {
                             background-image: url(../picture/tuijian/biao.png);
-                            height: 24px;
-                            width: 95px;
+                            height: vw(24);
+                            width: vw(95);
 
                             >span {
                                 color: #fff;
                                 font-size: 12px;
                                 display: inline-block;
                                 text-align: center;
-                                line-height: 24px;
+                                line-height: vw(24);
                                 font-weight: 700;
-                                margin-left: 30px;
+                                margin-left: vw(30);
                             }
                         }
                     }
@@ -2332,20 +2336,20 @@ body {
                 .special-chart {
                     background: url(../picture/tuijian/bj.png);
                     background-position: -460px 0;
-                    width: 230px;
-                    height: 322px;
+                    width: vw(230);
+                    height: vw(322);
 
                     >div {
 
                         // 框内大标题样式
                         &:nth-child(1) {
-                            width: 110px;
-                            height: 34px;
-                            line-height: 34px;
+                            width: vw(110);
+                            height: vw(34);
+                            line-height: vw(34);
                             color: #fff;
                             background: #f2272b;
-                            margin: 20px auto 37px;
-                            font-size: 16px;
+                            margin: vw(20) auto vw(37);
+                            font-size: vw(16);
                             font-weight: 700;
                             text-align: center;
                             border-radius: 50px;
@@ -2353,8 +2357,8 @@ body {
 
                         // 框内内容
                         &:nth-child(2) {
-                            width: 230px;
-                            height: 192px;
+                            width: vw(230);
+                            height: vw(192);
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: space-evenly;
@@ -2366,10 +2370,10 @@ body {
                                 color: #c81623;
                                 border: 1px solid #ffe0e8;
                                 border-radius: 5px;
-                                width: 88px;
-                                height: 36px;
-                                line-height: 36px;
-                                font-size: 14px;
+                                width: vw(88);
+                                height: vw(36);
+                                line-height: vw(36);
+                                font-size: vw(14);
                                 text-align: center;
                             }
                         }
@@ -2381,7 +2385,7 @@ body {
 
     // 精灵图
     .mod-service {
-        padding: vw(30) 0px;
+        padding: vw(30) 0;
 
         // 内胆
         >div {
@@ -2471,7 +2475,7 @@ body {
         // 分类部分 购物指南等
         .foot-help {
             height: vw(200);
-            padding: vw(20) 0px;
+            padding: vw(20) 0;
             width: vw(1190);
             margin: auto;
             color: #666;
@@ -2481,7 +2485,7 @@ body {
 
                 ul {
                     li {
-                        line-height: 22px;
+                        line-height: vw(22);
                     }
                 }
             }
@@ -2522,7 +2526,7 @@ body {
             height: vw(265.4);
             padding: 15px 0;
             border-top: 1px solid #e1e1e1;
-            width: 1190px;
+            width: vw(1190);
             margin: 0 auto;
 
             // 关于我们联系我们帮助类的项，一行
