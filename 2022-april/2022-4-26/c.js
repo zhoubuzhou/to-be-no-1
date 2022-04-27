@@ -52,7 +52,7 @@ console.log(typeof y);
 
 let o = 10;
 
-console.log( (o++) );
+console.log((o++));
 
 
 

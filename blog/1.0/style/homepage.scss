@@ -40,7 +40,7 @@ ul>li {
 .facade {
     width: 100%;
     height: 100vh;
-    background: no-repeat url(../img/paper-3155438.jpg);
+    background: no-repeat url(../img/new.jpg);
     background-size: cover;
     background-attachment: fixed;
 
@@ -109,68 +109,29 @@ ul>li {
     }
 }
 
-// 内容大区
-.content {
-    width: 100%;
+// 本页面
+.about {
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
-    // 文章区域
-    .essay {
+.cite{
+    height: 400px;
+    text-align: center;
+    background-image:url(../img/paper-3155438.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(77, 77, 77);
+    text-shadow: -1px -1px 10px rgb(162, 162, 162);
+    .cite-dash{
         width: 100%;
-        height: 100vh;
-        background-color: rgb(249, 247, 247);
-        color: rgb(77, 77, 77);
-
-
-        // 内胆
-        .essay-liner {
-            height: 100%;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-
-            // 标题
-            .essay-title {
-                line-height: 2rem;
-                >p{
-                    text-align: center;
-                }
-            }
-
-            // 内容
-            .essay-content {
-
-                // 1*3列表统一
-                .essay-item {
-                    margin: 0.5rem;
-                    width: 50rem;
-                    height: 8rem;
-                    border-radius: 15px;
-                    color: rgb(77, 77, 77);
-                    background-color: #fff;
-                    box-shadow: 5px 5px 15px rgba(164, 164, 164, 0.8);
-                }
-            }
-        }
-    }
-
-    // 个人简介区
-    .briefly{
-        width: 100%;
-        height: 100vh;
-        .briefly-liner{
-            height: 100%;
-            padding: 1rem;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            .briefly-title{
-                font-size:24px ;
-            }
-            .briefly-content{}
-        }
     }
 }
