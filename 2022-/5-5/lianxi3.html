@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //将数值属性值都乘以 2
+      // 创建一个 multiplyNumeric(obj) 函数，把 obj 所有的
+      // 数值属性值都乘以 2
+
+      // 在调用之前
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu",
+      };
+      //   multiplyNumeric(menu);
+      function multiplyNumeric(obj) {
+        for (let key in obj) {
+         if (typeof obj[key] === 'number') {
+            obj[key] = obj[key] * 2;
+         }
+        }
+      }
+      multiplyNumeric(menu);
+      console.log(menu);
+    </script>
+  </body>
+</html>

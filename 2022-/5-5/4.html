@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const add = {
+        name: "lili",
+        age: 20,
+        gender: "boy",
+        100: "hi",
+        "123 demo": 100,
+      };
+      console.log(add);
+      console.log((add.name = "jack"));
+      add.age = 30;
+      console.log(add.age);
+      console.log(add.gender);
+    //   非常规变量名一定要用[],并且最好是加''引号，不然访问的是变量，没有这个变量就会undefind
+      console.log(add['100']);
+      console.log(add['123 demo']);
+    </script>
+  </body>
+</html>
