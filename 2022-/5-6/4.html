@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 严格模式
+      "use strict";
+      function say() {
+        console.log(this);
+      }
+      const add = {
+        name: "123",
+        say,
+      };
+      const pdd = {
+        name: "456",
+        say,
+      };
+      //即使用的相同函数，this也只认当前他所运算的对象，所以add和pdd的表现形式并不相等
+      add.say();
+      pdd.say();
+      console.log(add.say === pdd.say);//ture
+      say();//undefined
+    </script>
+  </body>
+</html>

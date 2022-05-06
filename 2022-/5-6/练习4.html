@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 求和对象属性
+      // 编写代码来汇总所有薪水并存储在变量 中sum。应该390在上面的例子中。
+      // 如果salaries为空，则结果必须为0。
+      let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130,
+      };
+
+      // 方法一
+      // let sum = function (obj) {
+      //   let r = 0;
+      //   for (const key in obj) {
+      //     r += obj[key];
+      //   }
+      //   return r;
+      // };
+      // console.log(sum(salaries));
+
+      // 方法2
+      let sum = 0;
+      for (const key in salaries) {
+        sum += salaries[key];
+      }
+      console.log(sum);
+    </script>
+  </body>
+</html>

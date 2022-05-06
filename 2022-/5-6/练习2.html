@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   编写代码，每个动作一行：
+      //   创建一个空对象user。
+      //   添加name具有 value的属性John。
+      //   添加surname具有 value的属性Smith。
+      //   将 的值更改name为Pete。
+      //   从对象中删除属性name。
+      const user = {};
+      user.name = 'John';
+      user.surname = 'Smith';
+      name = 'Pete';//原地修改
+      delete user.name;//删除name
+      for (const key in user) {
+        console.log(key,user[key]);//打印属性和属性值
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      //箭头函数没有自己的this，但因为作用域链，会继承上一层的this，而say的this指向user，所以输出时表现为user
+      const user = {
+        name: "jack",
+        say() {
+          const day = () => {
+            console.log(this);
+          };
+          day();
+        },
+      };
+      user.say(); //user
+
+      //证明箭头函数没有自己的this，严格和非严格都为window，因为是向上一层找的，这里的window为外层的值
+      const qay = () => {
+        console.log(this);
+      };
+      qay();//window
+
+      //箭头函数再函数中会继承函数的this（在严格模式下为undefined，非严格window），同时也证明了函数只有在严格模式下才有this，非严格也是向外继承
+      function say() {
+          const day = () => {
+            console.log(this);
+          };
+          day();
+        }
+        say();//undefined
+    </script>
+  </body>
+</html>

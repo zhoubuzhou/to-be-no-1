@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  检查是否为空
+      //  如果对象没有属性，则编写isEmpty(obj)返回的函数，否则truefalse
+      let schedule = {};
+      const isEmpty = function (obj) {
+        for (const key in obj) {
+          return false;
+        }
+        return true;
+      }
+      console.log(isEmpty(schedule));// true
+
+      schedule["8:30"] = "get up";
+
+      console.log(isEmpty(schedule)); // false
+    </script>
+  </body>
+</html>
