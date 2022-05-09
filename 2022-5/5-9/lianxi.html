@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //来自访问者的数字的总和
+      //创建一个脚本，提示访问者输入两个数字，然后显示它们的总和。
+      const some = function () {
+        let num1 = prompt("第一个数字？");
+        let num2 = prompt("第二个数字？");
+        n = isFinite(num1);
+        m = isFinite(num2);
+        if (n === true && m === true) {
+          return +num1 + +num2;
+        } else {
+          return NaN;
+        }
+      };
+      console.log(+some().toFixed(2));
+
+      //正确答案
+    //let a = +prompt("The first number?", "");
+    //let b = +prompt("The second number?", "");
+    //alert(a + b);
+    </script>
+  </body>
+</html>

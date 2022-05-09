@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {};
+      obj[Symbol.toPrimitive] = function (hint) {
+        switch (hint) {
+          case "string":
+            return "hello";
+          case "number":
+            return 100;
+          default:
+            return "";
+        }
+      };
+      console.log(obj + obj);
+      console.log(obj - 100);
+      console.log(String(obj) + "jack");
+    </script>
+  </body>
+</html>

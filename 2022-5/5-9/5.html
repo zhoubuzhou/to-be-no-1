@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const Accumulator = function (num) {
+        this.value = num;
+        this.read = function () {
+          this.value += +prompt("val");
+        };
+      };
+      let accumulator = new Accumulator(1); // 初始值 1
+      accumulator.read(); // 添加用户输入的 value
+      accumulator.read(); // 添加用户输入的 value
+      alert(accumulator.value); // 显示这些值的总和
+    </script>
+  </body>
+</html>

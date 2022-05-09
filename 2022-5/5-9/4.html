@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const Calculator = function () {
+          //此处的this都是这一层的this，（找不到就会去外层找
+          this.read = function () {
+              this.x = +prompt('x');
+              this.y = +prompt('y');
+          }
+          this.sum = function () {
+              return this.x + this.y;
+          }
+          this.mul = function () {
+              return this.x * this.y;
+          }
+      };
+      let calculator = new Calculator;
+      calculator.read();
+      alert("Sum=" + calculator.sum());
+      alert("Mul=" + calculator.mul());
+    </script>
+  </body>
+</html>

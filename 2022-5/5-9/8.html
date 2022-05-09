@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const age = Symbol("age");
+      const gender = Symbol("gender");
+      const user = {
+        name: "jack",
+        [age]: 20,
+      };
+      user[gender] = "boy";
+      console.log(user[age], gender);//加[]访问值，不加返回代码
+      console.log(user.name.toString() + "hello");
+    </script>
+  </body>
+</html>

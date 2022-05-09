@@ -8,7 +8,13 @@
 </head>
 <body>
     <script>
-        
+        let pdd = 'lili';
+        const user = {
+            [pdd] : 'jack',
+        };
+        console.log(user?.say);
+        console.log(user?.say?.());
+        console.log(user?.[pdd]);
     </script>
 </body>
 </html>
