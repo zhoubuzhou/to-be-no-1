@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //从 min 到 max 的随机数
+      //重要性：2
+      //内置函数从to （不包括）Math.random()创建一个随机值。011
+      //编写函数以从to （不包括）random(min, max)生成一个随机浮点数。minmaxmax
+      const max = 10;
+      const min = 5;
+    //   console.log(Math.random() * (max - min) + min);
+      //从 min 到 max 的随机整数
+      //重要性：2
+      //创建一个函数，该函数randomInteger(min, max)生成一个随机整数min，从max包含这两个min和max作为可能的值。
+      //区间中的任何数字min..max必须以相同的概率出现。
+      const r = Math.random() * (max-min)+min;
+      console.log(Math.floor(r))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 输入数字求和
+      // 写出函数 sumInput()，要求如下：
+      // 使用 prompt 向用户索要值，并存在数组中。
+      // 当用户输入了非数字、空字符串或者点击“取消”按钮的时候，问询结束。
+      // 计算并返回数组所有项之和。
+      // 0 是有效的数字，不要因为是 0 就停止问询。
+      function sumInput() {
+        const arr = [];
+        let sum = 0;
+        while (true) {
+          const num = prompt("number?");
+          if (isFinite(num) === false || num === null) {
+              break;
+          }
+          arr.push(num);
+          sum += +num;
+        }
+        console.log(arr);
+        return sum;
+      }
+      console.log(sumInput());
+    </script>
+  </body>
+</html>

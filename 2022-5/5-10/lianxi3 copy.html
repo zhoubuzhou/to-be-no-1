@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 对输入数字求和
+      // 编写如下函数sumInput()：
+      // 使用数组向用户询问值prompt并将这些值存储在数组中。
+      // 完成询问用户何时输入非数字值、空字符串或按“取消”。
+      // 计算并返回数组项的总和。
+      // PS 零0是有效数字，请不要在零处停止输入。
+      function sumInput() {
+        const arr = [];
+        while (true) {
+          const num = prompt("number?", 0);
+          if (num === null || num === "" || isFinite(num) === false) {
+            break;
+          }
+          arr.push(num);
+        }
+        let str = 0;
+        for (const v of arr) {
+          str += +v;
+        }
+        return str;
+      }
+      console.log(sumInput());
+
+      //先写一个函数
+      //函数内定义一个空数组，按照题目要求接收元素
+      //再定义一个while 死循环，之内定义一个变量 接收用户输入
+      //while循环里用if定义一个停止条件（当满足...时，中止循环），按照题干“非数字值、空字符串或按取消”这三种条件 循环停止，非数字用isFinite()判断（返回值是真假），取消会返回null，''空字符串，if内输入break（终止整个循环
+      //再在if循环之后定义一个push（），将接收到的值，一一添加进数组
+      //再定义一个变量，用来接收数组每一个元素相加的和，
+      //之后用for of循环，接收数组中的每一个元素
+      //返回相加的和，再打印这一函数。
+    </script>
+  </body>
+</html>

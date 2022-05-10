@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 让我们尝试 5 个数组操作。
+      // 1.styles创建一个包含项目“Jazz”和“Blues”的数组。
+      // 2.将“Rock-n-Roll”附加到末尾。
+      // 3.将中间的值替换为“经典”。您查找中间值的代码应该适用于任何奇数长度的数组。
+      // 4.剥离数组的第一个值并显示它。
+      // 5.在数组前面Rap加上和。Reggae
+      // 进程中的数组：
+      //1.Jazz, Blues;
+      //2.Jazz, Blues, Rock - n - Roll;
+      //3.Jazz, Classics, Rock - n - Roll;
+      //4.Classics, Rock - n - Roll;
+      //5.Rap, Reggae, Classics, Rock - n - Roll;
+      let arr = ["Jazz", "Blues"];//1
+      console.log(arr);
+      arr.push('Rock - n - Roll');//2
+      console.log(arr);
+      arr.splice(1,1,'Classics');//3
+      console.log(arr);
+      arr.splice(0,1);//4
+      console.log(arr);
+      arr.unshift('Rap','Reggae');//5
+      console.log(arr);
+    </script>
+  </body>
+</html>
