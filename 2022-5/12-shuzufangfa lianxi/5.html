@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 复制和排序数组
+    有一个字符串数组 arr。我们希望有一个排序过的副本，但保持 arr 不变。
+    创建一个函数 copySorted(arr) 返回这样一个副本。
+    let arr = ["HTML", "JavaScript", "CSS"];
+    let sorted = copySorted(arr);
+    alert( sorted ); // CSS, HTML, JavaScript
+    alert( arr ); // HTML, JavaScript, CSS (no changes) -->
+    <script>
+      let arr = ["HTML", "JavaScript", "CSS"];
+      function copySorted(x) {
+        const r = [];
+        x.forEach(el=>{
+          r.push(el)
+        }
+
+        )
+        r.sort();
+        return r;
+      }
+      let sorted = copySorted(arr);
+      console.log(sorted); // CSS, HTML, JavaScript
+      console.log(arr); // HTML, JavaScript, CSS (no changes)
+    </script>
+  </body>
+</html>

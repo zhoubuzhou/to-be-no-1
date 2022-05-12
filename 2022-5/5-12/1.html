@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 将border-left-width转换为borderLeftWidth
+      function camelize(str) {
+        const r = str.split("-");
+        const x = r.map((v, i) => {
+          if (i === 0) return v;
+          return v[0].toUpperCase() + v.substr(1);
+        });
+        return x.join("");
+      }
+
+      console.log(camelize("border-left-width"));
+    </script>
+  </body>
+</html>

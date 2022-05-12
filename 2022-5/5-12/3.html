@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 复制和排序数组
+      // function copySorted(arr) {
+      //   return arr.slice().sort();
+      // };
+      // let arr = ["HTML", "JavaScript", "CSS"];
+      // let sorted = copySorted(arr);
+      // console.log(sorted);
+      // console.log(arr);
+
+      //老师版本
+      let arr = ["HTML", "JavaScript", "CSS"];
+      function copySorted(x) {
+        const r = [];
+        x.forEach(v => {
+          r.push(v);
+        });
+        r.sort();
+        return r;
+      }
+      let sorted = copySorted(arr);
+      console.log(sorted); // CSS, HTML, JavaScript
+      console.log(arr); // HTML, JavaScript, CSS (no changes)
+    </script>
+  </body>
+</html>

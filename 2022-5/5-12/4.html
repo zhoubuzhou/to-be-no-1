@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //映射到名称
+      //你有一个对象数组user，每个对象都有user.name. 编写将其转换为名称数组的代码。
+      // let john = { name: "John", age: 25 };
+      // let pete = { name: "Pete", age: 30 };
+      // let mary = { name: "Mary", age: 28 };
+
+      let users = [
+        { name: "John", age: 25 },
+        { name: "Pete", age: 30 },
+        { name: "Mary", age: 28 },
+      ];
+      let names = users.map((el) => el.names);
+      alert(names); // John, Pete, Mary
+    </script>
+  </body>
+</html>

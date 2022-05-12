@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // “就地”过滤范围
+      // 该函数应该只修改数组。它不应该返回任何东西。
+      // let arr = [5, 3, 8, 1];
+      // function filterRangeInPlace(arr, max, min) {
+      //   for (let i = 0; i < arr.length; i++) {
+      //     let val = arr[i];
+      //     if (val < max || val > min) {
+      //       arr.splice(i, 1);
+      //       i--;
+      //     }
+      //   }
+      // }
+      // filterRangeInPlace(arr, 1, 4);
+      // console.log(arr); // [3, 1]
+
+      //老师的版本(删除了3，1)
+      let arr = [5, 3, 8, 1];
+      function filterRangeInPlace(arr, min, max) {
+        for (let i = 0; i <= arr.length; i++) {
+          if (arr[i] <= max && arr[i] >= min) {
+            arr.splice(i, 1);
+            i--;
+          }
+        }
+      }
+      filterRangeInPlace(arr, 1, 4);
+      console.log(arr); 
+    </script>
+  </body>
+</html>

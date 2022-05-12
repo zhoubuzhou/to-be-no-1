@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 过滤范围
+      写一个函数 filterRange(arr, a, b) ，获取一个数组arr，查找数值大于或等于 a，且小于或等于 b 的元素，并将结果以数组的形式返回。不修改原数组。
+      let arr = [5, 3, 8, 1];
+      let filtered = filterRange(arr, 1, 4);
+      alert( filtered ); // 3,1（匹配值）
+      alert( arr ); // 5,3,8,1（未修改） -->
+    <script>
+      let arr = [5, 3, 8, 1];
+
+      function filterRange(arr,min,max) {
+        return arr.filter(el=> el >=min && el<=max)
+      }
+      let filtered = filterRange(arr, 1, 4);  
+      console.log( filtered ); // 3,1（匹配值）
+      console.log( arr ); // 5,3,8,1（未修改）
+    </script>
+  </body>
+</html>

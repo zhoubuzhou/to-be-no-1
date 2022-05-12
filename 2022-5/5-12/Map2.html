@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const m1 = new Map();
+        m1.set('name','jack')
+          .set('age',20)
+          .set('gender','boy');
+        for (let v of m1.keys()) {
+            console.log(v);
+        }
+        for (let v of m1.values()) {
+            console.log(v);
+        }
+        console.log('---');
+        for (let v of m1.entries()) {
+            console.log(v[0]);
+            console.log(v[1]);
+        }
+        console.log(m1)
+    </script>
+</body>
+</html>
