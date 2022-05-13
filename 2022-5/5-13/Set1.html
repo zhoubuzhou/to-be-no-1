@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const s1 = new Set();
+      s1.add("js").add("html").add("css");
+      s1.delete("html");
+      console.log(s1.has('html'))
+      console.log(s1.clear())
+      console.log(s1.size)
+    </script>
+  </body>
+</html>

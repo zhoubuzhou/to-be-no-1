@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     let lili = {}
+     let jack = {}
+     const wm = new WeakMap();
+     wm.set(jack,10)
+     wm.set(lili,5)
+     console.log(wm.get(lili))
+     console.log(wm.delete(lili))
+     console.log(wm.has(lili))
+     console.log(wm)
+
+    </script>
+  </body>
+</html>
