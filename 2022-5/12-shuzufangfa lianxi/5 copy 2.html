@@ -17,10 +17,8 @@
     <script>
       let arr = ["HTML", "JavaScript", "CSS"];
       function copySorted(x) {
-        const r = [];
-        x.forEach((el) => {
-          r.push(el);
-        });
+        let r = [];
+        x.forEach((el) => {r.push(el);});
         r.sort();
         return r;
       }

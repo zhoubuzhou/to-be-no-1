@@ -21,11 +21,11 @@
       let mary = { name: "Mary", age: 29 };
       let arr = [john, pete, mary];
       function getAverageAge(x) {
-        const reducer = (sum, v, i) => {
+        const r = x.reduce((sum, v, i) => {
           sum += v.age;
           return sum;
-        };
-        return x.reduce(reducer, 0) / x.length;
+        }, 0);
+        return r / x.length;
       }
       console.log(getAverageAge(arr));
     </script>
