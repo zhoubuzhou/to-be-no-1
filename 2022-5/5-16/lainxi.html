@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 最高薪资
+    这儿有一个 salaries 对象：
+    let salaries = {
+     "John": 100,
+     "Pete": 300,
+     "Mary": 250
+    };
+    新建一个函数 topSalary(salaries) ，返回收入最高的人的姓名。
+    如果 salaries 是空的，函数应该返回 null 。
+    如果有多个收入最高的人，返回其中任意一个即可。
+    P.S. 使用 Object.entries 和解构语法来遍历键/值对。 -->
+    <script>
+      let salaries = {
+        John: 100,
+        Pete: 300,
+        Mary: 250,
+      };
+      function topSalary(obj) {
+        let top = "";
+        let num = 0;
+        const r = Object.entries(obj);
+        for (const [a, b] of r) {
+          if (num < b) {
+            num = b;
+            top = a;
+          }
+        }
+        return top;
+      }
+      console.log(topSalary(salaries));
+    </script>
+  </body>
+</html>

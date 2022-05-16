@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 某月的最后一天？
+    写一个函数 getLastDayOfMonth(year, month) 返回month 月的最后一天。有时候是 30，有时是 31，甚至在二月的时候会是 28/29。
+    参数：
+    year —— 四位数的年份，比如 2012。
+    month —— 月份，从 0 到 11。
+    举个例子，getLastDayOfMonth(2012, 1) = 29（闰
+    年，二月） -->
+    <script>
+      function getLastDayOfMonth(year, month) {
+        let date = new Date(year,month,0);
+        return date.getDate();
+      }
+      console.log(getLastDayOfMonth(2022, 2));
+      console.log(getLastDayOfMonth(2021, 2));
+      console.log(getLastDayOfMonth(2020, 2));
+      console.log(getLastDayOfMonth(2019, 2));
+      console.log(getLastDayOfMonth(2018, 2));
+      console.log(getLastDayOfMonth(2017, 2));
+      console.log(getLastDayOfMonth(2016, 2));
+      console.log(getLastDayOfMonth(2015, 2));
+    </script>
+  </body>
+</html>
