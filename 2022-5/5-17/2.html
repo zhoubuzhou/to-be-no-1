@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        name: "lili",
+        age: 20,
+        gender:'gril',
+        size: {
+          height: 170,
+          width: 50,
+        },
+      };
+      const r = JSON.stringify(user, (k, v) => {
+        if (k === "age") {
+          return v + "岁";
+        }
+        if (k === "gender") {
+          return v ==='boy'?'男':'女';
+        }
+        if (k === "height") {
+          return v + "cm";
+        }
+        if (k === "width") {
+          return undefined;
+        }
+        return v;
+      });
+      console.log(r);
+    </script>
+  </body>
+</html>

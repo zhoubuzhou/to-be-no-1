@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        // firstName: "sun",
+        // lastName: "tao",
+        get fullName() {
+          return `${this.lastName} ${this.firstName}`;
+        },
+        set fullName(v) {
+          [this.lastName, this.firstName] = v.split(" ");
+        },
+      };
+      user.fullName = "li lucy";
+      console.log(user.fullName);
+    </script>
+  </body>
+</html>

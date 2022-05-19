@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        name: "jack",
+        age: 20,
+      };
+      Object.defineProperties(user, {
+        gender: {
+          value: "boy",
+          // enumerable: false,
+          // configurable: false,
+          // writable: false,
+        },
+        size: {
+          value: "100",
+          // enumerable: false,
+          // configurable: false,
+          // writable: false,
+        },
+      });
+      // const r1 =
+      console.log( Object.getOwnPropertyDescriptor(user,'gender'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 按字段排序 我们有一组要排序的对象：
+    let users = [ 
+    { name: "John", age: 20,surname: "Johnson" },
+    { name: "Pete", age: 18, surname: "Peterson" },
+    {name: "Ann", age: 19, surname: "Hathaway" } ]; 
+    通常的做法应该是这样的： //通过 name (Ann, John, Pete) users.sort((a, b) => a.name > b.name ? 1 : -1);
+    // 通过 age (Pete, Ann, John)
+     users.sort((a, b) => a.age > b.age ? 1 : -1);
+    我们可以让它更加简洁吗，比如这样？ 
+    users.sort(byField('name'));
+    users.sort(byField('age')); 
+    这样我们就只需要写 byField(fieldName)，而不是写一个函数。 编写函数 byField 来实现这个需求。 -->
+    <script>
+      let users = [
+        { name: "John", age: 20, surname: "Johnson" },
+        { name: "Pete", age: 18, surname: "Peterson" },
+        { name: "Ann", age: 19, surname: "Hathaway" },
+      ];
+      function byField(attr) {
+        return (a, b) => {
+          if (a[attr] > b[attr]) return 1;
+          if (a[attr] < b[attr]) return -1;
+        };
+      }
+      users.sort(byField("name"));
+      console.log(users);
+      // users.sort(byField("age"));
+      console.log(users);
+    </script>
+  </body>
+</html>
