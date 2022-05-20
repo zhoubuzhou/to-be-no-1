@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      Object.prototype.say = function () {
+        return 100 + this;
+      };
+      ({}.say());
+      [].say();
+      let cc = "nono";
+      let bb = "100";
+      let aa = 100;
+      const arr = [1, 2];
+      console.log(cc.say()); //100nono
+      console.log(bb.say()); //100100
+      console.log(aa.say()); //200
+      console.log(arr.say()); //200
+    </script>
+  </body>
+</html>

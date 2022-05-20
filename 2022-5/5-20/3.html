@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 将装饰器 "defer()" 添加到函数 在所有函数的原型中添加 defer(ms)方法，该方法返回一 个包装器，将函数调用延迟 ms 毫秒。
+    下面是它应该如何执行的例子： 
+    function f(a, b) { alert( a + b ); }
+    f.defer(1000)(1, 2); // 1 秒后显示 3 请注意，参数应该被传给原始函数。 -->
+    <script>
+      Function.prototype.defer = function (t) {
+        return (x, y) => {
+          setTimeout(() => {
+            this(x, y);
+          }, t);
+        };
+      };
+
+      function f(a, b) {
+        alert(a + b);
+      }
+      f.defer(1000)(1, 2); // 1 秒后显示 3
+    </script>
+  </body>
+</html>
