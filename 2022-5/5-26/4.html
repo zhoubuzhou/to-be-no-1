@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="c1 p1">
+      <span class="c1 c3">
+        <i class="c1 c3">
+          <b id="b1">Hi</b>
+        </i>
+      </span>
+    </p>
+    <script>
+      const b1 = document.getElementById('b1')
+      console.log(b1.closest('p.c1'));
+      console.log(b1.closest('.p1'));
+      console.log(b1.closest('.c1'));
+      console.log(b1.closest('span.c1'));
+    </script>
+  </body>
+</html>
