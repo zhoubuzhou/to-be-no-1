@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="H" value="lili" age="20" />
+    <script>
+      const input = document.getElementById("H");
+      input.value = "hello";
+      // input.setAttribute('type','checkbox')//修改
+      console.log(input.getAttribute("value")); //获取
+      console.log(input.value); //获取
+      console.dir(input.attributes); //获取
+    </script>
+  </body>
+</html>

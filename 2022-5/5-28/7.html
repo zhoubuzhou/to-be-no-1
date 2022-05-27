@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div data-info="name"></div>
+    <div data-info="age"></div>
+    <script>
+      const info = {
+        name: "jack",
+        age: "20",
+      };
+      const divs = document.querySelectorAll("[data-info]");
+      divs.forEach((el) => {
+        el.innerHTML = info[el.dataset.info];
+      });
+    </script>
+  </body>
+</html>
