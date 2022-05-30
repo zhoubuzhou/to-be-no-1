@@ -7,10 +7,17 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="box1">
+      <p>
+        hello p1
+        <b>jack</b>
+        <i>!!</i>
+      </p>
+    </div>
     <script>
-      const a = "true";
-      const b = true;
-      console.log(a == b);
+      const box1 = document.querySelector(".box1");
+      const box2 = box1.cloneNode(true);
+      console.log(box2.outerHTML);
     </script>
   </body>
 </html>

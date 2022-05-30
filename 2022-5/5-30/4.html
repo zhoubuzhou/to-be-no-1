@@ -7,10 +7,12 @@
     <title>Document</title>
   </head>
   <body>
+    <p class="p1">hello</p>
+    </ul>
     <script>
-      const a = "true";
-      const b = true;
-      console.log(a == b);
+     const p1 = document.querySelector('.p1')
+     p1.insertAdjacentHTML('beforebegin','jack')
+     p1.insertAdjacentHTML('afterbegin','<div>jack</div>')
     </script>
   </body>
 </html>

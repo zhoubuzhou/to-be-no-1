@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li id="li4">4</li>
+    </ul>
+    <script>
+      const list = document.querySelector("#list");
+      const li4 = document.querySelector("#li4");
+      const lia = document.createElement("li");
+      lia.innerHTML = "lia";
+      li4.before(lia);
+      li4.after(lia);
+      list.append(lia);
+    </script>
+  </body>
+</html>

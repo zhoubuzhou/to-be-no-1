@@ -7,17 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="box1">Hi</div>
     <script>
-        const add = 'NaN';
-        console.log(isNaN(add))
-        console.log(typeof add)
-        console.log(Number.isNaN(add))
-        console.log(typeof add)
-        function aa() {
-            
-            console.log(arguments);
-        }
-        aa()
+        const h1 = document.createElement('h1')
+        h1.innerHTML='Hello';
+        const box1 = document.getElementById('box1')
+        box1.append(h1)
     </script>
 </body>
 </html>

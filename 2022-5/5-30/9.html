@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #calendar {
+        width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #calendar > div {
+        box-sizing: border-box;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calendar">
+      <div>一</div>
+      <div>二</div>
+      <div>三</div>
+      <div>四</div>
+      <div>五</div>
+      <div>六</div>
+      <div>日</div>
+    </div>
+    <script>
+      function createCalendar(elem, year, month) {
+        const d = new Date(year, month, 0);
+        const dates = d.getDate();
+        const lastDayWeek = d.getDay();
+
+        const d0 = new Date(year, month - 1, 1);
+        const w = d0.getDay() || 7;
+
+        // 算出四月最后一天
+        const d4 = new Date(year, month - 1, 0);
+        const d4LastDay = d4.getDate();
+
+        const arr1 = [];
+        for (let j = w - 2; j >= 0; j--) {
+          const div = document.createElement("div");
+          div.innerHTML = d4LastDay - j;
+          arr1.push(div);
+        }
+        for (let i = 1; i <= dates; i++) {
+          const div = document.createElement("div");
+          div.innerHTML = i;
+          arr1.push(div);
+        }
+
+        for (let x = 1; x <= 7 - lastDayWeek; x++) {
+          const div = document.createElement("div");
+          div.innerHTML = x;
+          arr1.push(div);
+        }
+        elem.append(...arr1);
+      }
+      createCalendar(document.getElementById("calendar"), 2022, 5);
+    </script>
+  </body>
+</html>

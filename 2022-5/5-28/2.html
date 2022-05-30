@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .f{
+            background-color: aqua;
+            position: relative;
+            height: 200px;
+            z-index: 999;
+        }
+        .s{
+            background-color:red;
+            position: absolute;
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
-<input type="text" id="H" value="jack" age="20">
-    <script>
-        const input=document.getElementById('H')
-        console.log(input.type)
-        console.log(input.value)
-        console.log(input.id)
-        console.log(input.age)
-    </script>
+   <div class="f">dad<div class="s">son</div></div>
+   <div>123</div>
 </body>
 </html>
