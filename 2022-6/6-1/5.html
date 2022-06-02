@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn2">2</button>
+    <script>
+        function fn1() {
+            console.log('fn1')
+        }
+        function fn2() {
+            console.log('fn2')
+        }
+        function fn3() {
+            console.log('fn3')
+        }
+        const btn2 = document.getElementById('btn2')
+        btn2.addEventListener('click',fn1)
+        btn2.addEventListener('click',fn2)
+        btn2.addEventListener('click',fn3)
+        setTimeout(() => {
+            btn2.removeEventListener('click',fn1)
+            btn2.removeEventListener('click',fn2)
+        }, 5000);
+    </script>
+</body>
+</html>

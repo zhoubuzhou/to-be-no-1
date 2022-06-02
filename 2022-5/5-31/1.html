@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            color: blueviolet;
+        }
+        .b{
+            border: 2px solid greenyellow;
+            width: 120px;
+        }
+        .c{
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+        }
+        .d{
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="a ">Hello</div>
+    <script>
+        const box1 =document.querySelector('#box1')
+        box1.classList.add('c')
+        box1.classList.remove('a')
+        console.log(box1.classList.contains('a'))
+        setInterval(() => {
+            box1.classList.toggle('b')
+        }, 500);
+        setInterval(() => {
+            box1.classList.toggle('d')
+        }, 500);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box1{
+        padding: 20px;
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        border: 10px solid;
+        background-clip: content-box;
+        overflow: auto;
+      }
+      #box1 p{
+        height: 700px;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">
+      <p>Hello</p>
+    </div>
+    <script>
+      const box1 = document.querySelector("#box1");
+     console.log(box1.offsetWidth);
+     console.log(box1.offsetHeight);
+     console.log(box1.clientTop);
+     console.log(box1.scrollWidth);
+     console.log(box1.scrollLeft);
+
+    </script>
+  </body>
+</html>

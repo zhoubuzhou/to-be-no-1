@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 2000px;
+        height: 2000px;
+        background: url(https://www.syracuse.com/resizer/qm5j-Q_VrC6hpdVUJhJRCYYL1xQ=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.syracuse.com/home/syr-media/width2048/img/news/photo/2013/07/catpoopjpg-d9b04aa8be6ee56c.jpg)
+          repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Hello</div>
+    <script>
+      setInterval(() => {
+        window.scrollTo(0, 0);
+      }, 3000);
+      setTimeout(() => {
+        console.log(window.pageYOffset)
+      }, 2000);
+    </script>
+  </body>
+</html>
