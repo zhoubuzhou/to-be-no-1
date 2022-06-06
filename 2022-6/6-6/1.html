@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 20px;
+            border: solid 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" onclick="console.log(1);console.log(event.target)">box1
+        <div class="box2" onclick="console.log(2);console.log(event.target)">box2
+            <div class="box3" onclick="console.log(3);console.log(event.target)">box3
+                <div class="box4" onclick="console.log(4);console.log(event.target)">box4</div>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        const box1 = document.getElementsByClassName('box1');
+        const box2 = document.getElementsByClassName('box2');
+        const box3 = document.getElementsByClassName('box3');
+        const box4 = document.getElementsByClassName('box4');
+        box1.onclick(console.log(1))
+        console.log(event.target)
+        console.log(box1,box2,box3,box4);
+    </script> -->
+</body>
+</html>

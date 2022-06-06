@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .imgs {
+        width: 400px;
+      }
+      .imgs .big {
+        width: 100%;
+      }
+      .imgs .big img {
+        width: 100%;
+      }
+      .imgs .small {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .imgs .small img {
+        width: 25%;
+        border: 2px transparent solid;
+        box-sizing: border-box;
+      }
+      .imgs .small img:hover {
+          border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imgs">
+      <div class="big">
+        <img src="./img/a.jpg" alt="" />
+      </div>
+      <div class="small">
+        <img data-thumb src="./img/a.jpg" alt="" />
+        <img data-thumb src="./img/b.jpg" alt="" />
+        <img data-thumb src="./img/c.jpg" alt="" />
+        <img data-thumb src="./img/d.jpg" alt="" />
+      </div>
+    </div>
+    <script>
+      document.addEventListener("mouseover", function (e) {
+        if (e.target.dataset.thumb === "") {
+          const src = e.target.getAttribute("src");
+          document.querySelector(".big img").src = src;
+        }
+      });
+    </script>
+  </body>
+</html>

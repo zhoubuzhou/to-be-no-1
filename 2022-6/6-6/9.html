@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button data-toggle-id="email">email</button>
+    <form id="email" hidden>email <input type="text" /></form>
+    <button data-toggle-id="email">email</button>
+    <form id="email" hidden>email <input type="text" /></form>
+    <script>
+      document.addEventListener("click", function (e) {
+        const el = document.querySelector(`#${e.target.dataset.toggleId}`);
+        el.hidden = !el.hidden;
+      });
+    </script>
+  </body>
+</html>

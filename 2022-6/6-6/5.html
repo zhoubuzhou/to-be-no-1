@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        padding: 20px;
+        border: solid 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      box1
+      <div class="box2">
+        box2
+        <div class="box3">
+          box3
+          <div class="box4">box4</div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <p>hello<b>!!</b></p>
+    <script>
+      document.addEventListener("click", function (e) {
+        console.log(e.target.innerHTML);
+      });
+    </script>
+  </body>
+</html>

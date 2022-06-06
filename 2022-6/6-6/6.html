@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        padding: 20px;
+        border: solid 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button data-action="save">保存</button>
+      <button data-action="del">删除</button>
+      <button data-action="edit">编辑</button>
+    </div>
+    <script>
+      function save() {
+        console.log('save');
+      }
+      function del() {
+        console.log('del');
+      }
+      function edit() {
+        console.log('edit');
+      }
+      document.addEventListener("click", function (e) {
+        if (e.target.dataset.action === "save") {
+          save();
+        } else if (e.target.dataset.action === "del") {
+          del();
+        } else if (e.target.dataset.action === "edit") {
+          edit();
+        }
+      });
+    </script>
+  </body>
+</html>

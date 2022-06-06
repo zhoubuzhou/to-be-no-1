@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 数据可视化 -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
+      </tbody>
+    </table>
+    <script>
+      const id = () => Math.ceil(Math.random() * 1000);
+      const users = [
+        {
+          id: id(),
+          name: "jack",
+          age: 20,
+          gender: 1,
+        },
+        {
+          id: id(),
+          name: "lili",
+          age: 21,
+          gender: 0,
+        },
+      ];
+      users.forEach((el) => {
+        const tr = document.createElement("tr");
+        const tdId = document.createElement("td");
+        tdId.innerHTML = el.id;
+        const tdName = document.createElement("td");
+        tdName.innerHTML = el.name;
+        const tdAge = document.createElement("td");
+        tdAge.innerHTML = el.age;
+        const tdGender = document.createElement("td");
+        const gender = {
+          1: "男",
+          0: "女",
+        };
+        //两种方法 推荐类数组这一种（也可以数组）
+        tdGender.innerHTML = gender[el.gender];
+        // tdGender.innerHTML = el.gender==1?'男':'女';
+        tr.append(tdId, tdName, tdAge, tdGender);
+        document.querySelector("table tbody").append(tr);
+      });
+      console.log(users);
+    </script>
+  </body>
+</html>

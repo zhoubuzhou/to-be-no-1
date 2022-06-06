@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 20px;
+            border: solid 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1
+        <div class="box2">box2
+            <div class="box3">box3
+                <div class="box4" >box4</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const box1 = document.querySelector('.box1');
+        const box2 = document.querySelector('.box2');
+        const box3 = document.querySelector('.box3');
+        const box4 = document.querySelector('.box4');
+        //冒泡
+        box1.addEventListener('click',function (e) {
+            console.log(1);
+        })
+        box2.addEventListener('click',function (e) {
+            console.log(2);
+        })
+        box3.addEventListener('click',function (e) {
+            console.log(3);
+        })
+        box4.addEventListener('click',function (e) {
+            console.log(4);
+        })
+        // 捕获
+        box1.addEventListener('click',function (e) {
+            console.log('a',1);
+        },true)
+        box2.addEventListener('click',function (e) {
+            console.log('a',2);
+        },true)
+        box3.addEventListener('click',function (e) {
+            console.log('a',3);
+        },true)
+        box4.addEventListener('click',function (e) {
+            console.log('a',4);
+        },true)
+        // console.log(box1,box2,box3,box4);
+    </script>
+</body>
+</html>
