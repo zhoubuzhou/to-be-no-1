@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击</button>
+    <script>
+        const btn =document.getElementById('btn')
+        btn.addEventListener('mousedown',function (e) {
+            console.log('mousedown');
+        })
+        btn.addEventListener('mouseup',function (e) {
+            console.log('mouseup');
+        })
+        btn.addEventListener('mouseover',function (e) {
+            console.log('mouseover');
+        })
+        btn.addEventListener('mouseout',function (e) {
+            console.log('mouseout');
+        })
+        btn.addEventListener('mousemove',function (e) {
+            console.log('mousemove');
+        })
+        btn.addEventListener('click',function (e) {
+            console.log('click');
+        })
+        btn.addEventListener('dblclick',function (e) {
+            console.log('dblclick');
+        })
+        btn.addEventListener('contextmenu',function (e) {
+            console.log('contextmenu');
+        })
+    </script>
+</body>
+</html>

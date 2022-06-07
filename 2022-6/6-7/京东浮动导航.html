@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 500px;
+        border: solid;
+      }
+      .nav {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">置顶</div>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <script>
+      const nav = document.querySelector(".nav");
+      nav.onclick = function () {
+        window.scrollTo(0, 0);
+      };
+      window.addEventListener("scroll", function (e) {
+        if (window.pageYOffset - window.innerHeight > 20) {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "";
+        }
+      });
+    </script>
+  </body>
+</html>

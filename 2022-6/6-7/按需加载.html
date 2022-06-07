@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 900px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        src="./imgs/loading.gif"
+        data-src="./imgs/a.jpg"
+        width="300px"
+        alt=""
+      />
+      文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本
+    </div>
+    <div>
+      <img
+        src="./imgs/loading.gif"
+        data-src="./imgs/b.jpg"
+        width="300px"
+        alt=""
+      />
+      文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本
+    </div>
+    <div>
+      <img
+        src="./imgs/loading.gif"
+        data-src="./imgs/c.jpg"
+        width="300px"
+        alt=""
+      />
+      文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本
+    </div>
+    <div>
+      <img
+        src="./imgs/loading.gif"
+        data-src="./imgs/d.webp"
+        width="300px"
+        alt=""
+      />
+      文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本
+    </div>
+    <script>
+      const img = document.querySelectorAll("img");
+      img.forEach((el) => {
+        const pos = el.getBoundingClientRect();
+        if (window.innerHeight - pos.top >= pos.height) {
+          if (el.getAttribute("src") === "./imgs/loading.gif") {
+            el.src = el.dataset.src;
+          }
+        }
+      });
+      window.addEventListener("scroll", function (e) {
+        img.forEach((el) => {
+          const pos = el.getBoundingClientRect();
+          if (window.innerHeight - pos.top >= pos.height) {
+            if (el.getAttribute("src") === "./imgs/loading.gif") {
+              el.src = el.dataset.src;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
