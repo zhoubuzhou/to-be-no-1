@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modelDialog {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      .modelDialog form {
+        background-color: #fff;
+        width: 400px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Model</h1>
+    <button id="regist">注册</button>
+    <div class="modelDialog">
+      <form name="user">
+        <p>
+          <label for="uname">用户</label>
+          <input type="text" id="uname" name="username" value="jack" />
+        </p>
+        <p>
+          <input
+            type="radio"
+            id="genderBoy"
+            name="gender"
+            value="boy"
+            checked
+          />
+          <label for="genderBoy">男</label>
+          <input type="radio" id="genderGirl" name="gender" value="girl" />
+          <label for="genderGirl">女</label>
+        </p>
+        <p>
+          <label for="jian">简介</label>
+          <input type="textarea" id="jian" name="jian" value="hello jack" />
+        </p>
+        <p>
+          <label>爱好</label>
+          <input type="checkbox" id="css" name="hobby" value="css" />
+          <label for="css">CSS</label>
+          <input type="checkbox" id="html" name="hobby" value="html" />
+          <label for="html">HTML</label>
+          <input type="checkbox" id="js" name="hobby" value="js" />
+          <label for="js">JS</label>
+        </p>
+        <p>
+          <label for="city">城市</label>
+          <select id="city" name="city">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </p>
+        <input type="button" value="提交" />
+        <input type="button" value="取消" name="cancelBtn" />
+      </form>
+    </div>
+    <script>
+      const form = document.user;
+      const regist = document.getElementById("regist");
+      const modelDialog = document.querySelector(".modelDialog");
+      regist.addEventListener("click", function () {
+        modelDialog.style.display = "flex";
+      });
+      form.cancelBtn.onclick = function () {
+        modelDialog.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

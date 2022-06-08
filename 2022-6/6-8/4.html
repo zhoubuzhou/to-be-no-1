@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="user">
+        <p>
+            <label>爱好</label>
+            <input type="checkbox" id="css" name="hobby" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="html" name="hobby" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="js" name="hobby" value="js" >
+            <label for="js">JS</label>
+        </p>
+    </form>
+    <script>
+        const form = document.user;
+        [...form.hobby].forEach(el=>{
+            el.checked = ['html','css'].includes(el.value);
+            // if (['html','css'].includes(el.value)) {
+            //     el.checked = true;
+            // }
+            //两种方式
+        })
+        
+    </script>
+</body>
+</html>

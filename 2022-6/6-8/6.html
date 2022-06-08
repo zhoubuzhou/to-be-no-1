@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>增删改查</h1>
+    <button>添加</button>
+    <table border="1" id="userGrid">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>邮箱</th>
+          <th>手机号</th>
+          <th>性别</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      const userGrid = document.getElementById("userGrid");
+      const id = () => Math.round(Math.random() * 1000);
+      const users = [
+        {
+          id: id(),
+          name: "lili",
+          age: 20,
+          email: "lili@qq.com",
+          phone: "15312021913",
+          gender: 1,
+        },
+        {
+          id: id(),
+          name: "jack",
+          age: 22,
+          email: "jack@qq.com",
+          phone: "15312021912",
+          gender: 0,
+        },
+      ];
+
+      const render = function (date, el) {
+        date.forEach((row) => {
+          const tr = document.createElement("tr");
+          const tdId = document.createElement("td");
+          tdId.innerHTML = row.id;
+          const tdName = document.createElement("td");
+          tdName.innerHTML = row.name;
+          const tdAge = document.createElement("td");
+          tdAge.innerHTML = row.age;
+          const tdEmail = document.createElement("td");
+          tdEmail.innerHTML = row.email;
+          const tdPhone = document.createElement("td");
+          tdPhone.innerHTML = row.phone;
+          const tdGender = document.createElement("td");
+          tdGender.innerHTML = {
+            0: "男",
+            1: "女",
+          }[row.gender];
+          tr.append(tdId, tdName, tdAge, tdEmail, tdPhone, tdGender);
+          //   const tdchenge = document.createElement("button");
+          //   tdchenge.innerHTML = ;
+          el.tBodies[0].append(tr);
+        });
+      };
+      render(users, userGrid);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="user">
+        <p>
+            <label>爱好</label>
+            <input type="checkbox" id="css" name="hobby" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="html" name="hobby" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="js" name="hobby" value="js" checked>
+            <label for="js">JS</label>
+        </p>
+    </form>
+    <script>
+        const form = document.user;
+        console.log(form.querySelectorAll('[name="hobby"]:checked'))
+        console.log([...form.querySelectorAll('[name="hobby"]:checked')].map(el=>el.value))
+        
+    </script>
+</body>
+</html>

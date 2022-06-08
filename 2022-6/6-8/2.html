@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="user">
+        <p>
+            <label for="uname">用户</label>
+            <input type="text" id="uname" name="username" value="jack">
+        </p>
+        <p>
+            <input type="radio" id="genderBoy" name="gender" value="boy" checked>
+            <label for="genderBoy">男</label>
+            <input type="radio" id="genderGirl" name="gender" value="girl">
+            <label for="genderGirl">女</label>
+        </p>
+        <p>
+            <label for="jian">简介</label>
+            <input type="textarea" id="jian" name="jian" value="hello jack">
+        </p>
+        <p>
+            <label for="city">城市</label>
+            <select id="city" name="city">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+        </p>
+    </form>
+    <script>
+        console.log(document.user.uname.value)
+        console.log(document.user.gender.value)
+        console.log(document.user.jian.value)
+        console.log(document.user.city.value)
+    </script>
+</body>
+</html>
