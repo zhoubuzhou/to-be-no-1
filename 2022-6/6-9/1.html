@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="add">
+      <p>
+        <label for="userName"></label>
+        <input type="text" id="userName" name="userName" />
+      </p>
+      <button type="button" onclick="form.userName.focus();">focus</button>
+      <button type="button" onclick="form.userName.blur();">blur</button>
+    </form>
+    <script>
+      const form = document.add;
+      form.userName.onfocus = function () {
+        console.log("onfocus");
+      };
+      form.userName.onblur = function () {
+        console.log("onblur");
+      };
+        setTimeout(el=>{
+            form.userName.focus();
+        },2000);
+    </script>
+  </body>
+</html>

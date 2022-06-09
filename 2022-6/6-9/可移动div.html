@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        border: solid;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div tabindex="0" class="d1">div</div>
+    <script>
+      const d1 = document.querySelector(".d1");
+      d1.onfocus = function () {
+        this.style.fontSize = "30px";
+        d1.onkeydown = function (e) {
+          if (e.code === "ArrowUp") {
+            this.style.top = parseInt(getComputedStyle(d1).top) - 10 + "px";
+          }
+          if (e.code === "ArrowDown") {
+            this.style.top = parseInt(getComputedStyle(d1).top) + 10 + "px";
+          }
+          if (e.code === "ArrowLeft") {
+            this.style.left = parseInt(getComputedStyle(d1).left) - 10 + "px";
+          }
+          if (e.code === "ArrowRight") {
+            this.style.left = parseInt(getComputedStyle(d1).left) + 10 + "px";
+          }
+        };
+        d1.onblur = function () {
+          this.style.fontSize = "";
+          d1.onkeydown = null;
+        };
+      };
+    </script>
+  </body>
+</html>

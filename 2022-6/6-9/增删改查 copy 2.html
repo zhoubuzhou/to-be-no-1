@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modelDialog {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modelDialog form {
+        width: 400px;
+        background: #fff;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>C(create)U(update)R(read)D(delete)</h1>
+    <!-- 添加 -->
+    <div class="addModelDialog modelDialog">
+      <form name="addForm">
+        <p>
+          <label for="name">用户名</label>
+          <input type="text" name="name" id="name" />
+        </p>
+        <p>
+          <label>性别</label>
+          <input type="radio" name="gender" id="genderBoy" value="1" />
+          <label for="genderBoy">男</label>
+          <input type="radio" name="gender" id="genderGirl" value="0" checked />
+          <label for="genderGirl">女</label>
+        </p>
+        <p>
+          <label for="email">邮箱</label>
+          <input type="text" name="email" id="email" />
+        </p>
+        <p>
+          <label for="phone">手机</label>
+          <input type="text" name="phone" id="phone" />
+        </p>
+        <p>
+          <label for="age">年龄</label>
+          <input type="text" name="age" id="age" />
+        </p>
+        <input
+          type="button"
+          name="submitBtn"
+          value="提交"
+          data-action="doAdd"
+        />
+        <input
+          type="button"
+          name="cancelBtn"
+          value="取消"
+          data-action="cancelAdd"
+        />
+      </form>
+    </div>
+    <!-- 编辑 -->
+    <div class="editModelDialog modelDialog">
+      <form name="editForm">
+        <h2>编辑用户</h2>
+        <input type="text" name="id" hidden />
+        <p>
+          <label for="name">用户名</label>
+          <input type="text" name="name" id="name" />
+        </p>
+        <p>
+          <label>性别</label>
+          <input type="radio" name="gender" id="genderBoy" value="1" />
+          <label for="genderBoy">男</label>
+          <input type="radio" name="gender" id="genderGirl" value="0" checked />
+          <label for="genderGirl">女</label>
+        </p>
+
+        <p>
+          <label for="email">邮箱</label>
+          <input type="text" name="email" id="email" />
+        </p>
+        <p>
+          <label for="phone">手机</label>
+          <input type="text" name="phone" id="phone" />
+        </p>
+        <p>
+          <label for="age">年龄</label>
+          <input type="text" name="age" id="age" />
+        </p>
+
+        <input
+          type="button"
+          name="submitBtn"
+          value="提交"
+          data-action="doEdit"
+        />
+        <input
+          type="button"
+          name="cancelBtn"
+          value="取消"
+          data-action="cancelEdit"
+        />
+      </form>
+    </div>
+
+    <button data-action="add">添加</button>
+    <table id="userGrid" border="1">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>手机</th>
+          <th>邮箱</th>
+          <th>性别</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      const id = () => String(Math.ceil(Math.random() * 1000));
+      const addModelDialog = document.querySelector(".addModelDialog"); //添加按钮的模态框
+      const editModelDialog = document.querySelector(".editModelDialog"); //编辑按钮的模态框
+      const users = [
+        {
+          id: id(),
+          name: "jack",
+          age: 20,
+          email: "jack@qq.com",
+          phone: "18013838666",
+          gender: "1",
+        },
+        {
+          id: id(),
+          name: "lili",
+          age: 21,
+          email: "lili@qq.com",
+          phone: "18013838555",
+          gender: "0",
+        },
+      ];
+      const render = function (data, el) {
+        el.tBodies[0].innerHTML = '';
+        data.forEach((row) => {
+          const tr = document.createElement("tr");
+          const tdId = document.createElement("td");
+          tdId.innerHTML = row.id;
+          const tdName = document.createElement("td");
+          tdName.innerHTML = row.name;
+          const tdAge = document.createElement("td");
+          tdAge.innerHTML = row.age;
+          const tdEmail = document.createElement("td");
+          tdEmail.innerHTML = row.email;
+          const tdPhone = document.createElement("td");
+          tdPhone.innerHTML = row.phone;
+          const tdGender = document.createElement("td");
+          tdGender.innerHTML = {
+            0: "女",
+            1: "男",
+          }[row.gender]; //在数据中用01表示男女，这里就可以直接点，因为对应的类数组位置
+          const tdOpt = document.createElement("td"); //添加'操作'那一单元格
+          const delBtn = document.createElement("button"); //删除按钮创建
+          delBtn.innerHTML = "删除";
+          delBtn.dataset.action = "del"; //为他添加特性，之后好使用方法
+          const editBtn = document.createElement("button"); //编辑按钮创建
+          editBtn.innerHTML = "编辑";
+          editBtn.dataset.action = "edit"; //为他添加特性，之后好使用方法
+          tdOpt.append(delBtn, editBtn);
+          tr.append(tdId, tdName, tdAge, tdEmail, tdPhone, tdGender, tdOpt);
+          el.querySelector("tbody").append(tr); //获取tbody 并插入tr
+          // el.tBodies[0].append(tr); 第二种用法
+        });
+      };
+      render(users, document.getElementById("userGrid")); //给以上传实参
+
+      const methods = {
+        //方法合集用dataset与方法同名链接
+        add() {
+          //添加按钮
+          addModelDialog.style.display = "flex";
+        },
+        doAdd() {
+          //添加表单的提交
+          const form = document.addForm;
+          users.push({
+            //将新添加的数据导入users数据库
+            id: id(),
+            name: form.name.value,
+            age: form.age.value,
+            phone: form.phone.value,
+            email: form.email.value,
+            gender: form.gender.value,
+          });
+          render(users, document.getElementById("userGrid"));
+          addModelDialog.style.display = "none";
+          form.reset();
+        },
+        cancelAdd() {
+          //添加表单的取消
+          addModelDialog.style.display = "none";
+          document.addForm.reset();
+        },
+        del() {
+          //删除按钮
+          console.log("del");
+        },
+        edit() {
+          //编辑按钮
+          console.log("edit");
+        },
+      };
+      document.addEventListener("click", function (e) {
+        const action = e.target.dataset.action; //target获取特性
+        if (action) {
+          methods[action].call(e.target);
+          //用dataset与方法同名链接 可以直接所以可以[]
+          //call改变this指向
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .modelDialog {
+
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      background-color: rgba(0, 0, 0, .5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modelDialog form {
+      width: 400px;
+      background: #fff;
+      padding: 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>C(create)U(update)R(read)D(delete)</h1>
+  <div class="modelDialog">
+    <form name="userForm">
+      <p>
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username" value="jack">
+      </p>
+      <p>
+        <label>性别</label>
+        <input type="radio" name="gender" id="genderBoy" value="boy">
+        <label for="genderBoy">男</label>
+        <input type="radio" name="gender" id="genderGirl" value="girl" checked>
+        <label for="genderGirl">女</label>
+      </p>
+
+      <p>
+        <label>爱好</label>
+        <input type="checkbox" name="hobby" id="hobbyCss" value="css">
+        <label for="hobbyCss">CSS</label>
+        <input type="checkbox" name="hobby" id="hobbyHtml" value="html">
+        <label for="hobbyHtml">HTML</label>
+        <input type="checkbox" name="hobby" id="hobbyJs" value="js">
+        <label for="hobbyJs">JS</label>
+      </p>
+
+      <p>
+        <label for="desc">简介</label>
+        <textarea name="desc" id="desc">hello jack</textarea>
+      </p>
+      <p>
+        <label for="city">城市</label>
+        <select name="city" id="city">
+          <option value="nj">南京</option>
+          <option value="wx" selected>无锡</option>
+          <option value="sz">苏州</option>
+          <option value="cz">常州</option>
+        </select>
+      </p>
+      <input type="button" name="submitBtn" value="提交">
+      <input type="button" name="cancelBtn" value="取消">
+    </form>
+  </div>
+
+  <button data-action="add">添加</button>
+  <table id="userGrid" border="1">
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>手机</th>
+        <th>邮箱</th>
+        <th>性别</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    const id = () => Math.ceil(Math.random() * 1000);
+    const modelDialog = document.querySelector('.modelDialog');
+    const users = [{
+      id: id(),
+      name: 'jack',
+      age: 20,
+      email: 'jack@qq.com',
+      phone: '18013838666',
+      gender: 1,
+    }, {
+      id: id(),
+      name: 'lili',
+      age: 21,
+      email: 'lili@qq.com',
+      phone: '18013838555',
+      gender: 0,
+
+    }];
+
+    const render = function(data, el) {
+      el.tBodies[0].innerHTML = '';
+      data.forEach(row => {
+        const tr = document.createElement('tr');
+        const tdId = document.createElement('td');
+        tdId.innerHTML = row.id;
+        const tdName = document.createElement('td');
+        tdName.innerHTML = row.name;
+        const tdAge = document.createElement('td');
+        tdAge.innerHTML = row.age;
+        const tdEmail = document.createElement('td');
+        tdEmail.innerHTML = row.email;
+        const tdPhone = document.createElement('td');
+        tdPhone.innerHTML = row.phone;
+        const tdGender = document.createElement('td');
+        tdGender.innerHTML = {
+          1: '男',
+          0: '女'
+        } [row.gender];
+        const tdOpt = document.createElement('td');
+        const delBtn = document.createElement('button');
+        delBtn.innerHTML = '删除'
+        delBtn.dataset.id = row.id;
+        delBtn.dataset.action = 'del'
+        const editBtn = document.createElement('button');
+        editBtn.innerHTML = '编辑'
+        editBtn.dataset.action = 'edit'
+        tdOpt.append(delBtn, editBtn)
+        tr.append(tdId, tdName, tdAge, tdPhone, tdEmail, tdGender, tdOpt);
+        el.tBodies[0].append(tr);
+      });
+    }
+    render(users, document.getElementById('userGrid'));
+
+    const methods = {
+      add() {
+        // modelDialog.style.display = 'flex';
+        users.push({
+          id: id(),
+          name: 'lucy',
+          age: 21,
+          email: 'lucy@qq.com',
+          gender: 0
+        });
+        render(users, document.getElementById('userGrid'));
+      },
+      edit() {
+        console.log('edit');
+      },
+      del() {
+        const id = this.dataset.id;
+        const index = users.findIndex(el => el.id === id);
+        users.splice(index, 1);
+        render(users, document.getElementById('userGrid'));
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      const action = e.target.dataset.action;
+      // e.target.dataset.id
+      methods[action].call(e.target);
+    })
+  </script>
+
+</body>
+
+</html>
