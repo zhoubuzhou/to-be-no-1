@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modelDialog {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modelDialog form {
+        width: 400px;
+        background: #fff;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>C(create)U(update)R(read)D(delete)</h1>
+    <div class="addModelDialog modelDialog">
+      <form name="addForm">
+        <h2>添加用户</h2>
+        <p>
+          <label for="name">用户名</label>
+          <input type="text" name="name" id="name" />
+        </p>
+        <p>
+          <label>性别</label>
+          <input type="radio" name="gender" id="genderBoy" />
+          <label for="genderBoy">男</label>
+          <input type="radio" name="gender" id="genderGirl" />
+          <label for="genderGirl">女</label>
+        </p>
+        <p>
+          <label for="email">邮箱</label>
+          <input type="text" name="email" id="email" />
+        </p>
+        <p>
+          <label for="phone">手机</label>
+          <input type="text" name="phone" id="phone" />
+        </p>
+        <p>
+          <label for="age">年龄</label>
+          <input type="text" name="age" id="age" />
+        </p>
+
+        <input type="button" name="submitBtn" value="提交" data-action="doAdd"/>
+        <input type="button" name="cancelBtn" value="取消" data-action="cancelAdd"/>
+      </form>
+    </div>
+    <div class="editModelDialog modelDialog">
+      <form action="editForm">
+        <h2>添加用户</h2>
+        <p>
+          <label for="name">用户名</label>
+          <input type="text" name="name" id="name" />
+        </p>
+        <p>
+          <label>性别</label>
+          <input type="radio" name="gender" id="genderBoy" />
+          <label for="genderBoy">男</label>
+          <input type="radio" name="gender" id="genderGirl" />
+          <label for="genderGirl">女</label>
+        </p>
+        <p>
+          <label for="email">邮箱</label>
+          <input type="text" name="email" id="email" />
+        </p>
+        <p>
+          <label for="phone">手机</label>
+          <input type="text" name="phone" id="phone" />
+        </p>
+        <p>
+          <label for="age">年龄</label>
+          <input type="text" name="age" id="age" />
+        </p>
+
+        <input type="button" name="submitBtn" value="提交" data-action="doEdit"/>
+        <input type="button" name="cancelBtn" value="取消" data-action="cancelEdit"/>
+      </form>
+    </div>
+
+    <button data-action="add">添加</button>
+    <table border="1" id="userGrid">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>手机</th>
+          <th>邮箱</th>
+          <th>性别</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      const addModelDialog = document.querySelector(".addModelDialog");
+      const editModelDialog = document.querySelector(".editModelDialog");
+      const id = () => String(Math.ceil(Math.random() * 1000));
+      const users = [
+        {
+          id: id(),
+          name: "jack",
+          age: 20,
+          email: "jack@qq.com",
+          phone: "18013838666",
+          gender: "1",
+        },
+        {
+          id: id(),
+          name: "lili",
+          age: 21,
+          email: "lili@qq.com",
+          phone: "18013838555",
+          gender: "0",
+        },
+      ];
+
+      const render = function (data, el) {
+        (el.tBodies[0].innerHTML = ""),
+          data.forEach((row) => {
+            const tr = document.createElement("tr");
+            const tdId = document.createElement("td");
+            tdId.innerHTML = row.id;
+            const tdName = document.createElement("td");
+            tdName.innerHTML = row.name;
+            const tdAge = document.createElement("td");
+            tdAge.innerHTML = row.age;
+            const tdEmail = document.createElement("td");
+            tdEmail.innerHTML = row.email;
+            const tdPhone = document.createElement("td");
+            tdPhone.innerHTML = row.phone;
+            const tdGender = document.createElement("td");
+            tdGender.innerHTML = {
+              0: "男",
+              1: "女",
+            }[row.gender];
+            const tdBtn = document.createElement("td");
+            const delBtn = document.createElement("button");
+            delBtn.innerHTML = "删除";
+            delBtn.dataset.action = "del";
+            const editBtn = document.createElement("button");
+            editBtn.innerHTML = "编辑";
+            editBtn.dataset.action = "edit";
+            tdBtn.append(delBtn, editBtn);
+            tr.append(tdId, tdName, tdAge, tdEmail, tdPhone, tdGender, tdBtn);
+            el.tBodies[0].append(tr);
+          });
+      };
+      render(users, document.getElementById("userGrid"));
+      const methods = {
+        add() {
+          addModelDialog.style.display = "flex";
+        },
+        doAdd(){
+          const form = document.addForm;
+          addModelDialog.style.display = "none";
+          console.log(form);
+          form.reset();
+        },
+        cancelAdd(){
+          const form = document.addForm;
+          addModelDialog.style.display = "none";
+          form.reset();
+        },
+        doEdit(){
+            editModelDialog.style.display = "none";
+        },
+        cancelEdit(){
+            editModelDialog.style.display = "none";
+        },
+        del() {
+          console.log("del");
+        },
+        edit() {
+          editModelDialog.style.display = "flex";
+        },
+      };
+      document.addEventListener("click", function (e) {
+        const action = e.target.dataset.action;
+        if (action) {
+          methods[action].call(e.target);
+        }
+      });
+    </script>
+  </body>
+</html>

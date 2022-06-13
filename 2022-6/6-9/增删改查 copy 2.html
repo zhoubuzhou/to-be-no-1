@@ -151,7 +151,7 @@
         },
       ];
       const render = function (data, el) {
-        el.tBodies[0].innerHTML = '';
+        el.tBodies[0].innerHTML = "";
         data.forEach((row) => {
           const tr = document.createElement("tr");
           const tdId = document.createElement("td");
@@ -172,9 +172,11 @@
           const tdOpt = document.createElement("td"); //添加'操作'那一单元格
           const delBtn = document.createElement("button"); //删除按钮创建
           delBtn.innerHTML = "删除";
+          delBtn.dataset.id = row.id;
           delBtn.dataset.action = "del"; //为他添加特性，之后好使用方法
           const editBtn = document.createElement("button"); //编辑按钮创建
           editBtn.innerHTML = "编辑";
+          editBtn.dataset.id = row.id;
           editBtn.dataset.action = "edit"; //为他添加特性，之后好使用方法
           tdOpt.append(delBtn, editBtn);
           tr.append(tdId, tdName, tdAge, tdEmail, tdPhone, tdGender, tdOpt);
@@ -211,13 +213,44 @@
           addModelDialog.style.display = "none";
           document.addForm.reset();
         },
+        cancelEdit() {
+          //添加表单的取消
+          editModelDialog.style.display = "none";
+        },
         del() {
           //删除按钮
+          const id = this.dataset.id;
+          const index = users.findIndex((el) => el.id === id);
+          users.splice(index, 1);
           console.log("del");
+          render(users, document.getElementById("userGrid"));
         },
         edit() {
           //编辑按钮
-          console.log("edit");
+          const id = this.dataset.id;
+          const index = users.findIndex((el) => el.id === id);
+          editModelDialog.style.display = "flex";
+          users[index];
+          document.editForm.id.value = users[index].id;
+          document.editForm.name.value = users[index].name;
+          document.editForm.phone.value = users[index].phone;
+          document.editForm.email.value = users[index].email;
+          document.editForm.age.value = users[index].age;
+          document.editForm.gender.value = users[index].gender;
+          
+        },
+        doEdit() {
+          //编辑的提交
+          const form = document.editForm;
+          const id = form.id.value;
+          const index = users.findIndex((el) => el.id === id);
+          users[index].name = form.name.value;
+          users[index].phone = form.phone.value;
+          users[index].email = form.email.value;
+          users[index].age = form.age.value;
+          users[index].gender = form.gender.value;
+          render(users, document.getElementById("userGrid"));
+          editModelDialog.style.display = "none";
         },
       };
       document.addEventListener("click", function (e) {

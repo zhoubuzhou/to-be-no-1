@@ -1,0 +1,13 @@
+{
+  "name": "6-13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2.js",
+  "scripts": {
+    "test": "node -v",
+    "abc":"node -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
