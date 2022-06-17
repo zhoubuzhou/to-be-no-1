@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = '2022-06-17';
+        const r = str.match(/^(?<y>\d{4})-(?<m>\d{2})-(?<d>\d{2})$/);
+        console.log(r.groups.y);
+        console.log(r.groups.m);
+        console.log(r.groups.d);
+    </script>
+</body>
+</html>

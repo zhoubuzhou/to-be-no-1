@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const x = '\w';
+        const exp = new RegExp(`^\b${x}$`);
+        const str = '1jack,2jack,3jack';
+        console.log(str.match(/[123]jack/g));
+    </script>
+</body>
+</html>

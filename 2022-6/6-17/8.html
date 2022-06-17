@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = '2022-06-17,2012-06-29,2020-08-22';
+        const r = str.replace(/(?<y>\d{4})-(?<m>\d{2})-(?<d>\d{2})/g,'$<d>/$<m>/$<y>');
+        console.log(r);
+    </script>
+</body>
+</html>
