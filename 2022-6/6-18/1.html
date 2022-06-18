@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .error {
+        color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="addForm">
+      <p>用户<input type="text" name="username" data-prop="username" /></p>
+      <p>密码<input type="password" name="password" data-prop="password" /></p>
+      <p>邮箱<input type="email" name="email" data-prop="email" /></p>
+      <p>
+        <button name="addBtn" type="button">提交</button>
+      </p>
+    </form>
+
+    <script>
+      const addForm = document.addForm;
+      document.addForm.addBtn.onclick = function () {
+        const username = addForm.username.value;
+        const password = addForm.password.value;
+        const email = addForm.email.value;
+
+        //提交也必须触发验证 所以复制了下列代码
+        const regs = {
+          username: {
+            rule: /^[a-z]{3,18}$/,
+            msg: "用户格式错误",
+          },
+          email: {
+            rule: /^\w+@\w+\.\w+$/,
+            msg: "email格式错误",
+          },
+          password: {
+            rule: /^[^\s]{3,18}$/,
+            msg: "密码格式错误",
+          },
+        };
+
+        let flag = true;
+        //el是二维数组
+        Object.entries(regs).forEach(([k, v]) => {
+          console.log(k, v);
+
+          if (v.rule.test(addForm[k].value) === false) {
+            let msgSpan = addForm[k].nextElementSibling;
+            if (!msgSpan) {
+              msgSpan = document.createElement("span");
+              addForm[k].after(msgSpan);
+              msgSpan.classList.add("error");
+            }
+            msgSpan.textContent = v.msg;
+            addForm[k].style.backgroundColor = "yellow";
+            flag = flag && false;
+          } else {
+            addForm[k].nextElementSibling.textContent = "";
+            addForm[k].style.backgroundColor = "";
+             flag = flag && true;
+            
+          }
+        });
+
+        if (flag) {
+            console.log('get...');
+        }
+       
+      };
+      document.addEventListener("input", function (e) {
+        const target = e.target;
+        const prop = target.dataset.prop;
+        if (!prop) return;
+        // console.log(e);//这里的e是inpuevent
+        // console.log(target.value);//表示获取到的用户输入的内容
+        const regs = {
+          username: {
+            rule: /^[a-z]{3,18}$/,
+            msg: "用户格式错误",
+          },
+          email: {
+            rule: /^\w+@\w+\.\w+$/,
+            msg: "email格式错误",
+          },
+          password: {
+            rule: /^[^\s]{3,18}$/,
+            msg: "密码格式错误",
+          },
+        };
+        if (regs[prop].rule.test(target.value) === false) {
+          let msgSpan = target.nextElementSibling;
+          if (!msgSpan) {
+            msgSpan = document.createElement("span");
+            target.after(msgSpan);
+            msgSpan.classList.add("error");
+          }
+          msgSpan.textContent = regs[prop].msg;
+          target.style.backgroundColor = "yellow";
+        } else {
+          target.nextElementSibling.textContent = "";
+          target.style.backgroundColor = "";
+        }
+      });
+    </script>
+  </body>
+</html>
