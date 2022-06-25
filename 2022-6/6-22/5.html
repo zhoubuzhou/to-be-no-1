@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <template id="t1">
+      <div>
+        {{(num+100)/2}}
+        <br>
+        {{age>18?'ok':'no'}}
+        <br>
+        {{'a,b,c'.split(',').join('-')}}
+        <br>
+        <div v-html="age>18?'ok':'no'"></div>
+      </div>
+    </template>
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: "#app", //挂载点
+        template: "#t1",
+        data() {
+          return {
+            age: 20,
+            num:200,
+            subTitle: "<h3>sub</h3>",
+          };
+        },
+       
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      {{getTime}}
+
+      <hr />
+      {{getTime}}
+
+      <hr />
+      {{getTime}}
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            title:'hello'
+          };
+        },
+        computed: {
+          getTime() {
+            return Date.now() +Math.random();
+          },
+        },
+      });
+      // vm.fullName = 'lili sun';
+      //计算属性有缓存 随机值一样，方法没有 每次都会重新调用执行，
+      //侦听器 可以写异步代码，计算属性不可以
+    </script>
+  </body>
+</html>

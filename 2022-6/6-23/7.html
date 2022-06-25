@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p :style="{color:'red',fontSize:'30px',border:'1px solid'}">
+        hello
+      </p>
+
+      <p :style="s1">
+        hello
+      </p>
+      <p :style="s2">
+        hello
+      </p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      //对类的操作，就是对对象变量的操作
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            s1: {color:'red',fontSize:'30px',border:'1px solid'},
+            s2: {color:'blue',fontSize:'30px',border:'1px solid'},
+          };
+        },
+      });
+      // vm.fullName = 'lili sun';
+      //计算属性有缓存 随机值一样，方法没有 每次都会重新调用执行，
+      //侦听器 可以写异步代码，计算属性不可以
+    </script>
+  </body>
+</html>

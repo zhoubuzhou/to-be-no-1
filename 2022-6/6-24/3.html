@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li :key="index" v-for="(v,index) in hobby">{{v}}</li>
+      </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            hobby: ["css", "js", "vue", "html"],
+          };
+        },
+      });
+      setTimeout(() => {
+        vm.hobby = vm.hobby.filter((el, index) => index >= 2);
+        // vm.hobby.pop();
+        // vm.hobby[1] = 100;
+        // vm.hobby[0] = 'cssabc'
+        // console.log(vm.hobby)
+      }, 2000);
+      //只有整体重新赋值，才能更新数组
+    </script>
+  </body>
+</html>

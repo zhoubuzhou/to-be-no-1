@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="v in event">{{v}}</li>
+      </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            users: [
+              ["a", "b", "c", "d"],
+              [1, 2, 3, 4],
+              [5, 6, 7, 8],
+              ["css", "js", "html", "vue"],
+            ],
+            users2: [
+              ["a", "b", "c", "d"],
+              [1, 2, 3, 4],
+              [5, 6, 7, 8],
+              ["css", "js", "html", "vue"],
+            ],
+          };
+        },
+        computed: {
+          event() {
+            return users.filter((el, index) => index % 2 === 0);
+          },
+        },
+      });
+      //v-for的优先级高于v-if，同时写会先循环再判断
+    </script>
+  </body>
+</html>

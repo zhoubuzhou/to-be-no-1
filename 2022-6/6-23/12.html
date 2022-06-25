@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+  </head>
+  <body>
+    <div id="app">
+      <template v-if="flag">
+        username <input type="text" key="a">
+      </template>
+        <p v-show="show">hello show</p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      //show是控制display：none，来实现隐藏，无论刚开始是否显示，都会被渲染
+      //if是节点删除和重建，如果一开始false 节点将不会被渲染，什么时候true什么时候渲染，
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            flag:true,
+            show:true,
+          };
+        },
+      });
+    </script>
+  </body>
+</html>

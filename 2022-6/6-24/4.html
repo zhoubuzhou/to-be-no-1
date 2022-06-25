@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li :key="v.id" v-for="(v,index) in users">
+          {{index}},{{v.username}}-{{v.age}}
+        </li>
+      </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script src="./mock.js"></script>
+    <script>
+      const _m = Mock.mock;
+      const users = _m({
+        "data|5": [
+          {
+            id: "@guid()",
+            username: "@name()",
+            "age|20-40": 0,
+            "gender|1": ["0", "1"],
+          },
+        ],
+      });
+      const vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            users: users.data,
+          };
+        },
+        computed: {
+          usersOfBoy() {
+            return this.users.filter((el) => el.gender === "1");
+          },
+          usersOfGirl() {
+            return this.users.filter((el) => el.gender === "0");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
