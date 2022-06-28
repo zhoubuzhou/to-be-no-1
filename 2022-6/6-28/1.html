@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        <input type="checkbox" v-model="form.agree" />是否同意{{form.agree}}
+        <!-- agree会自动注入真假值判断 -->
+      </p>
+      <p>
+        <input
+          type="checkbox"
+          v-model="form.isAgree"
+          true-value="yes"
+          false-value="no"
+        />是否同意{{form.isAgree}}
+        <!-- 真值用yes表示，假用no，下面vue中也是如此 -->
+      </p>
+      <p>
+        <input type="checkbox" v-model="form.hobby" value="css"/>css
+        <input type="checkbox" v-model="form.hobby" value="js"/>js
+        <input type="checkbox" v-model="form.hobby" value="html"/>html
+        <!-- 多个复选框 -->
+      </p>
+      <p>
+        <select v-model="form.city">
+            <option disabled value="">请选择...</option>
+            <option value="nj">南京</option>
+            <option value="sh">上海</option>
+            <option value="wx">无锡</option>
+            <option value="cz">常州</option>
+        </select>
+      </p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          form: {
+            agree: true,
+            isAgree: "no",
+            hobby:['css'],
+            city:'',
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

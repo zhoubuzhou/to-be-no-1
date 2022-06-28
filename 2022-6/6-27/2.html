@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" @keyup.ctrl="log">
+        <input type="text" @keyup.ctrl.67="log">
+        <button  @click.ctrl.shift="log">click</button>
+        <button  @click.ctrl.exact="log">click</button>
+        <!-- 精确 -->
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            methods:{
+                log(e){
+                    console.log(e.key);
+                    console.log(e.keyCode);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
